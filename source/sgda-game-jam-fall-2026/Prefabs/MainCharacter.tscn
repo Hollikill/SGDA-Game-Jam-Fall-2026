@@ -3,8 +3,9 @@
 [ext_resource type="Script" uid="uid://c48v1ield32oa" path="res://Scripts/PlayerControl.gd" id="1_jvtun"]
 [ext_resource type="Texture2D" uid="uid://cliokys54tuof" path="res://Resources/player.png" id="1_uo0ar"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_guh3l"]
-radius = 20.0
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_flsnp"]
+radius = 45.0
+height = 120.0
 
 [node name="CharacterBody2D" type="CharacterBody2D" unique_id=1226192143]
 script = ExtResource("1_jvtun")
@@ -14,4 +15,4 @@ MovementSpeed = 200.0
 texture = ExtResource("1_uo0ar")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=6420865]
-shape = SubResource("CircleShape2D_guh3l")
+shape = SubResource("CapsuleShape2D_flsnp")

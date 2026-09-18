@@ -8,7 +8,7 @@ extends Node
 var player_scene = preload("res://Prefabs/MainCharacter.tscn");
 var player = null;
 
-const room_enter_margin = 50;
+const room_enter_margin = 60;
 
 func _ready() -> void:
 	player = player_scene.instantiate();

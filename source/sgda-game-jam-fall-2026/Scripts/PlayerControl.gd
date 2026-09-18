@@ -5,6 +5,7 @@ extends CharacterBody2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	Sprite.scale = Vector2(0.1, 0.1)
 	add_to_group("player")
 
 
@@ -16,19 +17,9 @@ func _physics_process(delta: float) -> void:
 	velocity = motion;
 	move_and_slide()
 	
-	# prevent from exiting the borders of the screen
-	var sprite_size = Sprite.texture.get_size()/2;
-	if (global_position.x - sprite_size.x < 0):
-		global_position.x = 0 + sprite_size.x
-	if (global_position.y - sprite_size.y < 0):
-		global_position.y = 0 + sprite_size.y
-	if (global_position.x + sprite_size.x > GlobalPersistant.screen_size.x):
-		global_position.x = GlobalPersistant.screen_size.x - sprite_size.x
-	if (global_position.y + sprite_size.y > GlobalPersistant.screen_size.y):
-		global_position.y = GlobalPersistant.screen_size.y - sprite_size.y
 
 func off_screen_side():
-	var sprite_size = Sprite.texture.get_size()/2;
+	var sprite_size = Sprite.texture.get_size()/(20);
 	if (global_position.x - sprite_size.x <= 0):
 		return "left"
 	if (global_position.y - sprite_size.y <= 0):
