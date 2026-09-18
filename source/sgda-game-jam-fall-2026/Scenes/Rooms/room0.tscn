@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://dd026gt54fhj3"]
+
+[ext_resource type="PackedScene" uid="uid://cxysrp5irkfh7" path="res://Prefabs/MainCharacter.tscn" id="1_bvbwa"]
+[ext_resource type="PackedScene" uid="uid://ih0atrudmxrj" path="res://Prefabs/obstacles/rock001.tscn" id="2_wyi3d"]
+
+[node name="Room0" type="Node2D" unique_id=1319993212]
+
+[node name="MainCharacter" parent="." unique_id=902630964 instance=ExtResource("1_bvbwa")]
+position = Vector2(493, 283)
+
+[node name="Node2D" parent="." unique_id=2086126590 instance=ExtResource("2_wyi3d")]
+position = Vector2(1093, 92)
+
+[node name="Node2D2" parent="." unique_id=1815399218 instance=ExtResource("2_wyi3d")]
+position = Vector2(128, 110)
+
+[node name="Node2D3" parent="." unique_id=766564833 instance=ExtResource("2_wyi3d")]
+position = Vector2(167, 513)
+
+[node name="Node2D4" parent="." unique_id=289162036 instance=ExtResource("2_wyi3d")]
+position = Vector2(226, 543)
+
+[node name="Node2D5" parent="." unique_id=205754104 instance=ExtResource("2_wyi3d")]
+position = Vector2(149, 571)

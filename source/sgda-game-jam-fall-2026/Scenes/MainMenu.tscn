@@ -1,0 +1,37 @@
+[gd_scene format=3 uid="uid://cnv4qw1vyrqnj"]
+
+[sub_resource type="GDScript" id="GDScript_erv1k"]
+script/source = "extends Button
+
+@export var button: Button = null;
+@export var startingScene: String = \"\";
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	button.pressed.connect(_switch_scenes);
+
+func _switch_scenes():
+	get_tree().change_scene_to_file(\"Scenes/\"+startingScene+\".tscn\");
+"
+
+[node name="MainMenu" type="Node2D" unique_id=1075226138]
+
+[node name="Title Text" type="RichTextLabel" parent="." unique_id=838690557]
+offset_left = 500.0
+offset_top = 156.0
+offset_right = 799.0
+offset_bottom = 331.0
+theme_override_font_sizes/normal_font_size = 127
+bbcode_enabled = true
+text = "[color=#4f4]ESC8[/color]"
+scroll_active = false
+
+[node name="Start Button" type="Button" parent="." unique_id=1625528580 node_paths=PackedStringArray("button")]
+offset_left = 574.0
+offset_top = 371.0
+offset_right = 723.0
+offset_bottom = 420.0
+text = "Start Game"
+script = SubResource("GDScript_erv1k")
+button = NodePath(".")
+startingScene = "Rooms/room0"
