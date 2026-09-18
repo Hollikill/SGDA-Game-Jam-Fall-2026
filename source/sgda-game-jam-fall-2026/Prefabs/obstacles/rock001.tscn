@@ -13,5 +13,5 @@ size = Vector2(68, 51)
 position = Vector2(0, -1.5)
 shape = SubResource("RectangleShape2D_guh3l")
 
-[node name="Rock001" type="Sprite2D" parent="." unique_id=1002490319]
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1002490319]
 texture = ExtResource("1_dp463")

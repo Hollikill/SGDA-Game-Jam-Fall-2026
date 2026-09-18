@@ -12,8 +12,11 @@ config_version=5
 
 config/name="SGDA Game Jam Fall 2026"
 run/main_scene="uid://cnv4qw1vyrqnj"
-config/features=PackedStringArray("4.7", "C#", "GL Compatibility")
-config/icon="res://icon.svg"
+config/features=PackedStringArray("4.7", "GL Compatibility")
+
+[autoload]
+
+GlobalPersistant="*uid://bjh4ohexo0nks"
 
 [display]
 
@@ -62,4 +65,5 @@ game_down={
 rendering_device/driver.windows="d3d12"
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"
+textures/vram_compression/import_etc2_astc=true
 environment/defaults/default_clear_color=Color(1, 1, 1, 1)

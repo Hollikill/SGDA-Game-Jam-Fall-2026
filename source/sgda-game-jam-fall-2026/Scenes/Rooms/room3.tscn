@@ -1,0 +1,52 @@
+[gd_scene format=3 uid="uid://bocb4wf6lktui"]
+
+[ext_resource type="Script" uid="uid://cmhfdvscu61c2" path="res://Scripts/RoomController.gd" id="1_px80b"]
+[ext_resource type="Script" uid="uid://kh06467o6o7c" path="res://Scripts/EntranceMethod.gd" id="2_w786c"]
+[ext_resource type="PackedScene" uid="uid://calfpjhcwcxef" path="res://Prefabs/obstacles/tree001.tscn" id="3_jsrh8"]
+[ext_resource type="PackedScene" uid="uid://ih0atrudmxrj" path="res://Prefabs/obstacles/rock001.tscn" id="4_iei0n"]
+[ext_resource type="PackedScene" uid="uid://r0wv556m55pc" path="res://Prefabs/obstacles/rock002.tscn" id="5_sapi2"]
+
+[sub_resource type="Resource" id="Resource_owv72"]
+script = ExtResource("2_w786c")
+id = "room2"
+enter_side = 2
+metadata/_custom_type_script = "uid://kh06467o6o7c"
+
+[sub_resource type="Resource" id="Resource_rtayk"]
+script = ExtResource("2_w786c")
+id = "room1"
+enter_side = 1
+version = 1
+metadata/_custom_type_script = "uid://kh06467o6o7c"
+
+[node name="Room3" type="Node2D" unique_id=547036628]
+script = ExtResource("1_px80b")
+bottom = SubResource("Resource_owv72")
+left = SubResource("Resource_rtayk")
+
+[node name="Node2D" parent="." unique_id=2086126590 instance=ExtResource("3_jsrh8")]
+position = Vector2(534, 407)
+
+[node name="Node2D2" parent="." unique_id=972461338 instance=ExtResource("3_jsrh8")]
+position = Vector2(678, 493)
+
+[node name="Node2D3" parent="." unique_id=298176932 instance=ExtResource("3_jsrh8")]
+position = Vector2(807, 293)
+
+[node name="Node2D4" parent="." unique_id=1616051025 instance=ExtResource("3_jsrh8")]
+position = Vector2(676, 111)
+
+[node name="Node2D5" parent="." unique_id=1889108661 instance=ExtResource("3_jsrh8")]
+position = Vector2(554, 209)
+
+[node name="Node2D6" parent="." unique_id=75540610 instance=ExtResource("4_iei0n")]
+position = Vector2(692, 272)
+
+[node name="Node2D7" parent="." unique_id=1589144236 instance=ExtResource("5_sapi2")]
+position = Vector2(629, 332)
+
+[node name="Node2D8" parent="." unique_id=123281917 instance=ExtResource("5_sapi2")]
+position = Vector2(731, 337)
+
+[node name="Node2D9" parent="." unique_id=1284601090 instance=ExtResource("5_sapi2")]
+position = Vector2(683, 391)

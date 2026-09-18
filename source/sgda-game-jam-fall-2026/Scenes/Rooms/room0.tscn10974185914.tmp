@@ -7,19 +7,11 @@
 [sub_resource type="Resource" id="Resource_i84gn"]
 script = ExtResource("2_i84gn")
 id = "room1"
-enter_side = 3
-metadata/_custom_type_script = "uid://kh06467o6o7c"
-
-[sub_resource type="Resource" id="Resource_i70oh"]
-script = ExtResource("2_i84gn")
-id = "room2"
-enter_side = 0
 metadata/_custom_type_script = "uid://kh06467o6o7c"
 
 [node name="Room0" type="Node2D" unique_id=1319993212]
 script = ExtResource("1_xuuog")
 top = SubResource("Resource_i84gn")
-right = SubResource("Resource_i70oh")
 
 [node name="Node2D" parent="." unique_id=2086126590 instance=ExtResource("2_wyi3d")]
 position = Vector2(1093, 92)

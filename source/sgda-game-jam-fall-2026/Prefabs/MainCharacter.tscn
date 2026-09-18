@@ -6,14 +6,12 @@
 [sub_resource type="CircleShape2D" id="CircleShape2D_guh3l"]
 radius = 20.0
 
-[node name="MainCharacter" type="Node2D" unique_id=902630964]
-
-[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=1226192143 node_paths=PackedStringArray("Sprite")]
+[node name="CharacterBody2D" type="CharacterBody2D" unique_id=1226192143]
 script = ExtResource("1_jvtun")
-Sprite = NodePath("Player Sprite")
+MovementSpeed = 200.0
 
-[node name="Player Sprite" type="Sprite2D" parent="CharacterBody2D" unique_id=1048852850]
+[node name="Player Sprite" type="Sprite2D" parent="." unique_id=1048852850]
 texture = ExtResource("1_uo0ar")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=6420865]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=6420865]
 shape = SubResource("CircleShape2D_guh3l")
