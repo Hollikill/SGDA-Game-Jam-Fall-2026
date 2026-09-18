@@ -2,12 +2,10 @@
 
 [ext_resource type="Texture2D" uid="uid://cj8h3mq4ota48" path="res://Resources/tree002.png" id="1_r1bdk"]
 
-[node name="Node2D" type="Node2D" unique_id=2086126590]
+[node name="Tree002" type="Sprite2D" unique_id=1002490319]
+texture = ExtResource("1_r1bdk")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=392492203]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D" unique_id=1204698849]
 polygon = PackedVector2Array(47, -10, 25, 4, 26, 27, 29, 56, 52, 71, 25, 86, -15, 92, -44, 79, -36, 59, -21, 54, -21, 18, -52, -7, -43, -20, -54, -55, -16, -79, 16, -79, 39, -84, 53, -60, 53, -26)
-
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1002490319]
-texture = ExtResource("1_r1bdk")

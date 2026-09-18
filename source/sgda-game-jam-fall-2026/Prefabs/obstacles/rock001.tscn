@@ -2,16 +2,10 @@
 
 [ext_resource type="Texture2D" uid="uid://cdyqdywtqtnhy" path="res://Resources/rock001.png" id="1_dp463"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_guh3l"]
-size = Vector2(68, 51)
-
-[node name="Node2D" type="Node2D" unique_id=2086126590]
+[node name="Rock001" type="Sprite2D" unique_id=1002490319]
+texture = ExtResource("1_dp463")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=392492203]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=442114243]
-position = Vector2(0, -1.5)
-shape = SubResource("RectangleShape2D_guh3l")
-
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1002490319]
-texture = ExtResource("1_dp463")
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D" unique_id=6110794]
+polygon = PackedVector2Array(22, -18, 28, -9, 30, 4, 34, 10, 31, 13, 26, 13, 21, 15, 18, 20, 10, 18, 5, 20, 1, 17, -9, 15, -14, 21, -31, 17, -32, 10, -23, 0, -17, -10, -7, -21, 9, -25, 15, -24)

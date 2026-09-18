@@ -23,6 +23,7 @@ right = SubResource("Resource_i70oh")
 
 [node name="Node2D" parent="." unique_id=2086126590 instance=ExtResource("2_wyi3d")]
 position = Vector2(1093, 92)
+scale = Vector2(-1, 1)
 
 [node name="Node2D2" parent="." unique_id=1815399218 instance=ExtResource("2_wyi3d")]
 position = Vector2(128, 110)
@@ -35,3 +36,4 @@ position = Vector2(226, 543)
 
 [node name="Node2D5" parent="." unique_id=205754104 instance=ExtResource("2_wyi3d")]
 position = Vector2(149, 571)
+scale = Vector2(-1, 1)

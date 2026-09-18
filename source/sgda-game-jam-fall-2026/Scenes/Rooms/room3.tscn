@@ -26,15 +26,18 @@ left = SubResource("Resource_rtayk")
 
 [node name="Node2D" parent="." unique_id=2086126590 instance=ExtResource("3_jsrh8")]
 position = Vector2(534, 407)
+scale = Vector2(-1, 1)
 
 [node name="Node2D2" parent="." unique_id=972461338 instance=ExtResource("3_jsrh8")]
 position = Vector2(678, 493)
+scale = Vector2(-1, 1)
 
 [node name="Node2D3" parent="." unique_id=298176932 instance=ExtResource("3_jsrh8")]
 position = Vector2(807, 293)
 
 [node name="Node2D4" parent="." unique_id=1616051025 instance=ExtResource("3_jsrh8")]
 position = Vector2(676, 111)
+scale = Vector2(-1, 1)
 
 [node name="Node2D5" parent="." unique_id=1889108661 instance=ExtResource("3_jsrh8")]
 position = Vector2(554, 209)
@@ -47,6 +50,7 @@ position = Vector2(629, 332)
 
 [node name="Node2D8" parent="." unique_id=123281917 instance=ExtResource("5_sapi2")]
 position = Vector2(731, 337)
+scale = Vector2(-1, 1)
 
 [node name="Node2D9" parent="." unique_id=1284601090 instance=ExtResource("5_sapi2")]
 position = Vector2(683, 391)

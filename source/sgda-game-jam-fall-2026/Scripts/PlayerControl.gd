@@ -12,8 +12,9 @@ func _ready() -> void:
 func _physics_process(delta: float) -> void:
 	# handle player movement input
 	var direction: Vector2 = Input.get_vector("game_left", "game_right", "game_up", "game_down")
-	var motion: Vector2 = direction * MovementSpeed * delta;
-	move_and_collide(motion)
+	var motion: Vector2 = direction * MovementSpeed;
+	velocity = motion;
+	move_and_slide()
 	
 	# prevent from exiting the borders of the screen
 	var sprite_size = Sprite.texture.get_size()/2;

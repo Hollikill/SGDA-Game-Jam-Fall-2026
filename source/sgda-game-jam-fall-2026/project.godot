@@ -29,6 +29,10 @@ window/stretch/aspect="expand"
 
 project/assembly_name="SGDA Game Jam Fall 2026"
 
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/MirrorNodeHotkey/plugin.cfg")
+
 [input]
 
 game_left={

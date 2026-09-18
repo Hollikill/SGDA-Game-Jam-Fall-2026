@@ -27,12 +27,14 @@ right = SubResource("Resource_w786c")
 
 [node name="Node2D" parent="." unique_id=2086126590 instance=ExtResource("2_dsn0a")]
 position = Vector2(1020, 413)
+scale = Vector2(-1, 1)
 
 [node name="Node2D2" parent="." unique_id=1815399218 instance=ExtResource("2_dsn0a")]
 position = Vector2(531, 151)
 
 [node name="Node2D3" parent="." unique_id=766564833 instance=ExtResource("2_dsn0a")]
 position = Vector2(378, 473)
+scale = Vector2(-1, 1)
 
 [node name="Node2D4" parent="." unique_id=289162036 instance=ExtResource("2_dsn0a")]
 position = Vector2(1049, 311)
@@ -42,9 +44,11 @@ position = Vector2(1057, 519)
 
 [node name="Node2D6" parent="." unique_id=695673484 instance=ExtResource("4_i70oh")]
 position = Vector2(449, 191)
+scale = Vector2(-1, 1)
 
 [node name="Node2D7" parent="." unique_id=1439148355 instance=ExtResource("4_i70oh")]
 position = Vector2(470, 141)
+scale = Vector2(-1, 1)
 
 [node name="Node2D8" parent="." unique_id=1700508357 instance=ExtResource("4_i70oh")]
 position = Vector2(590, 177)

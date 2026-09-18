@@ -25,9 +25,12 @@ left = SubResource("Resource_xuuog")
 
 [node name="Node2D" parent="." unique_id=2086126590 instance=ExtResource("3_1lkfe")]
 position = Vector2(953, 487)
+scale = Vector2(-1, 1)
 
 [node name="Node2D2" parent="." unique_id=536839358 instance=ExtResource("4_vblew")]
 position = Vector2(357, 461)
+scale = Vector2(-1, 1)
 
 [node name="Node2D3" parent="." unique_id=1379144206 instance=ExtResource("5_0igsr")]
 position = Vector2(803, 202)
+scale = Vector2(-1, 1)
