@@ -1,3 +1,4 @@
+class_name AnomalyVersion
 extends Node
 
 @export var anomaly_version = -1;

@@ -1,6 +1,14 @@
 [gd_scene format=3 uid="uid://r0wv556m55pc"]
 
 [ext_resource type="Texture2D" uid="uid://ol6d7o2yjhxh" path="res://Resources/rock002.png" id="1_hwbaf"]
+[ext_resource type="Script" uid="uid://c844xk21lifky" path="res://Scripts/Obstacle.gd" id="2_t17w2"]
 
 [node name="Rock002" type="Sprite2D" unique_id=1002490319]
+z_index = -1
 texture = ExtResource("1_hwbaf")
+script = ExtResource("2_t17w2")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1726130357]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D" unique_id=2137182034]
+polygon = PackedVector2Array(17, 6, 13, -8, 1, -13, -16, -4, -15, 8, 1, 9)

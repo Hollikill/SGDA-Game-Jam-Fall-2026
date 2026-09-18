@@ -7,7 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://dydetwjs3uabm" path="res://Resources/player/sprite_3.png" id="6_m1igg"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_flsnp"]
-radius = 45.0
+radius = 26.0
 height = 120.0
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_y8rlq"]

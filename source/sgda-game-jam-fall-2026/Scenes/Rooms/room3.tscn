@@ -8,19 +8,20 @@
 
 [sub_resource type="Resource" id="Resource_owv72"]
 script = ExtResource("2_w786c")
-id = "room2"
+room_id = "room2"
 enter_side = 2
 metadata/_custom_type_script = "uid://kh06467o6o7c"
 
 [sub_resource type="Resource" id="Resource_rtayk"]
 script = ExtResource("2_w786c")
-id = "room1"
+room_id = "room1"
 enter_side = 1
-version = 1
+version_id = 1
 metadata/_custom_type_script = "uid://kh06467o6o7c"
 
 [node name="Room3" type="Node2D" unique_id=547036628]
 script = ExtResource("1_px80b")
+room_id = "room3"
 bottom = SubResource("Resource_owv72")
 left = SubResource("Resource_rtayk")
 

@@ -1,5 +1,6 @@
 extends Node
 
+@export var room_id: String = "";
 @export var top: EntranceMethod
 @export var bottom: EntranceMethod
 @export var left: EntranceMethod
@@ -11,6 +12,7 @@ var player = null;
 const room_enter_margin = 65;
 
 func _ready() -> void:
+	GlobalPersistant.current_loaded_room = room_id;
 	player = player_scene.instantiate();
 	add_child(player)
 	player.global_position = GlobalPersistant.scene_transition_info.player_position;
@@ -41,5 +43,5 @@ func _process(_delta: float) -> void:
 func _switch_room(entrance_method: EntranceMethod):
 	GlobalPersistant.scene_transition_info.player_position = player.global_position;
 	GlobalPersistant.scene_transition_info.entrance_side = entrance_method.enter_side;
-	GlobalPersistant.scene_transition_info.version_id = entrance_method.version;
-	get_tree().change_scene_to_file("Scenes/Rooms/"+entrance_method.id+".tscn");
+	GlobalPersistant.scene_transition_info.version_id = entrance_method.version_id;
+	get_tree().change_scene_to_file("Scenes/Rooms/"+entrance_method.room_id+".tscn");

@@ -1,11 +1,21 @@
 [gd_scene format=3 uid="uid://1x1qf2cyi4ig"]
 
 [ext_resource type="Texture2D" uid="uid://cj8h3mq4ota48" path="res://Resources/tree002.png" id="1_r1bdk"]
+[ext_resource type="Script" uid="uid://c844xk21lifky" path="res://Scripts/Obstacle.gd" id="2_ttag2"]
+[ext_resource type="Script" uid="uid://mx8vrp3eawff" path="res://Scripts/Anomaly.gd" id="2_uvvqd"]
 
 [node name="Tree002" type="Sprite2D" unique_id=1002490319]
+z_index = 1
 texture = ExtResource("1_r1bdk")
+script = ExtResource("2_ttag2")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=392492203]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D" unique_id=1204698849]
+polygon = PackedVector2Array(29, 56, 52, 71, 25, 86, -15, 92, -44, 79, -36, 59, -21, 54, -10, 44, 8, 42, 20, 48)
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1083734436]
+script = ExtResource("2_uvvqd")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D" unique_id=517875415]
 polygon = PackedVector2Array(47, -10, 25, 4, 26, 27, 29, 56, 52, 71, 25, 86, -15, 92, -44, 79, -36, 59, -21, 54, -21, 18, -52, -7, -43, -20, -54, -55, -16, -79, 16, -79, 39, -84, 53, -60, 53, -26)
