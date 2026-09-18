@@ -1,11 +1,12 @@
 extends CharacterBody2D
 
 @export var MovementSpeed: float = 100;
+@export var SpriteScale: float = 10;
 @onready var Sprite: AnimatedSprite2D = get_node("PlayerSprite");
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	Sprite.scale = Vector2(0.1, 0.1)
+	Sprite.scale = Vector2(1/SpriteScale, 1/SpriteScale)
 	add_to_group("player")
 
 
@@ -22,7 +23,7 @@ func _physics_process(delta: float) -> void:
 	move_and_slide()
 	
 	# prevent from exiting the borders of the screen
-	var sprite_size = Sprite.sprite_frames.get_frame_texture(Sprite.animation, Sprite.frame).get_size()/20;
+	var sprite_size = Sprite.sprite_frames.get_frame_texture(Sprite.animation, Sprite.frame).get_size()/(2*SpriteScale);
 	if (global_position.x - sprite_size.x < 0):
 		global_position.x = 0 + sprite_size.x
 	if (global_position.y - sprite_size.y < 0):
@@ -34,7 +35,7 @@ func _physics_process(delta: float) -> void:
 	
 
 func off_screen_side():
-	var sprite_size = Sprite.sprite_frames.get_frame_texture(Sprite.animation, Sprite.frame).get_size()/20;
+	var sprite_size = Sprite.sprite_frames.get_frame_texture(Sprite.animation, Sprite.frame).get_size()/(2*SpriteScale);
 	if (global_position.x - sprite_size.x <= 0):
 		return "left"
 	if (global_position.y - sprite_size.y <= 0):
