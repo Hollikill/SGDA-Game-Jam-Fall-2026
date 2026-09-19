@@ -49,3 +49,5 @@ func _process(delta: float) -> void:
 			modulate.a = max(modulate.a-(((1-min_transparency)/seconds_to_fade)*delta), min_transparency)
 		else:
 			modulate.a = min(modulate.a+(((1-min_transparency)/seconds_to_fade)*delta), 1)
+	if mouse_on:
+		GlobalPersistant.set_cursor(GlobalPersistant.CursorType.ATTACK);
