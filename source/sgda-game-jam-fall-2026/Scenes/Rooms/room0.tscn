@@ -3,6 +3,8 @@
 [ext_resource type="Script" uid="uid://cmhfdvscu61c2" path="res://Scripts/RoomController.gd" id="1_xuuog"]
 [ext_resource type="Script" uid="uid://kh06467o6o7c" path="res://Scripts/EntranceMethod.gd" id="2_i84gn"]
 [ext_resource type="PackedScene" uid="uid://ih0atrudmxrj" path="res://Prefabs/obstacles/rock001.tscn" id="2_wyi3d"]
+[ext_resource type="PackedScene" uid="uid://cv44ykmxwk481" path="res://Prefabs/obstacles/house001.tscn" id="4_i84gn"]
+[ext_resource type="PackedScene" uid="uid://dg4q6nyhdgy7d" path="res://Prefabs/obstacles/chest001.tscn" id="5_r3xn8"]
 
 [sub_resource type="Resource" id="Resource_i84gn"]
 script = ExtResource("2_i84gn")
@@ -19,6 +21,7 @@ metadata/_custom_type_script = "uid://kh06467o6o7c"
 [sub_resource type="Resource" id="Resource_rak3q"]
 script = ExtResource("2_i84gn")
 room_id = "room3"
+enter_side = null
 metadata/_custom_type_script = "uid://kh06467o6o7c"
 
 [node name="Room0" type="Node2D" unique_id=1319993212]
@@ -44,3 +47,10 @@ position = Vector2(226, 543)
 [node name="Node2D5" parent="." unique_id=205754104 instance=ExtResource("2_wyi3d")]
 position = Vector2(149, 571)
 scale = Vector2(-1, 1)
+
+[node name="HouseOutside000" parent="." unique_id=293732730 instance=ExtResource("4_i84gn")]
+position = Vector2(616, 299)
+
+[node name="chest001" parent="." unique_id=1002490319 instance=ExtResource("5_r3xn8")]
+z_index = 0
+position = Vector2(568, 328)

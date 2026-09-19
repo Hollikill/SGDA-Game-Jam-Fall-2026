@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dbfj4c1c647e6"
-path="res://.godot/imported/room2.png-fb989aca5cac185a7f4ab8647ad40908.ctex"
+uid="uid://bkbpfsndveo4n"
+path="res://.godot/imported/house_outside_000.png-2fc35025b69962bc4329f9e5b9e3e8a0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Resources/Rooms/room2.png"
-dest_files=["res://.godot/imported/room2.png-fb989aca5cac185a7f4ab8647ad40908.ctex"]
+source_file="res://Resources/house_outside_000.png"
+dest_files=["res://.godot/imported/house_outside_000.png-2fc35025b69962bc4329f9e5b9e3e8a0.ctex"]
 
 [params]
 
