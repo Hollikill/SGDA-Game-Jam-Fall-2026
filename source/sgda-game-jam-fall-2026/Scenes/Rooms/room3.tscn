@@ -31,9 +31,6 @@ bottom = SubResource("Resource_owv72")
 left = SubResource("Resource_rtayk")
 bottomleft = SubResource("Resource_p7hsn")
 
-[node name="Background" type="Sprite2D" parent="." unique_id=712355000]
-position = Vector2(640, 360)
-
 [node name="Node2D" parent="." unique_id=2086126590 instance=ExtResource("3_jsrh8")]
 position = Vector2(534, 407)
 scale = Vector2(-1, 1)

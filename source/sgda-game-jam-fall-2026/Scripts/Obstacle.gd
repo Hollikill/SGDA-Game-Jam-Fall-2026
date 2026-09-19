@@ -23,7 +23,6 @@ func _ready():
 
 func _on_mouse_enter():
 	mouse_on = true;
-	print("obstacle enter")
 	var tween = create_tween()
 	tween.set_parallel(true)
 	tween.tween_property(self, "scale", base_texture_scale * (1 + (.05/sprite_scale_offset)), 0.15)
@@ -50,3 +49,5 @@ func _process(delta: float) -> void:
 			modulate.a = max(modulate.a-(((1-min_transparency)/seconds_to_fade)*delta), min_transparency)
 		else:
 			modulate.a = min(modulate.a+(((1-min_transparency)/seconds_to_fade)*delta), 1)
+	if mouse_on:
+		GlobalPersistant.set_cursor(GlobalPersistant.CursorType.ATTACK);

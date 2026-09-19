@@ -12,7 +12,7 @@ extends Node
 
 var entrancesIDs: Array[String] = []
 
-@onready var background: Sprite2D = $Background
+@onready var background: Sprite2D = Sprite2D.new();
 
 var player_scene = preload("res://Prefabs/MainCharacter.tscn");
 var player = null;
@@ -30,6 +30,9 @@ const OVERLAY_COLOR := Color(0.75, 0.75, 1, 1)
 
 func _ready() -> void:
 	GlobalPersistant.current_loaded_room = room_id;
+	add_child(background);
+	background.z_index = -999;
+	background.position = GlobalPersistant.screen_size/2;
 	
 	entrancesIDs = ["", "", "", "", room_id, "", "", "", ""]
 	if(topleft != null): 

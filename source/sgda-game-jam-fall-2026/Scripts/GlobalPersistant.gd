@@ -70,7 +70,25 @@ func is_complete(room_id: String):
 	return room_data[room_id]["completed_versions"].size()+1 >= room_data[room_id]["used_versions"].size();
 
 #################################
+# Manage Mouse Cursors
+
+enum CursorType {NORMAL, ATTACK}
+var current_cursor = CursorType.NORMAL;
+
+func set_cursor(type: CursorType):
+	if type > current_cursor:
+		current_cursor = type;
+
+#################################
 func _ready() -> void:
 	build_room_map();
 	loading_rooms = false;
 	pass
+	
+func _process(delta: float) -> void:
+	match current_cursor:
+		CursorType.NORMAL:
+			Input.set_custom_mouse_cursor(null);
+		CursorType.ATTACK:
+			Input.set_custom_mouse_cursor(load("res://Resources/cursors/attack.png"));
+	current_cursor = CursorType.NORMAL;
