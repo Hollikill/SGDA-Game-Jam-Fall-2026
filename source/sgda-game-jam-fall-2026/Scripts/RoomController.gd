@@ -12,7 +12,7 @@ extends Node
 
 var entrancesIDs: Array[String] = []
 
-@onready var background: Sprite2D = $Background
+@onready var background: Sprite2D = Sprite2D.new();
 
 var player_scene = preload("res://Prefabs/MainCharacter.tscn");
 var player = null;
@@ -25,6 +25,9 @@ var is_popup_open: bool = false
 
 func _ready() -> void:
 	GlobalPersistant.current_loaded_room = room_id;
+	add_child(background);
+	background.z_index = -999;
+	background.position = GlobalPersistant.screen_size/2;
 	
 	entrancesIDs = ["", "", "", "", room_id, "", "", "", ""]
 	if(topleft != null): 

@@ -28,9 +28,6 @@ top = SubResource("Resource_i84gn")
 right = SubResource("Resource_i70oh")
 topright = SubResource("Resource_rak3q")
 
-[node name="Background" type="Sprite2D" parent="." unique_id=541313282]
-position = Vector2(640, 360)
-
 [node name="Node2D" parent="." unique_id=2086126590 instance=ExtResource("2_wyi3d")]
 position = Vector2(1093, 92)
 scale = Vector2(-1, 1)

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://csmoghyvwtyhq"
-path="res://.godot/imported/room3.png-34b8832e4ee227a2e313c2b5400b66ed.ctex"
+path="res://.godot/imported/room3.png-b6a3272ac075212f4f67eca7b8ae58cd.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Resources/Rooms/room3.png"
-dest_files=["res://.godot/imported/room3.png-34b8832e4ee227a2e313c2b5400b66ed.ctex"]
+source_file="res://Resources/rooms/room3.png"
+dest_files=["res://.godot/imported/room3.png-b6a3272ac075212f4f67eca7b8ae58cd.ctex"]
 
 [params]
 
