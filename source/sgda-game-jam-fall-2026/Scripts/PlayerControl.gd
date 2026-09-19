@@ -17,7 +17,7 @@ func _physics_process(delta: float) -> void:
 	var motion: Vector2 = direction * MovementSpeed;
 	velocity = motion;
 	if(velocity.length() > 0):
-		pass
+		pass #TODO: Add walk animations
 	else: 
 		Sprite.play("idle")
 	move_and_slide()

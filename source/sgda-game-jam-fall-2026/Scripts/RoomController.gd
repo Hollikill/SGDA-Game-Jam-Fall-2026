@@ -21,7 +21,12 @@ const room_enter_margin = 65;
 
 var popup_layer: CanvasLayer
 var popup_textures: Array[TextureRect] = []
+var popup_containers: Array[PanelContainer] = []
 var is_popup_open: bool = false
+
+const BORDER_COLOR := Color(0.2, 0.1, 1, 1)
+const BORDER_WIDTH := 3
+const OVERLAY_COLOR := Color(0.75, 0.75, 1, 1)
 
 func _ready() -> void:
 	GlobalPersistant.current_loaded_room = room_id;
@@ -52,16 +57,25 @@ func _ready() -> void:
 	popup_layer.visible = false;
 	var grid = GridContainer.new()
 	grid.columns = 3
-	grid.size = GlobalPersistant.screen_size
+	grid.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
+	grid.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+	grid.size_flags_vertical = Control.SIZE_EXPAND_FILL
+	grid.add_theme_constant_override("h_separation", 0)
+	grid.add_theme_constant_override("v_separation", 0)
 	popup_layer.add_child(grid)
-	for i in range(1, 10): 
+	for i in range(0, 9): 
 		var tex = TextureRect.new()
 		tex.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
 		tex.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_CENTERED
 		tex.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 		tex.size_flags_vertical = Control.SIZE_EXPAND_FILL
 		tex.visible = true
-		grid.add_child(tex)
+		var container = PanelContainer.new()
+		container.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+		container.size_flags_vertical = Control.SIZE_EXPAND_FILL
+		popup_containers.append(container)
+		popup_containers[i].add_child(tex)
+		grid.add_child(popup_containers[i])
 		popup_textures.append(tex)
 
 	player = player_scene.instantiate();
@@ -92,6 +106,38 @@ func load_room_background() -> void:
 	else:
 		push_error("RoomController Error: Background image missing at " + path)
 
+func recalculateBorders(): 
+	for i in range(0, 9): 
+		var style_box := StyleBoxFlat.new()
+		style_box.bg_color = Color(0, 0, 0, 0)
+		style_box.border_color = BORDER_COLOR
+		if(popup_textures[i].texture == null or popup_containers[i] == null or !GlobalPersistant.is_complete(entrancesIDs[i])): 
+			var empty_style := StyleBoxEmpty.new()
+			popup_containers[i].add_theme_stylebox_override("panel", empty_style)
+			continue
+		
+		if i in [0, 3, 6] or (entrancesIDs[i - 1] != "" and GlobalPersistant.is_complete(entrancesIDs[i - 1])):
+			style_box.border_width_left = 0
+		else:
+			style_box.border_width_left = BORDER_WIDTH
+		
+		if i in [2, 5, 8] or (entrancesIDs[i + 1] != "" and GlobalPersistant.is_complete(entrancesIDs[i + 1])):
+			style_box.border_width_right = 0
+		else:
+			style_box.border_width_right = BORDER_WIDTH
+		
+		if i in [0, 1, 2] or (entrancesIDs[i - 3] != "" and GlobalPersistant.is_complete(entrancesIDs[i - 3])):
+			style_box.border_width_top = 0
+		else:
+			style_box.border_width_top = BORDER_WIDTH
+		
+		if i in [6, 7, 8] or (entrancesIDs[i + 3] != "" and GlobalPersistant.is_complete(entrancesIDs[i + 3])):
+			style_box.border_width_bottom = 0
+		else:
+			style_box.border_width_bottom = BORDER_WIDTH
+				
+		popup_containers[i].add_theme_stylebox_override("panel", style_box)
+
 func toggle_popup() -> void:
 	is_popup_open = !is_popup_open
 	popup_layer.visible = is_popup_open
@@ -106,9 +152,12 @@ func toggle_popup() -> void:
 			if entrancesIDs[i] != "":
 				var path = "res://Resources/Rooms/"+entrancesIDs[i]+".png"
 				var img = load(path)
+				if(GlobalPersistant.is_complete(entrancesIDs[i])): 
+					slot.modulate = OVERLAY_COLOR
 				slot.texture = img
 			else:
 				slot.texture = null
+		recalculateBorders()
 	else:
 		set_process(true)
 		player.set_physics_process(true)
