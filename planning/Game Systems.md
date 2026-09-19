@@ -79,3 +79,8 @@
 
 1. loop music, select track depending on rooms completed, fade between tracks
 2. allow other systems to play sfx
+
+## Room background loader
+
+1. load room backgrounds from 1280x720 png files and attach them to room scene roots
+2. allow other scripts to queury a room ID to get the room background .png
