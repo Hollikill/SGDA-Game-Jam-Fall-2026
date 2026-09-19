@@ -63,11 +63,11 @@ func complete_anomaly():
 	if (room_data[current_loaded_room]["completed_versions"].find(scene_transition_info.version_id) == -1):
 		room_data[current_loaded_room]["completed_versions"].append(scene_transition_info.version_id);
 
-func is_complete(room_id: int):
+func is_complete(room_id: String):
 	if (!room_data.has(room_id)): room_data[room_id] = {};
 	if (!room_data[room_id].has("used_versions")): room_data[room_id]["used_versions"] = [];
 	if (!room_data[room_id].has("completed_versions")): room_data[room_id]["completed_versions"] = [];
-	return room_data[room_id]["completed_versions"].length() >= room_data[room_id]["used_versions"].length();
+	return room_data[room_id]["completed_versions"].length()+1 >= room_data[room_id]["used_versions"].length();
 
 #################################
 func _ready() -> void:
