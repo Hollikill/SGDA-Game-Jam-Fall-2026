@@ -88,7 +88,7 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	match current_cursor:
 		CursorType.NORMAL:
-			Input.set_custom_mouse_cursor(load("res://Resources/cursors/normal.png"));
+			Input.set_custom_mouse_cursor(null);
 		CursorType.ATTACK:
 			Input.set_custom_mouse_cursor(load("res://Resources/cursors/attack.png"));
 	current_cursor = CursorType.NORMAL;
