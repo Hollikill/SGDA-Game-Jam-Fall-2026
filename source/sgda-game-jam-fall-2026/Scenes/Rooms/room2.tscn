@@ -20,7 +20,7 @@ metadata/_custom_type_script = "uid://kh06467o6o7c"
 
 [sub_resource type="Resource" id="Resource_ci7o5"]
 script = ExtResource("2_owv72")
-room_id = "room2"
+room_id = "room1"
 metadata/_custom_type_script = "uid://kh06467o6o7c"
 
 [node name="Room2" type="Node2D" unique_id=391693953]

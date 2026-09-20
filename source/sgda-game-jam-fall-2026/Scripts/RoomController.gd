@@ -66,15 +66,24 @@ func _ready() -> void:
 	for i in range(0, 9): 
 		var tex = TextureRect.new()
 		tex.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
-		tex.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_CENTERED
+		tex.stretch_mode = TextureRect.STRETCH_SCALE
 		tex.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 		tex.size_flags_vertical = Control.SIZE_EXPAND_FILL
 		tex.visible = true
 		var container = PanelContainer.new()
 		container.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 		container.size_flags_vertical = Control.SIZE_EXPAND_FILL
+		var white_bg := StyleBoxFlat.new()
+		white_bg.set_content_margin_all(0)
+		white_bg.bg_color = Color(1, 1, 1, 1)
+		container.add_theme_stylebox_override("panel", white_bg)
 		popup_containers.append(container)
 		popup_containers[i].add_child(tex)
+		var border_overlay = Panel.new()
+		border_overlay.mouse_filter = Control.MOUSE_FILTER_IGNORE
+		border_overlay.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+		border_overlay.size_flags_vertical = Control.SIZE_EXPAND_FILL
+		popup_containers[i].add_child(border_overlay)
 		grid.add_child(popup_containers[i])
 		popup_textures.append(tex)
 
@@ -108,12 +117,13 @@ func load_room_background() -> void:
 
 func recalculateBorders(): 
 	for i in range(0, 9): 
+		var overlay = popup_containers[i].get_child(1) as Panel
 		var style_box := StyleBoxFlat.new()
+		style_box.set_content_margin_all(0)
 		style_box.bg_color = Color(0, 0, 0, 0)
 		style_box.border_color = BORDER_COLOR
 		if(popup_textures[i].texture == null or popup_containers[i] == null or !GlobalPersistant.is_complete(entrancesIDs[i])): 
-			var empty_style := StyleBoxEmpty.new()
-			popup_containers[i].add_theme_stylebox_override("panel", empty_style)
+			overlay.add_theme_stylebox_override("panel", style_box)
 			continue
 		
 		if i in [0, 3, 6] or (entrancesIDs[i - 1] != "" and GlobalPersistant.is_complete(entrancesIDs[i - 1])):
@@ -136,7 +146,7 @@ func recalculateBorders():
 		else:
 			style_box.border_width_bottom = BORDER_WIDTH
 				
-		popup_containers[i].add_theme_stylebox_override("panel", style_box)
+		overlay.add_theme_stylebox_override("panel", style_box)
 
 func toggle_popup() -> void:
 	is_popup_open = !is_popup_open
