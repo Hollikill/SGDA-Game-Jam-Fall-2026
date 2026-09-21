@@ -190,7 +190,7 @@ func _unhandled_input(event: InputEvent) -> void:
 			toggle_popup()
 
 func _switch_room(entrance_method: EntranceMethod):
-	GlobalPersistant.scene_transition_info.player_position = player.global_position;
-	GlobalPersistant.scene_transition_info.entrance_side = entrance_method.enter_side;
-	GlobalPersistant.scene_transition_info.version_id = entrance_method.version_id;
-	get_tree().change_scene_to_file("Scenes/Rooms/"+entrance_method.room_id+".tscn");
+	GlobalPersistant.scene_transition_info.player_position = player.global_position
+	GlobalPersistant.scene_transition_info.entrance_side = entrance_method.enter_side
+	GlobalPersistant.scene_transition_info.version_id = entrance_method.version_id
+	get_tree().change_scene_to_file("Scenes/Rooms/"+entrance_method.room_id+".tscn")
