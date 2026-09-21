@@ -89,7 +89,7 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("3_hfhi6")
 }],
-"loop": 0,
+"loop": 1,
 "name": &"idleleft",
 "speed": 4.0
 }, {
@@ -106,7 +106,7 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("4_in6tk")
 }],
-"loop": 0,
+"loop": 1,
 "name": &"idleright",
 "speed": 4.0
 }, {
@@ -223,7 +223,7 @@ MovementSpeed = 200.0
 
 [node name="PlayerSprite" type="AnimatedSprite2D" parent="." unique_id=1638782628]
 sprite_frames = SubResource("SpriteFrames_y8rlq")
-animation = &"walkleft1"
+animation = &"idleleft"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=6420865]
 shape = SubResource("CapsuleShape2D_flsnp")
