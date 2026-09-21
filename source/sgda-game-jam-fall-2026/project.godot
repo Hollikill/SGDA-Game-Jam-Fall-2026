@@ -17,6 +17,7 @@ config/features=PackedStringArray("4.7", "GL Compatibility")
 [autoload]
 
 GlobalPersistant="*uid://bjh4ohexo0nks"
+GlobalAudio="*uid://by4pqw2jujwoh"
 
 [display]
 
