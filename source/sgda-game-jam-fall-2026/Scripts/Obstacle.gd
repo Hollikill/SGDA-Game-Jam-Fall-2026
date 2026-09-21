@@ -56,4 +56,4 @@ func _process(delta: float) -> void:
 		GlobalPersistant.set_cursor(GlobalPersistant.CursorType.ATTACK);
 	if mouse_on and Input.is_action_just_pressed("game_attack"):
 		var player = get_tree().get_first_node_in_group("player")
-		player.setupPathfinding(get_global_mouse_position(), doNothing)
+		player.setupPathfinding(doNothing, self)

@@ -20,4 +20,4 @@ func complete_anamoly():
 func _process(_delta: float) -> void:
 	if mouse_on and Input.is_action_just_pressed("game_attack"):
 		var player = get_tree().get_first_node_in_group("player")
-		player.setupPathfinding(get_global_mouse_position(), complete_anamoly)
+		player.setupPathfinding(complete_anamoly, self)

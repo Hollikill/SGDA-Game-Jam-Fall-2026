@@ -5,12 +5,14 @@ extends CharacterBody2D
 @onready var Sprite: AnimatedSprite2D = get_node("PlayerSprite");
 
 var pathfinding = false
-var pathfindTo: Vector2
 var lastLocation: Vector2
 var timeStuck = 0
 var patience = 3
-var distanceToFind = 150
+var distanceToFind = 50
+var toleranceDistance = 150
 var onReachFunc: Callable = func(): pass
+var proximityRay: RayCast2D
+var pathfindTarget
 
 var facingLeft = false
 
@@ -29,20 +31,20 @@ func playAnimation(anim: String):
 		return
 	Sprite.play(anim)
 
-func setupPathfinding(destination: Vector2, callback: Callable) -> void: 
+func setupPathfinding(callback: Callable, target: Node2D) -> void: 
 	pathfinding = true
-	pathfindTo = destination
 	onReachFunc = callback
+	pathfindTarget = target
 
 func pathfind(delta: float): 
-	if global_position.distance_to(pathfindTo) < distanceToFind:
+	var direction = (pathfindTarget.global_position - global_position).normalized() 
+	velocity = direction * MovementSpeed
+	var pos_before_move = global_position
+	if (pathfindTarget.global_position.distance_to(global_position) <= toleranceDistance):
 		pathfinding = false
 		timeStuck = 0
 		onReachFunc.call()
 		return
-	var direction = (pathfindTo - global_position).normalized() 
-	velocity = direction * MovementSpeed
-	var pos_before_move = global_position
 	move_and_slide()
 	var distance_moved = pos_before_move.distance_to(global_position)
 	if distance_moved < (MovementSpeed * delta) * 0.5:
@@ -50,8 +52,14 @@ func pathfind(delta: float):
 	else:
 		timeStuck = 0.0
 	if(timeStuck > 0.5): 
-		pathfinding = false
-		playAnimation("stuck")
+		if(pathfindTarget.global_position.distance_to(global_position) > toleranceDistance): 
+			pathfinding = false
+			playAnimation("stuck")
+		else: 
+			pathfinding = false
+			timeStuck = 0
+			onReachFunc.call()
+			return
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta: float) -> void:

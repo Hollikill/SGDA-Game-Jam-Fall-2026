@@ -8,10 +8,6 @@
 [ext_resource type="Texture2D" uid="uid://dvyw76ngupmwq" path="res://Resources/player/idle/left/sprite_2.png" id="4_mcusn"]
 [ext_resource type="Texture2D" uid="uid://c5mewau0cqwri" path="res://Resources/player/idle/right/sprite_2.png" id="5_8w0nq"]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_flsnp"]
-radius = 26.0
-height = 120.0
-
 [sub_resource type="SpriteFrames" id="SpriteFrames_y8rlq"]
 animations = [{
 "frames": [{
@@ -43,13 +39,17 @@ animations = [{
 "speed": 4.0
 }]
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_flsnp"]
+radius = 26.0
+height = 120.0
+
 [node name="CharacterBody2D" type="CharacterBody2D" unique_id=1226192143]
 script = ExtResource("1_jvtun")
 MovementSpeed = 200.0
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=6420865]
-shape = SubResource("CapsuleShape2D_flsnp")
-
 [node name="PlayerSprite" type="AnimatedSprite2D" parent="." unique_id=1638782628]
 sprite_frames = SubResource("SpriteFrames_y8rlq")
 animation = &"idleleft"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=6420865]
+shape = SubResource("CapsuleShape2D_flsnp")
