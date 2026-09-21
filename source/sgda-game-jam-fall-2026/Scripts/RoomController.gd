@@ -175,13 +175,13 @@ func toggle_popup() -> void:
 
 func _process(_delta: float) -> void:
 	var offScreenSide = player.off_screen_side()
-	if (offScreenSide == "left" && left != null):
+	if (offScreenSide == "left" and left != null):
 		_switch_room(left)
-	if (offScreenSide == "top" && top != null):
+	if ((offScreenSide == "top" and !GlobalPersistant.hasFlag("UD_flip") and top != null) or (offScreenSide == "bottom" and GlobalPersistant.hasFlag("UD_flip") and bottom != null)):
 		_switch_room(top)
-	if (offScreenSide == "right" && right != null):
+	if (offScreenSide == "right" and right != null):
 		_switch_room(right)
-	if (offScreenSide == "bottom" && bottom != null):
+	if ((offScreenSide == "bottom" and !GlobalPersistant.hasFlag("UD_flip") and bottom != null) or (offScreenSide == "top" and GlobalPersistant.hasFlag("UD_flip") and top != null)):
 		_switch_room(bottom)
 
 func _unhandled_input(event: InputEvent) -> void:

@@ -92,3 +92,15 @@ func _process(_delta: float) -> void:
 		CursorType.ATTACK:
 			Input.set_custom_mouse_cursor(load("res://Resources/cursors/attack.png"));
 	current_cursor = CursorType.NORMAL;
+
+var flags: Array[String]
+
+func giveFlag(flag: String): 
+	if!(flag in flags): 
+		flags.append(flag)
+
+func hasFlag(flag: String): 
+	return flag in flags
+
+func removeFlag(flag: String): 
+	flags.erase(flag)
