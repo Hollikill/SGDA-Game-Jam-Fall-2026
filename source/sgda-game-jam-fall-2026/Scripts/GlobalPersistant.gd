@@ -85,7 +85,7 @@ func _ready() -> void:
 	loading_rooms = false;
 	pass
 	
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	match current_cursor:
 		CursorType.NORMAL:
 			Input.set_custom_mouse_cursor(null);

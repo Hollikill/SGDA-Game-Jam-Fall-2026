@@ -35,6 +35,9 @@ func _on_mouse_exit():
 	tween.tween_property(self, "scale", base_texture_scale, 0.15)
 	tween.tween_property(self, "rotation", base_texture_rotation, 0.15)
 
+func doNothing(): 
+	pass
+
 func _process(delta: float) -> void:
 	if (player == null):
 		player = get_tree().get_first_node_in_group("player");
@@ -51,3 +54,6 @@ func _process(delta: float) -> void:
 			modulate.a = min(modulate.a+(((1-min_transparency)/seconds_to_fade)*delta), 1)
 	if mouse_on:
 		GlobalPersistant.set_cursor(GlobalPersistant.CursorType.ATTACK);
+	if mouse_on and Input.is_action_just_pressed("game_attack"):
+		var player = get_tree().get_first_node_in_group("player")
+		player.setupPathfinding(get_global_mouse_position(), doNothing)

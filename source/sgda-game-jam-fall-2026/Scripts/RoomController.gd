@@ -32,7 +32,7 @@ func _ready() -> void:
 	GlobalPersistant.current_loaded_room = room_id;
 	add_child(background);
 	background.z_index = -999;
-	background.position = GlobalPersistant.screen_size/2;
+	background.position = GlobalPersistant.screen_size/2.0;
 	
 	entrancesIDs = ["", "", "", "", room_id, "", "", "", ""]
 	if(topleft != null): 
@@ -95,15 +95,15 @@ func _ready() -> void:
 	
 	match GlobalPersistant.scene_transition_info.entrance_side:
 		GlobalPersistant.EnterSide.LEFT:
-			player.global_position.x = room_enter_margin;
+			player.global_position.x = room_enter_margin
 		GlobalPersistant.EnterSide.RIGHT:
-			player.global_position.x = GlobalPersistant.screen_size.x - room_enter_margin;
+			player.global_position.x = GlobalPersistant.screen_size.x - room_enter_margin
 		GlobalPersistant.EnterSide.TOP:
-			player.global_position.y = room_enter_margin;
+			player.global_position.y = room_enter_margin
 		GlobalPersistant.EnterSide.BOTTOM:
-			player.global_position.y = GlobalPersistant.screen_size.y - room_enter_margin;
+			player.global_position.y = GlobalPersistant.screen_size.y - room_enter_margin
 		GlobalPersistant.EnterSide.CENTER:
-			player.global_position = Vector2(GlobalPersistant.screen_size.x / 2, GlobalPersistant.screen_size.y / 2);
+			player.global_position = Vector2(GlobalPersistant.screen_size.x / 2.0, GlobalPersistant.screen_size.y / 2.0)
 		_:
 			pass
 
@@ -174,13 +174,14 @@ func toggle_popup() -> void:
 		player.set_process(true)
 
 func _process(_delta: float) -> void:
-	if (player.off_screen_side() == "left" && left != null):
+	var offScreenSide = player.off_screen_side()
+	if (offScreenSide == "left" && left != null):
 		_switch_room(left)
-	if (player.off_screen_side() == "top" && top != null):
+	if (offScreenSide == "top" && top != null):
 		_switch_room(top)
-	if (player.off_screen_side() == "right" && right != null):
+	if (offScreenSide == "right" && right != null):
 		_switch_room(right)
-	if (player.off_screen_side() == "bottom" && bottom != null):
+	if (offScreenSide == "bottom" && bottom != null):
 		_switch_room(bottom)
 
 func _unhandled_input(event: InputEvent) -> void:

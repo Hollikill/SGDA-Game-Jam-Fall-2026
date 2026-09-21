@@ -1,26 +1,76 @@
 extends CharacterBody2D
 
 @export var MovementSpeed: float = 100;
-@export var SpriteScale: float = 10;
+@export var SpriteScale: float = 2.5;
 @onready var Sprite: AnimatedSprite2D = get_node("PlayerSprite");
+
+var pathfinding = false
+var pathfindTo: Vector2
+var lastLocation: Vector2
+var timeStuck = 0
+var patience = 3
+var distanceToFind = 150
+var onReachFunc: Callable = func(): pass
+
+var facingLeft = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	Sprite.scale = Vector2(1/SpriteScale, 1/SpriteScale)
 	add_to_group("player")
 
+func playAnimation(anim: String): 
+	if(anim == "idle" or anim == "walk"): 
+		if(facingLeft): 
+			anim = anim + "left"
+		else: 
+			anim = anim + "right"
+	if(Sprite.animation == "stuck" or Sprite.animation == anim): 
+		return
+	Sprite.play(anim)
+
+func setupPathfinding(destination: Vector2, callback: Callable) -> void: 
+	pathfinding = true
+	pathfindTo = destination
+	onReachFunc = callback
+
+func pathfind(delta: float): 
+	if global_position.distance_to(pathfindTo) < distanceToFind:
+		pathfinding = false
+		timeStuck = 0
+		onReachFunc.call()
+		return
+	var direction = (pathfindTo - global_position).normalized() 
+	velocity = direction * MovementSpeed
+	var pos_before_move = global_position
+	move_and_slide()
+	var distance_moved = pos_before_move.distance_to(global_position)
+	if distance_moved < (MovementSpeed * delta) * 0.5:
+		timeStuck += delta
+	else:
+		timeStuck = 0.0
+	if(timeStuck > 0.5): 
+		pathfinding = false
+		playAnimation("stuck")
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta: float) -> void:
 	# handle player movement input
-	var direction: Vector2 = Input.get_vector("game_left", "game_right", "game_up", "game_down")
-	var motion: Vector2 = direction * MovementSpeed;
-	velocity = motion;
-	if(velocity.length() > 0):
-		pass #TODO: Add walk animations
+	if(pathfinding): 
+		pathfind(delta)
 	else: 
-		Sprite.play("idle")
-	move_and_slide()
+		var direction: Vector2 = Input.get_vector("game_left", "game_right", "game_up", "game_down")
+		var motion: Vector2 = direction * MovementSpeed;
+		velocity = motion;
+		move_and_slide()
+	if(velocity.length() > 0):
+		if(velocity.x > 0): 
+			facingLeft = false
+		elif(velocity.x < 0): 
+			facingLeft = true
+		playAnimation("walk")
+	if 1:#This should be an else, but I am changing this to if 1 as walk animations dont exist yet 
+		playAnimation("idle")
 	
 	# prevent from exiting the borders of the screen
 	var sprite_size = Sprite.sprite_frames.get_frame_texture(Sprite.animation, Sprite.frame).get_size()/(2*SpriteScale);
