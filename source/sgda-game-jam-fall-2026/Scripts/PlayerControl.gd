@@ -93,11 +93,11 @@ func pathfind(delta: float):
 	playAnimation("walk")
 	direction = (pathfindTarget.global_position - global_position).normalized() * interpVal + direction * (1-interpVal)
 	if(!direction.is_zero_approx()):
-		if(velocity.x > 0): 
+		if(direction.x > 0): 
 			facingLeft = false
-		elif(velocity.x < 0): 
+		elif(direction.x < 0): 
 			facingLeft = true
-	walkDirection = direction
+		walkDirection = direction
 	velocity = direction * MovementSpeed
 	var pos_before_move = global_position
 	if (pathfindTarget.global_position.distance_to(global_position) <= toleranceDistance):
@@ -112,10 +112,11 @@ func pathfind(delta: float):
 		timeStuck += delta
 	else:
 		timeStuck = 0.0
-	if(timeStuck > 0.5): 
+	if(timeStuck > patience): 
 		if(pathfindTarget.global_position.distance_to(global_position) > toleranceDistance): 
 			pathfinding = false
 			playAnimation("stuck")
+			timeStuck = 0
 		else: 
 			pathfinding = false
 			timeStuck = 0
@@ -126,7 +127,10 @@ func pathfind(delta: float):
 func _physics_process(delta: float) -> void:
 	# handle player movement input
 	var rawDirection = Input.get_vector("game_left", "game_right", "game_up", "game_down")
-	direction = rawDirection * interpVal + direction * (1-interpVal)
+	if(isLowPriorityAnim(Sprite.animation)): 
+		direction = rawDirection * interpVal + direction * (1-interpVal)
+	else: 
+		direction = direction * (1-interpVal)
 	if(pathfinding): 
 		pathfind(delta)
 	else: 
@@ -135,6 +139,7 @@ func _physics_process(delta: float) -> void:
 			velocity = direction * MovementSpeed
 		elif(walking()): 
 			velocity = walkDirection * MovementSpeed
+			walkDirection = walkDirection
 		else: 
 			velocity = direction * MovementSpeed
 		move_and_slide()
