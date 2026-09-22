@@ -127,13 +127,13 @@ func pathfind(delta: float):
 func _physics_process(delta: float) -> void:
 	# handle player movement input
 	var rawDirection = Input.get_vector("game_left", "game_right", "game_up", "game_down")
-	if(isLowPriorityAnim(Sprite.animation)): 
-		direction = rawDirection * interpVal + direction * (1-interpVal)
-	else: 
+	if(!isLowPriorityAnim(Sprite.animation)): 
 		direction = direction * (1-interpVal)
 	if(pathfinding): 
 		pathfind(delta)
 	else: 
+		if(isLowPriorityAnim(Sprite.animation)): 
+			direction = rawDirection * interpVal + direction * (1-interpVal)
 		if(!rawDirection.is_zero_approx()): 
 			walkDirection = direction
 			velocity = direction * MovementSpeed
