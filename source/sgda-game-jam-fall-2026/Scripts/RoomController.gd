@@ -111,7 +111,7 @@ func load_room_background() -> void:
 	var path: String = "res://Resources/Rooms/%s.png" % room_id
 	
 	if ResourceLoader.exists(path):
-		background.texture = load(path)
+		pass#background.texture = load(path)
 	else:
 		push_error("RoomController Error: Background image missing at " + path)
 
