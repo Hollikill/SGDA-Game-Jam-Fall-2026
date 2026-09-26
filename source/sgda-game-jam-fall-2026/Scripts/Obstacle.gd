@@ -1,6 +1,7 @@
 extends AnimatedSprite2D
 
-@export var min_transparency: float = 0.3;
+var min_transparency: float = 0.1;
+@export var is_environment: bool = false;
 var seconds_to_fade: float = 0.2;
 
 var player: CharacterBody2D = null;
@@ -13,15 +14,23 @@ var sprite_scale_offset = 1;
 
 func _ready():
 	play("default")
+
+	# add hover areas
 	var collision_areas = find_children("*", "Area2D", true, false)
-	for area in collision_areas:
-		area.input_pickable = true
-		area.mouse_entered.connect(_on_mouse_enter)
-		area.mouse_exited.connect(_on_mouse_exit)
+	if (!is_environment):
+		for area in collision_areas:
+			area.input_pickable = true
+			area.mouse_entered.connect(_on_mouse_enter)
+			area.mouse_exited.connect(_on_mouse_exit)
+	
+	# add highlight tween
 	base_texture_scale = scale;
 	base_texture_rotation = rotation;
 	var sprite_texture = sprite_frames.get_frame_texture(animation, 0)
 	sprite_scale_offset = max((sprite_texture.get_size().x + sprite_texture.get_size().y)/80,1);
+
+	# scatter animation starts
+	frame_progress = randf()
 
 func _on_mouse_enter():
 	mouse_on = true;
@@ -44,7 +53,7 @@ func _process(delta: float) -> void:
 	if (player == null):
 		player = get_tree().get_first_node_in_group("player");
 	# fade when player in front
-	else: if (z_index > player.z_index):
+	else: if (z_index > player.z_index || is_environment):
 		var collision_areas = find_children("*", "Area2D", true, false)
 		var behind_obstacle = false
 		for area in collision_areas:

@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://vouejpxblbtv"]
+
+[ext_resource type="Texture2D" uid="uid://dxf41u3nmjs5e" path="res://Resources/objects/Chest/Chest1.png" id="1_4b0bs"]
+[ext_resource type="Texture2D" uid="uid://h5nm1xrdag0l" path="res://Resources/objects/Chest/Chest2.png" id="2_unkmc"]
+[ext_resource type="Script" uid="uid://c844xk21lifky" path="res://Scripts/Obstacle.gd" id="3_unkmc"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_r3xn8"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_4b0bs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_unkmc")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 4.0
+}]
+
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" unique_id=980863385]
+z_index = -1
+sprite_frames = SubResource("SpriteFrames_r3xn8")
+script = ExtResource("3_unkmc")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1726188929]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D" unique_id=860068989]
+polygon = PackedVector2Array(-10, 64, 82, 57, 84, 8, 46, -55, -68, -63, -91, -31, -58, 7, -64, 55)

@@ -18,12 +18,6 @@ animations = [{
 "speed": 4.0
 }]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_wyi3d"]
-radius = 74.67857
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_xuuog"]
-size = Vector2(173.33334, 390.6667)
-
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" unique_id=1160690367]
 z_index = 1
 scale = Vector2(0.75, 0.75)
@@ -32,12 +26,10 @@ script = ExtResource("3_yhanx")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1544722432]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=977365468]
-position = Vector2(-22.666666, 158.66667)
-shape = SubResource("CircleShape2D_wyi3d")
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D" unique_id=1973112014]
+polygon = PackedVector2Array(-21.333334, 98.66667, -42.666668, 108, -78.66667, 185.33334, -45.333336, 206.66667, 33.333336, 189.33334, -6.666667, 113.333336)
 
 [node name="Area2D" type="Area2D" parent="." unique_id=988163361]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=454296742]
-position = Vector2(-32.000008, 14.000003)
-shape = SubResource("RectangleShape2D_xuuog")
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D" unique_id=7637168]
+polygon = PackedVector2Array(-2.6666667, 0, 68, -89.333336, 50.666668, -165.33334, -85.333336, -192, -129.33334, -129.33334, -120, -37.333336, -77.333336, -12, -42.666668, 108, -78.66667, 185.33334, -45.333336, 206.66667, 33.333336, 189.33334, -6.666667, 113.333336)

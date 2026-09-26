@@ -1,0 +1,70 @@
+[gd_scene format=3 uid="uid://c163ahw78yv26"]
+
+[ext_resource type="Texture2D" uid="uid://b7edt618w1v24" path="res://Resources/objects/house_interior/House3.png" id="1_md7pd"]
+[ext_resource type="Texture2D" uid="uid://dkp0j7ohjaf8p" path="res://Resources/objects/house_interior/House4.png" id="2_w6piw"]
+[ext_resource type="Script" uid="uid://c844xk21lifky" path="res://Scripts/Obstacle.gd" id="3_vkpbm"]
+[ext_resource type="Texture2D" uid="uid://h143fjbqt1ua" path="res://Resources/objects/house_exterior/House1.png" id="4_r7qkn"]
+[ext_resource type="Texture2D" uid="uid://nhch5ldndri0" path="res://Resources/objects/house_exterior/House2.png" id="5_x5tcy"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_guh3l"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_md7pd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_w6piw")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 4.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_xb0rm"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_r7qkn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_x5tcy")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 4.0
+}]
+
+[node name="Node2D" type="Node2D" unique_id=1677780389]
+scale = Vector2(0.85, 0.85)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=289392292]
+z_index = -1
+sprite_frames = SubResource("SpriteFrames_guh3l")
+script = ExtResource("3_vkpbm")
+is_environment = true
+
+[node name="StaticBody2D" type="StaticBody2D" parent="AnimatedSprite2D" unique_id=577047941]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="AnimatedSprite2D/StaticBody2D" unique_id=1367520082]
+polygon = PackedVector2Array(154, 307, 321, 302, 277.33334, 156, -350.58826, 160, -317, 307, -42, 306, -34, 328, -328, 325, -370.58826, 143.52942, 288, 141.33334, 345, 313, 161, 325)
+
+[node name="Area2D" type="Area2D" parent="AnimatedSprite2D" unique_id=1517474698]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="AnimatedSprite2D/Area2D" unique_id=839324403]
+polygon = PackedVector2Array(287.05884, 149.41177, 335.29413, 309.41177, 335.29413, -114.11765, 278.82355, -312.9412, -212.9412, -315.29413, -340, -162.66667, -358.82355, 152.94118)
+
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="." unique_id=182435158]
+z_index = 1
+sprite_frames = SubResource("SpriteFrames_xb0rm")
+script = ExtResource("3_vkpbm")
+is_environment = true
+
+[node name="StaticBody2D" type="StaticBody2D" parent="AnimatedSprite2D2" unique_id=915549453]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="AnimatedSprite2D2/StaticBody2D" unique_id=1350121235]
+polygon = PackedVector2Array(154, 307, 321, 302, 277.33334, 156, -350.58826, 160, -317, 307, -42, 306, -34, 328, -328, 325, -370.58826, 143.52942, 288, 141.33334, 345, 313, 161, 325)
+
+[node name="Area2D" type="Area2D" parent="AnimatedSprite2D2" unique_id=1275305789]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="AnimatedSprite2D2/Area2D" unique_id=2040668517]
+polygon = PackedVector2Array(-322.35297, 314.11765, 335.29413, 309.41177, 335.29413, -114.11765, 278.82355, -312.9412, -212.9412, -315.29413, -340, -162.66667, -358.82355, 152.94118)
