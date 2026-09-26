@@ -8,4 +8,4 @@ script = ExtResource("1_xuuog")
 room_id = "room4"
 
 [node name="AnimatedSprite2D" parent="." unique_id=1160690367 instance=ExtResource("2_wyi3d")]
-position = Vector2(1184, 179)
+position = Vector2(1253, 54)

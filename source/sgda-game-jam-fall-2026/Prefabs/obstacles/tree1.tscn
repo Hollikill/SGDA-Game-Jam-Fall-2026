@@ -18,22 +18,26 @@ animations = [{
 "speed": 4.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_guh3l"]
-size = Vector2(206, 368)
+[sub_resource type="CircleShape2D" id="CircleShape2D_wyi3d"]
+radius = 74.67857
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xuuog"]
+size = Vector2(173.33334, 390.6667)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" unique_id=1160690367]
-scale = Vector2(0.5, 0.5)
+z_index = 1
+scale = Vector2(0.75, 0.75)
 sprite_frames = SubResource("SpriteFrames_guh3l")
 script = ExtResource("3_yhanx")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1544722432]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=977365468]
-position = Vector2(-33, -2)
-shape = SubResource("RectangleShape2D_guh3l")
+position = Vector2(-22.666666, 158.66667)
+shape = SubResource("CircleShape2D_wyi3d")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=988163361]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=387762808]
-position = Vector2(-33, -2)
-shape = SubResource("RectangleShape2D_guh3l")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=454296742]
+position = Vector2(-32.000008, 14.000003)
+shape = SubResource("RectangleShape2D_xuuog")
