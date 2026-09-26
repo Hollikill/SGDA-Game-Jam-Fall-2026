@@ -54,9 +54,7 @@ func playAnimation(anim: String):
 		anim = anim + "left"
 	else: 
 		anim = anim + "right"
-	if(animPlaying and Sprite.animation == anim): 
-		return
-	if(animPlaying and anim_old == "walk" and current_base_anim == anim_old): 
+	if(animPlaying and anim_old == current_base_anim and facingLeft == ("left" in Sprite.animation)): 
 		return
 	if(anim_old == "walk"): 
 		anim = anim + str(walkPhase)
@@ -94,6 +92,12 @@ func setupPathfinding(callback: Callable, target: Node2D) -> void:
 
 func pathfind(delta: float): 
 	playAnimation("walk")
+	if (pathfindTarget.global_position.distance_to(global_position) <= toleranceDistance):
+		pathfinding = false
+		timeStuck = 0
+		onReachFunc.call()
+		playAnimation("find")
+		return
 	direction = (pathfindTarget.global_position - global_position).normalized() * interpVal + direction * (1-interpVal)
 	if(!direction.is_zero_approx()):
 		if(direction.x > 0): 
@@ -103,12 +107,6 @@ func pathfind(delta: float):
 		walkDirection = direction
 	velocity = direction * MovementSpeed
 	var pos_before_move = global_position
-	if (pathfindTarget.global_position.distance_to(global_position) <= toleranceDistance):
-		pathfinding = false
-		timeStuck = 0
-		onReachFunc.call()
-		playAnimation("find")
-		return
 	move_and_slide()
 	var distance_moved = pos_before_move.distance_to(global_position)
 	if distance_moved < (MovementSpeed * delta) * 0.5:
