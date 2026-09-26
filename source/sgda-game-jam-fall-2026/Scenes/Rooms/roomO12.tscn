@@ -1,0 +1,81 @@
+[gd_scene format=3 uid="uid://cu1m4jip5d1cj"]
+
+[ext_resource type="Script" uid="uid://cmhfdvscu61c2" path="res://Scripts/RoomController.gd" id="1_6pl4w"]
+[ext_resource type="PackedScene" uid="uid://bjwq1cbv4kp6q" path="res://Prefabs/obstacles/tree1.tscn" id="1_timms"]
+[ext_resource type="Script" uid="uid://kh06467o6o7c" path="res://Scripts/EntranceMethod.gd" id="2_eitr4"]
+
+[sub_resource type="Resource" id="Resource_lkcko"]
+script = ExtResource("2_eitr4")
+room_id = "roomN12"
+enter_side = 3
+metadata/_custom_type_script = "uid://kh06467o6o7c"
+
+[node name="RoomO12" type="Node2D" unique_id=880506470]
+script = ExtResource("1_6pl4w")
+room_id = "roomO12"
+top = SubResource("Resource_lkcko")
+
+[node name="border" type="Node2D" parent="." unique_id=709141298]
+
+[node name="AnimatedSprite2D14" parent="border" unique_id=1160690367 instance=ExtResource("1_timms")]
+position = Vector2(672.5, 19)
+
+[node name="AnimatedSprite2D15" parent="border" unique_id=1039885256 instance=ExtResource("1_timms")]
+position = Vector2(623.5, 90)
+
+[node name="AnimatedSprite2D16" parent="border" unique_id=2099336899 instance=ExtResource("1_timms")]
+position = Vector2(651.5, 198)
+
+[node name="AnimatedSprite2D17" parent="border" unique_id=71687953 instance=ExtResource("1_timms")]
+position = Vector2(621.5, 270)
+
+[node name="AnimatedSprite2D18" parent="border" unique_id=1252924619 instance=ExtResource("1_timms")]
+position = Vector2(660.5, 355)
+
+[node name="AnimatedSprite2D19" parent="border" unique_id=474123722 instance=ExtResource("1_timms")]
+position = Vector2(632.5, 439)
+
+[node name="AnimatedSprite2D20" parent="border" unique_id=1327034897 instance=ExtResource("1_timms")]
+position = Vector2(674.5, 519)
+
+[node name="AnimatedSprite2D21" parent="border" unique_id=618357950 instance=ExtResource("1_timms")]
+position = Vector2(730, 588)
+
+[node name="AnimatedSprite2D22" parent="border" unique_id=1438380825 instance=ExtResource("1_timms")]
+position = Vector2(1334.5, 1)
+
+[node name="AnimatedSprite2D23" parent="border" unique_id=394408608 instance=ExtResource("1_timms")]
+position = Vector2(1285.5, 72)
+
+[node name="AnimatedSprite2D24" parent="border" unique_id=1697105057 instance=ExtResource("1_timms")]
+position = Vector2(1313.5, 180)
+
+[node name="AnimatedSprite2D25" parent="border" unique_id=1948332680 instance=ExtResource("1_timms")]
+position = Vector2(1283.5, 252)
+
+[node name="AnimatedSprite2D26" parent="border" unique_id=1216836019 instance=ExtResource("1_timms")]
+position = Vector2(1322.5, 337)
+
+[node name="AnimatedSprite2D27" parent="border" unique_id=1101561119 instance=ExtResource("1_timms")]
+position = Vector2(1294.5, 421)
+
+[node name="AnimatedSprite2D28" parent="border" unique_id=1805061313 instance=ExtResource("1_timms")]
+position = Vector2(1336.5, 501)
+
+[node name="AnimatedSprite2D29" parent="border" unique_id=945121397 instance=ExtResource("1_timms")]
+position = Vector2(1304.5, 592)
+
+[node name="AnimatedSprite2D" parent="border" unique_id=435946664 instance=ExtResource("1_timms")]
+position = Vector2(1147, 589)
+
+[node name="AnimatedSprite2D2" parent="border" unique_id=1310527296 instance=ExtResource("1_timms")]
+position = Vector2(942, 569)
+
+[node name="AnimatedSprite2D3" parent="border" unique_id=655241223 instance=ExtResource("1_timms")]
+position = Vector2(1239, 625)
+
+[node name="AnimatedSprite2D4" parent="border" unique_id=2117983429 instance=ExtResource("1_timms")]
+position = Vector2(1035, 596)
+
+[node name="AnimatedSprite2D5" parent="border" unique_id=1485549963 instance=ExtResource("1_timms")]
+position = Vector2(832, 596)

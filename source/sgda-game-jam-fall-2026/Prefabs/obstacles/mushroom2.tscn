@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://c04qgkvtmjbyq"]
+
+[ext_resource type="Texture2D" uid="uid://s6qxlckx2bxa" path="res://Resources/objects/mushroom2/ mushroom2_0.png" id="1_w6o32"]
+[ext_resource type="Texture2D" uid="uid://cqwe7chormweo" path="res://Resources/objects/mushroom2/mushroom2_1.png" id="2_ccnga"]
+[ext_resource type="Script" uid="uid://c844xk21lifky" path="res://Scripts/Obstacle.gd" id="3_p6l0j"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_r3xn8"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_w6o32")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_ccnga")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 4.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_guh3l"]
+radius = 25.079872
+
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" unique_id=980863385]
+z_index = -1
+sprite_frames = SubResource("SpriteFrames_r3xn8")
+script = ExtResource("3_p6l0j")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1726188929]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=11845603]
+shape = SubResource("CircleShape2D_guh3l")

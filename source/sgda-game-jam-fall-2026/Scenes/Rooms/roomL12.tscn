@@ -1,0 +1,203 @@
+[gd_scene format=3 uid="uid://b3ds1633a7mrd"]
+
+[ext_resource type="Script" uid="uid://cmhfdvscu61c2" path="res://Scripts/RoomController.gd" id="1_2conp"]
+[ext_resource type="PackedScene" uid="uid://bjwq1cbv4kp6q" path="res://Prefabs/obstacles/tree1.tscn" id="1_ftdvh"]
+[ext_resource type="Script" uid="uid://kh06467o6o7c" path="res://Scripts/EntranceMethod.gd" id="2_fhhbb"]
+[ext_resource type="PackedScene" uid="uid://moj4xunry65n" path="res://Prefabs/obstacles/flower1.tscn" id="2_uhfo6"]
+[ext_resource type="PackedScene" uid="uid://cm2ab8vednxcq" path="res://Prefabs/obstacles/flower2.tscn" id="3_2conp"]
+[ext_resource type="PackedScene" uid="uid://c8m0htswftaok" path="res://Prefabs/obstacles/flower3.tscn" id="4_fhhbb"]
+
+[sub_resource type="Resource" id="Resource_ud02f"]
+script = ExtResource("2_fhhbb")
+room_id = "roomK12"
+enter_side = 3
+metadata/_custom_type_script = "uid://kh06467o6o7c"
+
+[sub_resource type="Resource" id="Resource_1dhxe"]
+script = ExtResource("2_fhhbb")
+room_id = "roomM12"
+enter_side = 2
+metadata/_custom_type_script = "uid://kh06467o6o7c"
+
+[sub_resource type="Resource" id="Resource_m3db2"]
+script = ExtResource("2_fhhbb")
+room_id = "roomL13"
+enter_side = 0
+metadata/_custom_type_script = "uid://kh06467o6o7c"
+
+[node name="RoomL12" type="Node2D" unique_id=836291961]
+script = ExtResource("1_2conp")
+room_id = "roomL12"
+top = SubResource("Resource_ud02f")
+bottom = SubResource("Resource_1dhxe")
+right = SubResource("Resource_m3db2")
+
+[node name="border" type="Node2D" parent="." unique_id=1719650539]
+
+[node name="AnimatedSprite2D14" parent="border" unique_id=1160690367 instance=ExtResource("1_ftdvh")]
+position = Vector2(35.5, -10)
+
+[node name="AnimatedSprite2D15" parent="border" unique_id=1914435716 instance=ExtResource("1_ftdvh")]
+position = Vector2(-13.5, 61)
+
+[node name="AnimatedSprite2D16" parent="border" unique_id=2020453609 instance=ExtResource("1_ftdvh")]
+position = Vector2(14.5, 169)
+
+[node name="AnimatedSprite2D17" parent="border" unique_id=1197521856 instance=ExtResource("1_ftdvh")]
+position = Vector2(-15.5, 241)
+
+[node name="AnimatedSprite2D18" parent="border" unique_id=1040451367 instance=ExtResource("1_ftdvh")]
+position = Vector2(23.5, 326)
+
+[node name="AnimatedSprite2D19" parent="border" unique_id=40126748 instance=ExtResource("1_ftdvh")]
+position = Vector2(-4.5, 410)
+
+[node name="AnimatedSprite2D20" parent="border" unique_id=658689621 instance=ExtResource("1_ftdvh")]
+position = Vector2(37.5, 490)
+
+[node name="AnimatedSprite2D21" parent="border" unique_id=687179334 instance=ExtResource("1_ftdvh")]
+position = Vector2(5.5, 581)
+
+[node name="AnimatedSprite2D22" parent="border" unique_id=406391982 instance=ExtResource("1_ftdvh")]
+position = Vector2(27, 667)
+
+[node name="AnimatedSprite2D23" parent="border" unique_id=1564087626 instance=ExtResource("1_ftdvh")]
+position = Vector2(5, 748)
+
+[node name="flowers" type="Node2D" parent="." unique_id=539752627]
+
+[node name="AnimatedSprite2D2" parent="flowers" unique_id=980863385 instance=ExtResource("2_uhfo6")]
+position = Vector2(367, 478)
+rotation = 3.1415927
+scale = Vector2(1, -1)
+
+[node name="AnimatedSprite2D3" parent="flowers" unique_id=1068364638 instance=ExtResource("2_uhfo6")]
+position = Vector2(147, 382)
+
+[node name="AnimatedSprite2D4" parent="flowers" unique_id=920075624 instance=ExtResource("3_2conp")]
+position = Vector2(493, 218)
+rotation = 3.1415927
+scale = Vector2(1, -1)
+
+[node name="AnimatedSprite2D5" parent="flowers" unique_id=1059289339 instance=ExtResource("4_fhhbb")]
+position = Vector2(799, 499)
+rotation = 3.1415927
+scale = Vector2(1, -1)
+
+[node name="AnimatedSprite2D6" parent="flowers" unique_id=903017114 instance=ExtResource("4_fhhbb")]
+position = Vector2(763, 262)
+
+[node name="AnimatedSprite2D7" parent="flowers" unique_id=1917195952 instance=ExtResource("4_fhhbb")]
+position = Vector2(1045, 164)
+
+[node name="AnimatedSprite2D8" parent="flowers" unique_id=1979233354 instance=ExtResource("4_fhhbb")]
+position = Vector2(1116, 500)
+
+[node name="AnimatedSprite2D9" parent="flowers" unique_id=1220119594 instance=ExtResource("4_fhhbb")]
+position = Vector2(267, 294)
+rotation = 3.1415927
+scale = Vector2(1, -1)
+
+[node name="AnimatedSprite2D10" parent="flowers" unique_id=1086508693 instance=ExtResource("4_fhhbb")]
+position = Vector2(72, 197)
+rotation = 3.1415927
+scale = Vector2(1, -1)
+
+[node name="AnimatedSprite2D11" parent="flowers" unique_id=203812833 instance=ExtResource("4_fhhbb")]
+position = Vector2(318, 91)
+
+[node name="AnimatedSprite2D12" parent="flowers" unique_id=1358734533 instance=ExtResource("4_fhhbb")]
+position = Vector2(120, 608)
+
+[node name="AnimatedSprite2D13" parent="flowers" unique_id=1333255410 instance=ExtResource("3_2conp")]
+position = Vector2(674, 553)
+rotation = 3.1415927
+scale = Vector2(1, -1)
+
+[node name="AnimatedSprite2D14" parent="flowers" unique_id=1596662815 instance=ExtResource("3_2conp")]
+position = Vector2(92, 478)
+rotation = 3.1415927
+scale = Vector2(1, -1)
+
+[node name="AnimatedSprite2D15" parent="flowers" unique_id=630607508 instance=ExtResource("3_2conp")]
+position = Vector2(190, 161)
+
+[node name="AnimatedSprite2D16" parent="flowers" unique_id=607582342 instance=ExtResource("3_2conp")]
+position = Vector2(77, 71)
+
+[node name="AnimatedSprite2D17" parent="flowers" unique_id=1859501372 instance=ExtResource("3_2conp")]
+position = Vector2(653, 116)
+rotation = 3.1415927
+scale = Vector2(1, -1)
+
+[node name="AnimatedSprite2D18" parent="flowers" unique_id=1869209919 instance=ExtResource("3_2conp")]
+position = Vector2(599, 352)
+
+[node name="AnimatedSprite2D19" parent="flowers" unique_id=970660198 instance=ExtResource("3_2conp")]
+position = Vector2(958, 674)
+rotation = 3.1415927
+scale = Vector2(1, -1)
+
+[node name="AnimatedSprite2D20" parent="flowers" unique_id=1637123038 instance=ExtResource("3_2conp")]
+position = Vector2(1096, 376)
+rotation = 3.1415927
+scale = Vector2(1, -1)
+
+[node name="AnimatedSprite2D21" parent="flowers" unique_id=694178133 instance=ExtResource("3_2conp")]
+position = Vector2(925, 346)
+
+[node name="AnimatedSprite2D22" parent="flowers" unique_id=134103636 instance=ExtResource("3_2conp")]
+position = Vector2(961, 294)
+
+[node name="AnimatedSprite2D23" parent="flowers" unique_id=2097399474 instance=ExtResource("3_2conp")]
+position = Vector2(855, 131)
+rotation = 3.1415927
+scale = Vector2(1, -1)
+
+[node name="AnimatedSprite2D24" parent="flowers" unique_id=1139503475 instance=ExtResource("3_2conp")]
+position = Vector2(1127, 114)
+
+[node name="AnimatedSprite2D25" parent="flowers" unique_id=858097030 instance=ExtResource("2_uhfo6")]
+position = Vector2(961, 529)
+
+[node name="AnimatedSprite2D26" parent="flowers" unique_id=348340149 instance=ExtResource("2_uhfo6")]
+position = Vector2(715, 394)
+
+[node name="AnimatedSprite2D27" parent="flowers" unique_id=190651007 instance=ExtResource("2_uhfo6")]
+position = Vector2(465, 589)
+rotation = 3.1415927
+scale = Vector2(1, -1)
+
+[node name="AnimatedSprite2D28" parent="flowers" unique_id=1395853800 instance=ExtResource("2_uhfo6")]
+position = Vector2(415, 322)
+rotation = 3.1415927
+scale = Vector2(1, -1)
+
+[node name="AnimatedSprite2D29" parent="flowers" unique_id=1578629991 instance=ExtResource("2_uhfo6")]
+position = Vector2(527, 95)
+
+[node name="AnimatedSprite2D30" parent="flowers" unique_id=379001614 instance=ExtResource("2_uhfo6")]
+position = Vector2(795, 68)
+rotation = 3.1415927
+scale = Vector2(1, -1)
+
+[node name="AnimatedSprite2D31" parent="flowers" unique_id=1580113906 instance=ExtResource("2_uhfo6")]
+position = Vector2(1152, 641)
+
+[node name="AnimatedSprite2D32" parent="flowers" unique_id=1936260398 instance=ExtResource("2_uhfo6")]
+position = Vector2(274, 667)
+rotation = 3.1415927
+scale = Vector2(1, -1)
+
+[node name="AnimatedSprite2D33" parent="flowers" unique_id=1511593910 instance=ExtResource("2_uhfo6")]
+position = Vector2(126, 286)
+rotation = 3.1415927
+scale = Vector2(1, -1)
+
+[node name="AnimatedSprite2D34" parent="flowers" unique_id=1703508741 instance=ExtResource("2_uhfo6")]
+position = Vector2(199, 76)
+rotation = 3.1415927
+scale = Vector2(1, -1)
+
+[node name="AnimatedSprite2D35" parent="flowers" unique_id=1493577255 instance=ExtResource("2_uhfo6")]
+position = Vector2(891, 199)
