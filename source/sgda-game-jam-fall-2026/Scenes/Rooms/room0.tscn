@@ -1,11 +1,11 @@
-[gd_scene format=3 uid="uid://btfux20o3dfi6"]
+[gd_scene format=3 uid="uid://dd026gt54fhj3"]
 
 [ext_resource type="Script" uid="uid://cmhfdvscu61c2" path="res://Scripts/RoomController.gd" id="1_xuuog"]
 [ext_resource type="PackedScene" uid="uid://bjwq1cbv4kp6q" path="res://Prefabs/obstacles/tree1.tscn" id="2_wyi3d"]
 
-[node name="Room4" type="Node2D" unique_id=459127640]
+[node name="Room0" type="Node2D" unique_id=459127640]
 script = ExtResource("1_xuuog")
-room_id = "room4"
+room_id = "room0"
 
 [node name="AnimatedSprite2D" parent="." unique_id=1160690367 instance=ExtResource("2_wyi3d")]
 position = Vector2(1253, 54)
