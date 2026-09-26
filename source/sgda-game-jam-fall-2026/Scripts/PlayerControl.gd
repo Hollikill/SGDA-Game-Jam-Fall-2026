@@ -33,9 +33,10 @@ func walking():
 	return false
 
 func isLowPriorityAnim(anim: String): 
-	if(anim == "idleleft" or anim == "idleright"): 
+	var animBase = anim.replace("left", "").replace("right", "").replace("1", "").replace("2", "").replace("googles", "")
+	if(animBase == "idle"): 
 		return 2
-	if(anim == "walkleft1" or anim == "walkleft2" or anim == "walkright1" or anim == "walkright2"): 
+	if(animBase == "walk"): 
 		return 1
 	return 0
 
@@ -47,20 +48,22 @@ func _ready() -> void:
 
 func playAnimation(anim: String): 
 	var anim_old = anim
+	var current_base_anim = Sprite.animation
+	current_base_anim = current_base_anim.replace("left", "").replace("right", "").replace("1", "").replace("2", "").replace("goggles", "")
 	if(facingLeft): 
 		anim = anim + "left"
 	else: 
 		anim = anim + "right"
 	if(animPlaying and Sprite.animation == anim): 
 		return
-	if(animPlaying and anim_old == "walk" and (Sprite.animation == anim + "1" or Sprite.animation == anim + "2")): 
+	if(animPlaying and anim_old == "walk" and current_base_anim == anim_old): 
 		return
 	if(anim_old == "walk"): 
 		anim = anim + str(walkPhase)
 	if(animPlaying and isLowPriorityAnim(anim) > isLowPriorityAnim(Sprite.animation)): 
 		return
-	var current_base_anim = Sprite.animation
-	current_base_anim = current_base_anim.replace("left", "").replace("right", "").replace("1", "").replace("2", "")
+	if(GlobalPersistant.hasFlag("goggle")): 
+		anim = anim + "goggle";
 	var is_linked_variant = (current_base_anim == anim_old)
 	if anim_old == "walk" and current_base_anim == "walk" and Sprite.animation != anim:
 		var current_is_left = "left" in Sprite.animation
