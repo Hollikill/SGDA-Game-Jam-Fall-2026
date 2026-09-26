@@ -54,9 +54,7 @@ func playAnimation(anim: String):
 		anim = anim + "left"
 	else: 
 		anim = anim + "right"
-	if(animPlaying and Sprite.animation == anim): 
-		return
-	if(animPlaying and anim_old == "walk" and current_base_anim == anim_old): 
+	if(animPlaying and anim_old == current_base_anim and facingLeft == ("left" in Sprite.animation)): 
 		return
 	if(anim_old == "walk"): 
 		anim = anim + str(walkPhase)
