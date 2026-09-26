@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://blb5nnet65w70"]
+[gd_scene format=3 uid="uid://1x1qf2cyi4ig"]
 
 [ext_resource type="Texture2D" path="res://Resources/tree002.png" id="1_r1bdk"]
 [ext_resource type="Script" uid="uid://c844xk21lifky" path="res://Scripts/Obstacle.gd" id="2_ttag2"]
