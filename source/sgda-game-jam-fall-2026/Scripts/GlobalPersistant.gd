@@ -20,7 +20,7 @@ var room_data = {};
 var room_versions = {};
 var current_loaded_room: String = "";
 var loading_rooms: bool = true;
-var room_trigger_unlock = false;
+var room_trigger_unlock = [];
 
 func subscribe_anomaly_version(version_id: int):
 	if (!room_versions.has(current_loaded_room)): room_versions[current_loaded_room] = [];
@@ -61,7 +61,7 @@ func complete_anomaly():
 	if (room_data[current_loaded_room]["completed_versions"].find(scene_transition_info.version_id) == -1):
 		room_data[current_loaded_room]["completed_versions"].append(scene_transition_info.version_id);
 
-func is_complete(room_id: String):
+func is_complete(room_id: String = current_loaded_room):
 	if (!room_data.has(room_id)): room_data[room_id] = {};
 	if (!room_data[room_id].has("used_versions")): room_data[room_id]["used_versions"] = [];
 	if (!room_data[room_id].has("finished")): room_data[room_id]["finished"] = false;
@@ -69,7 +69,7 @@ func is_complete(room_id: String):
 	var room_complete = room_data[room_id]["completed_versions"].size()+1 >= room_data[room_id]["used_versions"].size();
 	if (room_complete && !room_data[room_id]["finished"] && !loading_rooms):
 		room_data[room_id]["finished"] = true;
-		room_trigger_unlock = true;
+		room_trigger_unlock.append(room_id);
 	return room_complete;
 
 #################################

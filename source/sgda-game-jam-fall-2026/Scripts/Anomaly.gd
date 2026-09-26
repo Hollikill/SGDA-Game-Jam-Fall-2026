@@ -15,11 +15,12 @@ func _on_mouse_enter():
 func _on_mouse_exit():
 	mouse_on = false;
 
-func complete_anamoly(): 
+func complete_anomoly(): 
 	GlobalPersistant.complete_anomaly();
+	GlobalPersistant.is_complete();
 	get_parent().queue_free()
 
 func _process(_delta: float) -> void:
 	if mouse_on and Input.is_action_just_pressed("game_attack"):
 		var player = get_tree().get_first_node_in_group("player")
-		player.setupPathfinding(complete_anamoly, self)
+		player.setupPathfinding(complete_anomoly, self)

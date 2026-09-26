@@ -194,8 +194,8 @@ func toggle_popup() -> void:
 
 func _process(_delta: float) -> void:
 	# trigger room unlock on completion
-	if (GlobalPersistant.room_trigger_unlock == true):
-		GlobalPersistant.room_trigger_unlock = false;
+	if (GlobalPersistant.room_trigger_unlock.find(room_id) != -1):
+		GlobalPersistant.room_trigger_unlock.remove_at(GlobalPersistant.room_trigger_unlock.find(room_id));
 		GlobalPersistant.giveFlag(reward_flag_id);
 
 	# switch rooms on player hit side

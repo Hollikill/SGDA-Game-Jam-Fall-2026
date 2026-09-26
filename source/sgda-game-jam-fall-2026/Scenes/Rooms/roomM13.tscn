@@ -1,0 +1,136 @@
+[gd_scene format=3 uid="uid://dd026gt54fhj3"]
+
+[ext_resource type="Script" uid="uid://cmhfdvscu61c2" path="res://Scripts/RoomController.gd" id="1_rceqv"]
+[ext_resource type="Script" uid="uid://kh06467o6o7c" path="res://Scripts/EntranceMethod.gd" id="2_tl4br"]
+[ext_resource type="PackedScene" uid="uid://bjwq1cbv4kp6q" path="res://Prefabs/obstacles/tree1.tscn" id="3_uvqj3"]
+[ext_resource type="PackedScene" uid="uid://c163ahw78yv26" path="res://Prefabs/obstacles/house1.tscn" id="4_ayarf"]
+[ext_resource type="PackedScene" uid="uid://vouejpxblbtv" path="res://Prefabs/obstacles/chest1.tscn" id="5_p1fxw"]
+[ext_resource type="PackedScene" uid="uid://dvjghvdb6k0ss" path="res://Prefabs/obstacles/sapling1.tscn" id="6_xoihg"]
+
+[sub_resource type="Resource" id="Resource_ac48s"]
+script = ExtResource("2_tl4br")
+room_id = "roomN13"
+enter_side = 2
+metadata/_custom_type_script = "uid://kh06467o6o7c"
+
+[sub_resource type="Resource" id="Resource_i70oh"]
+script = ExtResource("2_tl4br")
+room_id = "roomM14"
+enter_side = 0
+metadata/_custom_type_script = "uid://kh06467o6o7c"
+
+[node name="Room0" type="Node2D" unique_id=459127640]
+script = ExtResource("1_rceqv")
+room_id = "roomM13"
+bottom = SubResource("Resource_ac48s")
+right = SubResource("Resource_i70oh")
+
+[node name="background" type="Node2D" parent="." unique_id=611366845]
+
+[node name="AnimatedSprite2D" parent="background" unique_id=1160690367 instance=ExtResource("3_uvqj3")]
+position = Vector2(1228, -4)
+
+[node name="AnimatedSprite2D3" parent="background" unique_id=685232466 instance=ExtResource("3_uvqj3")]
+position = Vector2(1060, -61)
+
+[node name="AnimatedSprite2D4" parent="background" unique_id=206746059 instance=ExtResource("3_uvqj3")]
+position = Vector2(889, -73)
+
+[node name="AnimatedSprite2D5" parent="background" unique_id=999540885 instance=ExtResource("3_uvqj3")]
+position = Vector2(691, -84)
+
+[node name="AnimatedSprite2D6" parent="background" unique_id=1327462316 instance=ExtResource("3_uvqj3")]
+position = Vector2(454.99994, -65)
+
+[node name="AnimatedSprite2D2" parent="background" unique_id=1892358017 instance=ExtResource("3_uvqj3")]
+position = Vector2(309, -82)
+
+[node name="AnimatedSprite2D7" parent="background" unique_id=63321331 instance=ExtResource("3_uvqj3")]
+position = Vector2(125, -51)
+
+[node name="AnimatedSprite2D8" parent="background" unique_id=709056964 instance=ExtResource("3_uvqj3")]
+position = Vector2(18, 47)
+
+[node name="AnimatedSprite2D9" parent="background" unique_id=142143192 instance=ExtResource("3_uvqj3")]
+position = Vector2(68, 168)
+
+[node name="AnimatedSprite2D10" parent="background" unique_id=1804160424 instance=ExtResource("3_uvqj3")]
+position = Vector2(3, 263)
+
+[node name="AnimatedSprite2D11" parent="background" unique_id=1004994603 instance=ExtResource("3_uvqj3")]
+position = Vector2(49, 327)
+
+[node name="AnimatedSprite2D12" parent="background" unique_id=1774866368 instance=ExtResource("3_uvqj3")]
+position = Vector2(3, 411)
+
+[node name="AnimatedSprite2D13" parent="background" unique_id=574156269 instance=ExtResource("3_uvqj3")]
+position = Vector2(52, 556)
+
+[node name="AnimatedSprite2D14" parent="background" unique_id=1481628755 instance=ExtResource("3_uvqj3")]
+position = Vector2(122, 643)
+
+[node name="house" parent="." unique_id=1677780389 instance=ExtResource("4_ayarf")]
+position = Vector2(621, 198.99998)
+
+[node name="AnimatedSprite2D2" parent="." unique_id=980863385 instance=ExtResource("5_p1fxw")]
+position = Vector2(483, 365)
+
+[node name="foreground" type="Node2D" parent="." unique_id=1935785441]
+position = Vector2(122, 643)
+scale = Vector2(0.75, 0.75)
+
+[node name="AnimatedSprite2D15" parent="foreground" unique_id=2008134364 instance=ExtResource("3_uvqj3")]
+position = Vector2(118.66667, -42.666687)
+scale = Vector2(1, 1)
+
+[node name="AnimatedSprite2D16" parent="foreground" unique_id=766703838 instance=ExtResource("3_uvqj3")]
+position = Vector2(237.33333, 10.666626)
+scale = Vector2(1, 1)
+
+[node name="AnimatedSprite2D17" parent="foreground" unique_id=301568103 instance=ExtResource("3_uvqj3")]
+position = Vector2(321.3333, -65.333374)
+scale = Vector2(1, 1)
+
+[node name="AnimatedSprite2D18" parent="foreground" unique_id=1136950062 instance=ExtResource("3_uvqj3")]
+position = Vector2(440, -57.333374)
+scale = Vector2(1, 1)
+
+[node name="AnimatedSprite2D19" parent="foreground" unique_id=633555117 instance=ExtResource("3_uvqj3")]
+position = Vector2(556, -10.666687)
+scale = Vector2(1, 1)
+
+[node name="AnimatedSprite2D22" parent="foreground" unique_id=1347378138 instance=ExtResource("3_uvqj3")]
+position = Vector2(1025.3334, 38.666626)
+scale = Vector2(1, 1)
+
+[node name="AnimatedSprite2D23" parent="foreground" unique_id=1143307639 instance=ExtResource("3_uvqj3")]
+position = Vector2(1156.0001, 69.33331)
+scale = Vector2(1, 1)
+
+[node name="AnimatedSprite2D24" parent="foreground" unique_id=1125771495 instance=ExtResource("3_uvqj3")]
+position = Vector2(1280.0001, 14.666626)
+scale = Vector2(1, 1)
+
+[node name="AnimatedSprite2D31" parent="foreground" unique_id=33725487 instance=ExtResource("3_uvqj3")]
+position = Vector2(1597.3334, -22.666687)
+scale = Vector2(1, 1)
+
+[node name="AnimatedSprite2D32" parent="foreground" unique_id=234660210 instance=ExtResource("3_uvqj3")]
+position = Vector2(1450.6667, 96)
+scale = Vector2(1, 1)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=2000314736]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D" unique_id=854723312]
+polygon = PackedVector2Array(16, 17, 1262, 17, 1294, 7, 1289, -27, -19, -18, -25, 737, 550, 739, 564, 702, 21, 702)
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="." unique_id=1580608644]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D2" unique_id=1038191167]
+polygon = PackedVector2Array(1269, 639, 1267, 706, 731, 695, 718, 733, 1298, 737, 1297, 665)
+
+[node name="Node2D" parent="." unique_id=2143138332 instance=ExtResource("6_xoihg")]
+position = Vector2(617, 718)
+
+[node name="Node2D2" parent="." unique_id=1511720578 instance=ExtResource("6_xoihg")]
+position = Vector2(736, 725)

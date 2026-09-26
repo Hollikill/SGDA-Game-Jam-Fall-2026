@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://cm2ab8vednxcq"]
+
+[ext_resource type="Texture2D" uid="uid://bdet0jb8w3hni" path="res://Resources/objects/flower2/flower2_0.png" id="1_5e3cn"]
+[ext_resource type="Texture2D" uid="uid://18lljmyf6pgp" path="res://Resources/objects/flower2/flower2_1.png" id="2_jwkkq"]
+[ext_resource type="Script" uid="uid://c844xk21lifky" path="res://Scripts/Obstacle.gd" id="3_p815a"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_r3xn8"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_5e3cn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_jwkkq")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 4.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_guh3l"]
+radius = 25.079872
+
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" unique_id=980863385]
+z_index = -1
+sprite_frames = SubResource("SpriteFrames_r3xn8")
+script = ExtResource("3_p815a")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1726188929]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=11845603]
+shape = SubResource("CircleShape2D_guh3l")

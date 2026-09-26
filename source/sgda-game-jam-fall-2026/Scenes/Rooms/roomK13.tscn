@@ -1,0 +1,228 @@
+[gd_scene format=3 uid="uid://bm7sjxed5lcg8"]
+
+[ext_resource type="Script" uid="uid://cmhfdvscu61c2" path="res://Scripts/RoomController.gd" id="1_jbyei"]
+[ext_resource type="Script" uid="uid://kh06467o6o7c" path="res://Scripts/EntranceMethod.gd" id="2_o2h61"]
+[ext_resource type="PackedScene" uid="uid://moj4xunry65n" path="res://Prefabs/obstacles/flower1.tscn" id="3_aj3ur"]
+[ext_resource type="PackedScene" uid="uid://cm2ab8vednxcq" path="res://Prefabs/obstacles/flower2.tscn" id="4_1dhxe"]
+[ext_resource type="PackedScene" uid="uid://c8m0htswftaok" path="res://Prefabs/obstacles/flower3.tscn" id="5_r6hpr"]
+[ext_resource type="PackedScene" uid="uid://bjwq1cbv4kp6q" path="res://Prefabs/obstacles/tree1.tscn" id="6_1dhxe"]
+
+[sub_resource type="Resource" id="Resource_jsn6o"]
+script = ExtResource("2_o2h61")
+room_id = "roomL13"
+enter_side = 2
+metadata/_custom_type_script = "uid://kh06467o6o7c"
+
+[node name="Room7" type="Node2D" unique_id=902578976]
+script = ExtResource("1_jbyei")
+room_id = "roomK13"
+bottom = SubResource("Resource_jsn6o")
+
+[node name="border" type="Node2D" parent="." unique_id=1762832866]
+
+[node name="AnimatedSprite2D" parent="border" unique_id=1160690367 instance=ExtResource("6_1dhxe")]
+position = Vector2(96, -122)
+
+[node name="AnimatedSprite2D3" parent="border" unique_id=612793569 instance=ExtResource("6_1dhxe")]
+position = Vector2(352, -137)
+
+[node name="AnimatedSprite2D2" parent="border" unique_id=1928447405 instance=ExtResource("6_1dhxe")]
+position = Vector2(601, -131)
+
+[node name="AnimatedSprite2D4" parent="border" unique_id=2025161846 instance=ExtResource("6_1dhxe")]
+position = Vector2(879, -125)
+
+[node name="AnimatedSprite2D6" parent="border" unique_id=1048869129 instance=ExtResource("6_1dhxe")]
+position = Vector2(1041, -122)
+
+[node name="AnimatedSprite2D7" parent="border" unique_id=2001668338 instance=ExtResource("6_1dhxe")]
+position = Vector2(1260, -100)
+
+[node name="AnimatedSprite2D8" parent="border" unique_id=670867274 instance=ExtResource("6_1dhxe")]
+position = Vector2(1140, -73)
+
+[node name="AnimatedSprite2D9" parent="border" unique_id=888906817 instance=ExtResource("6_1dhxe")]
+position = Vector2(948, -101)
+
+[node name="AnimatedSprite2D5" parent="border" unique_id=597726051 instance=ExtResource("6_1dhxe")]
+position = Vector2(751, -110)
+
+[node name="AnimatedSprite2D10" parent="border" unique_id=1193941693 instance=ExtResource("6_1dhxe")]
+position = Vector2(445, -130)
+
+[node name="AnimatedSprite2D11" parent="border" unique_id=1050867912 instance=ExtResource("6_1dhxe")]
+position = Vector2(520, -89)
+
+[node name="AnimatedSprite2D13" parent="border" unique_id=500941412 instance=ExtResource("6_1dhxe")]
+position = Vector2(274, -111)
+
+[node name="AnimatedSprite2D12" parent="border" unique_id=468122090 instance=ExtResource("6_1dhxe")]
+position = Vector2(190, -104)
+
+[node name="AnimatedSprite2D14" parent="border" unique_id=1121045822 instance=ExtResource("6_1dhxe")]
+position = Vector2(1312, -13)
+
+[node name="AnimatedSprite2D15" parent="border" unique_id=1864045280 instance=ExtResource("6_1dhxe")]
+position = Vector2(1263, 58)
+
+[node name="AnimatedSprite2D16" parent="border" unique_id=817244080 instance=ExtResource("6_1dhxe")]
+position = Vector2(1291, 166)
+
+[node name="AnimatedSprite2D17" parent="border" unique_id=1797211986 instance=ExtResource("6_1dhxe")]
+position = Vector2(1261, 238)
+
+[node name="AnimatedSprite2D18" parent="border" unique_id=1666406482 instance=ExtResource("6_1dhxe")]
+position = Vector2(1300, 323)
+
+[node name="AnimatedSprite2D19" parent="border" unique_id=1162960375 instance=ExtResource("6_1dhxe")]
+position = Vector2(1272, 407)
+
+[node name="AnimatedSprite2D20" parent="border" unique_id=917539741 instance=ExtResource("6_1dhxe")]
+position = Vector2(1314, 487)
+
+[node name="AnimatedSprite2D21" parent="border" unique_id=1666106265 instance=ExtResource("6_1dhxe")]
+position = Vector2(1282, 578)
+
+[node name="AnimatedSprite2D22" parent="border" unique_id=222099646 instance=ExtResource("6_1dhxe")]
+position = Vector2(24, -96)
+
+[node name="AnimatedSprite2D23" parent="border" unique_id=2108144823 instance=ExtResource("6_1dhxe")]
+position = Vector2(666, -93)
+
+[node name="flowers" type="Node2D" parent="." unique_id=935309663]
+
+[node name="AnimatedSprite2D2" parent="flowers" unique_id=980863385 instance=ExtResource("3_aj3ur")]
+position = Vector2(367, 478)
+rotation = 3.1415927
+scale = Vector2(1, -1)
+
+[node name="AnimatedSprite2D3" parent="flowers" unique_id=488051643 instance=ExtResource("3_aj3ur")]
+position = Vector2(147, 382)
+
+[node name="AnimatedSprite2D4" parent="flowers" unique_id=2301068 instance=ExtResource("4_1dhxe")]
+position = Vector2(493, 218)
+rotation = 3.1415927
+scale = Vector2(1, -1)
+
+[node name="AnimatedSprite2D5" parent="flowers" unique_id=545965504 instance=ExtResource("5_r6hpr")]
+position = Vector2(799, 499)
+rotation = 3.1415927
+scale = Vector2(1, -1)
+
+[node name="AnimatedSprite2D6" parent="flowers" unique_id=492541674 instance=ExtResource("5_r6hpr")]
+position = Vector2(763, 262)
+
+[node name="AnimatedSprite2D7" parent="flowers" unique_id=1278333167 instance=ExtResource("5_r6hpr")]
+position = Vector2(1045, 164)
+
+[node name="AnimatedSprite2D8" parent="flowers" unique_id=1775492654 instance=ExtResource("5_r6hpr")]
+position = Vector2(1116, 500)
+
+[node name="AnimatedSprite2D9" parent="flowers" unique_id=1577732920 instance=ExtResource("5_r6hpr")]
+position = Vector2(267, 294)
+rotation = 3.1415927
+scale = Vector2(1, -1)
+
+[node name="AnimatedSprite2D10" parent="flowers" unique_id=2058194535 instance=ExtResource("5_r6hpr")]
+position = Vector2(72, 197)
+rotation = 3.1415927
+scale = Vector2(1, -1)
+
+[node name="AnimatedSprite2D11" parent="flowers" unique_id=1091406021 instance=ExtResource("5_r6hpr")]
+position = Vector2(318, 91)
+
+[node name="AnimatedSprite2D12" parent="flowers" unique_id=1675021628 instance=ExtResource("5_r6hpr")]
+position = Vector2(120, 608)
+
+[node name="AnimatedSprite2D13" parent="flowers" unique_id=757247342 instance=ExtResource("4_1dhxe")]
+position = Vector2(674, 553)
+rotation = 3.1415927
+scale = Vector2(1, -1)
+
+[node name="AnimatedSprite2D14" parent="flowers" unique_id=1682839089 instance=ExtResource("4_1dhxe")]
+position = Vector2(92, 478)
+rotation = 3.1415927
+scale = Vector2(1, -1)
+
+[node name="AnimatedSprite2D15" parent="flowers" unique_id=1784313526 instance=ExtResource("4_1dhxe")]
+position = Vector2(190, 161)
+
+[node name="AnimatedSprite2D16" parent="flowers" unique_id=82395096 instance=ExtResource("4_1dhxe")]
+position = Vector2(77, 71)
+
+[node name="AnimatedSprite2D17" parent="flowers" unique_id=330435331 instance=ExtResource("4_1dhxe")]
+position = Vector2(653, 116)
+rotation = 3.1415927
+scale = Vector2(1, -1)
+
+[node name="AnimatedSprite2D18" parent="flowers" unique_id=341141492 instance=ExtResource("4_1dhxe")]
+position = Vector2(599, 352)
+
+[node name="AnimatedSprite2D19" parent="flowers" unique_id=1520733035 instance=ExtResource("4_1dhxe")]
+position = Vector2(958, 674)
+rotation = 3.1415927
+scale = Vector2(1, -1)
+
+[node name="AnimatedSprite2D20" parent="flowers" unique_id=1245859854 instance=ExtResource("4_1dhxe")]
+position = Vector2(1096, 376)
+rotation = 3.1415927
+scale = Vector2(1, -1)
+
+[node name="AnimatedSprite2D21" parent="flowers" unique_id=267629721 instance=ExtResource("4_1dhxe")]
+position = Vector2(925, 346)
+
+[node name="AnimatedSprite2D22" parent="flowers" unique_id=428416408 instance=ExtResource("4_1dhxe")]
+position = Vector2(961, 294)
+
+[node name="AnimatedSprite2D23" parent="flowers" unique_id=2094502510 instance=ExtResource("4_1dhxe")]
+position = Vector2(855, 131)
+rotation = 3.1415927
+scale = Vector2(1, -1)
+
+[node name="AnimatedSprite2D24" parent="flowers" unique_id=380103564 instance=ExtResource("4_1dhxe")]
+position = Vector2(1127, 114)
+
+[node name="AnimatedSprite2D25" parent="flowers" unique_id=976262130 instance=ExtResource("3_aj3ur")]
+position = Vector2(961, 529)
+
+[node name="AnimatedSprite2D26" parent="flowers" unique_id=656631650 instance=ExtResource("3_aj3ur")]
+position = Vector2(715, 394)
+
+[node name="AnimatedSprite2D27" parent="flowers" unique_id=147108934 instance=ExtResource("3_aj3ur")]
+position = Vector2(465, 589)
+rotation = 3.1415927
+scale = Vector2(1, -1)
+
+[node name="AnimatedSprite2D28" parent="flowers" unique_id=1016321592 instance=ExtResource("3_aj3ur")]
+position = Vector2(415, 322)
+rotation = 3.1415927
+scale = Vector2(1, -1)
+
+[node name="AnimatedSprite2D29" parent="flowers" unique_id=82688650 instance=ExtResource("3_aj3ur")]
+position = Vector2(527, 95)
+
+[node name="AnimatedSprite2D30" parent="flowers" unique_id=771491671 instance=ExtResource("3_aj3ur")]
+position = Vector2(795, 68)
+rotation = 3.1415927
+scale = Vector2(1, -1)
+
+[node name="AnimatedSprite2D31" parent="flowers" unique_id=448410818 instance=ExtResource("3_aj3ur")]
+position = Vector2(1152, 641)
+
+[node name="AnimatedSprite2D32" parent="flowers" unique_id=929521906 instance=ExtResource("3_aj3ur")]
+position = Vector2(274, 667)
+rotation = 3.1415927
+scale = Vector2(1, -1)
+
+[node name="AnimatedSprite2D33" parent="flowers" unique_id=1890608144 instance=ExtResource("3_aj3ur")]
+position = Vector2(126, 286)
+rotation = 3.1415927
+scale = Vector2(1, -1)
+
+[node name="AnimatedSprite2D34" parent="flowers" unique_id=138488332 instance=ExtResource("3_aj3ur")]
+position = Vector2(199, 76)
+rotation = 3.1415927
+scale = Vector2(1, -1)
+
+[node name="AnimatedSprite2D35" parent="flowers" unique_id=179824263 instance=ExtResource("3_aj3ur")]
+position = Vector2(891, 199)

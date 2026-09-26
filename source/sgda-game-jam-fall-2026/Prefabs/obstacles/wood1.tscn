@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://ct1qg83mdkjsw"]
+
+[ext_resource type="Texture2D" uid="uid://bicebpmre1pr5" path="res://Resources/objects/wood/wood_0.png" id="1_uses7"]
+[ext_resource type="Texture2D" uid="uid://bjugp6jy3pmch" path="res://Resources/objects/wood/wood_1.png" id="2_ddyd7"]
+[ext_resource type="Script" uid="uid://c844xk21lifky" path="res://Scripts/Obstacle.gd" id="3_jthqv"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_guh3l"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_uses7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_ddyd7")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 4.0
+}]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" unique_id=1160690367]
+z_index = 1
+scale = Vector2(0.75, 0.75)
+sprite_frames = SubResource("SpriteFrames_guh3l")
+script = ExtResource("3_jthqv")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1544722432]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D" unique_id=306462975]
+polygon = PackedVector2Array(42.666668, 50.666668, -49.333336, 53.333336, -66.66667, 110.66667, 41.333336, 106.66667, 70.66667, 84)
+
+[node name="Area2D" type="Area2D" parent="." unique_id=988163361]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D" unique_id=281722045]
+polygon = PackedVector2Array(42.666668, 50.666668, -49.333336, 53.333336, -66.66667, 110.66667, 41.333336, 106.66667, 70.66667, 84)

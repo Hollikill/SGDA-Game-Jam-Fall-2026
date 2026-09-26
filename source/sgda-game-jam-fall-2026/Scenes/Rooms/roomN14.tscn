@@ -1,0 +1,136 @@
+[gd_scene format=3 uid="uid://btfux20o3dfi6"]
+
+[ext_resource type="Script" uid="uid://cmhfdvscu61c2" path="res://Scripts/RoomController.gd" id="1_in3hd"]
+[ext_resource type="Script" uid="uid://kh06467o6o7c" path="res://Scripts/EntranceMethod.gd" id="2_fjsl5"]
+[ext_resource type="PackedScene" uid="uid://ct1qg83mdkjsw" path="res://Prefabs/obstacles/wood1.tscn" id="3_m4d0l"]
+[ext_resource type="PackedScene" uid="uid://bjwq1cbv4kp6q" path="res://Prefabs/obstacles/tree1.tscn" id="4_gnylh"]
+[ext_resource type="PackedScene" uid="uid://csvc1n8u4lme1" path="res://Prefabs/obstacles/fence/fence_post.tscn" id="5_cqxqa"]
+[ext_resource type="PackedScene" uid="uid://d16c5tsad2doc" path="res://Prefabs/obstacles/fence/fence_vert.tscn" id="6_l430y"]
+[ext_resource type="PackedScene" uid="uid://djdtyaotv2icg" path="res://Prefabs/obstacles/fence/fence_horz.tscn" id="7_q0uv5"]
+
+[sub_resource type="Resource" id="Resource_ac48s"]
+script = ExtResource("2_fjsl5")
+room_id = "roomM14"
+enter_side = 3
+metadata/_custom_type_script = "uid://kh06467o6o7c"
+
+[sub_resource type="Resource" id="Resource_3tidl"]
+script = ExtResource("2_fjsl5")
+room_id = "roomN13"
+enter_side = 1
+metadata/_custom_type_script = "uid://kh06467o6o7c"
+
+[node name="Room4" type="Node2D" unique_id=542161043]
+script = ExtResource("1_in3hd")
+room_id = "roomN14"
+top = SubResource("Resource_ac48s")
+left = SubResource("Resource_3tidl")
+
+[node name="AnimatedSprite2D" parent="." unique_id=1160690367 instance=ExtResource("3_m4d0l")]
+position = Vector2(794, 367)
+
+[node name="AnimatedSprite2D2" parent="." unique_id=1887496352 instance=ExtResource("4_gnylh")]
+position = Vector2(114, -85)
+
+[node name="AnimatedSprite2D3" parent="." unique_id=279022693 instance=ExtResource("4_gnylh")]
+position = Vector2(43, -49)
+
+[node name="AnimatedSprite2D4" parent="." unique_id=2128765587 instance=ExtResource("4_gnylh")]
+position = Vector2(1290, -113)
+
+[node name="AnimatedSprite2D5" parent="." unique_id=1188529963 instance=ExtResource("4_gnylh")]
+position = Vector2(15, 572)
+
+[node name="AnimatedSprite2D7" parent="." unique_id=1726744286 instance=ExtResource("3_m4d0l")]
+position = Vector2(330, 202)
+scale = Vector2(-0.75, 0.75)
+
+[node name="AnimatedSprite2D8" parent="." unique_id=387393780 instance=ExtResource("3_m4d0l")]
+position = Vector2(584, 85)
+
+[node name="AnimatedSprite2D9" parent="." unique_id=1857079267 instance=ExtResource("3_m4d0l")]
+position = Vector2(825, 173)
+
+[node name="AnimatedSprite2D10" parent="." unique_id=541282936 instance=ExtResource("3_m4d0l")]
+position = Vector2(458, 454)
+
+[node name="AnimatedSprite2D11" parent="." unique_id=859270923 instance=ExtResource("3_m4d0l")]
+position = Vector2(577, 264)
+
+[node name="AnimatedSprite2D13" parent="." unique_id=1022613362 instance=ExtResource("5_cqxqa")]
+position = Vector2(1285, 27)
+
+[node name="AnimatedSprite2D14" parent="." unique_id=411037276 instance=ExtResource("6_l430y")]
+position = Vector2(1281, 108)
+
+[node name="AnimatedSprite2D15" parent="." unique_id=419996962 instance=ExtResource("5_cqxqa")]
+position = Vector2(1285, 163)
+
+[node name="AnimatedSprite2D16" parent="." unique_id=877036568 instance=ExtResource("6_l430y")]
+position = Vector2(1281, 258)
+
+[node name="AnimatedSprite2D17" parent="." unique_id=1559173787 instance=ExtResource("5_cqxqa")]
+position = Vector2(1283, 307)
+
+[node name="AnimatedSprite2D18" parent="." unique_id=312576152 instance=ExtResource("6_l430y")]
+position = Vector2(1280, 399)
+
+[node name="AnimatedSprite2D19" parent="." unique_id=1856450003 instance=ExtResource("5_cqxqa")]
+position = Vector2(1281, 473)
+
+[node name="AnimatedSprite2D20" parent="." unique_id=1241143365 instance=ExtResource("6_l430y")]
+position = Vector2(1278, 568)
+
+[node name="AnimatedSprite2D21" parent="." unique_id=877329963 instance=ExtResource("5_cqxqa")]
+position = Vector2(1282, 662)
+
+[node name="AnimatedSprite2D22" parent="." unique_id=887028506 instance=ExtResource("7_q0uv5")]
+position = Vector2(1204, 688)
+
+[node name="AnimatedSprite2D23" parent="." unique_id=838974248 instance=ExtResource("5_cqxqa")]
+position = Vector2(1130, 674)
+
+[node name="AnimatedSprite2D24" parent="." unique_id=144790487 instance=ExtResource("7_q0uv5")]
+position = Vector2(1048, 688)
+
+[node name="AnimatedSprite2D25" parent="." unique_id=832587429 instance=ExtResource("5_cqxqa")]
+position = Vector2(972, 679)
+
+[node name="AnimatedSprite2D26" parent="." unique_id=2087882126 instance=ExtResource("7_q0uv5")]
+position = Vector2(893, 688)
+
+[node name="AnimatedSprite2D27" parent="." unique_id=2124238076 instance=ExtResource("5_cqxqa")]
+position = Vector2(819, 674)
+
+[node name="AnimatedSprite2D28" parent="." unique_id=400126483 instance=ExtResource("7_q0uv5")]
+position = Vector2(739, 690)
+
+[node name="AnimatedSprite2D29" parent="." unique_id=1084404722 instance=ExtResource("5_cqxqa")]
+position = Vector2(669, 674)
+
+[node name="AnimatedSprite2D30" parent="." unique_id=1068905894 instance=ExtResource("7_q0uv5")]
+position = Vector2(589, 691)
+
+[node name="AnimatedSprite2D31" parent="." unique_id=438870382 instance=ExtResource("5_cqxqa")]
+position = Vector2(516, 678)
+
+[node name="AnimatedSprite2D32" parent="." unique_id=399752467 instance=ExtResource("7_q0uv5")]
+position = Vector2(435, 691)
+
+[node name="AnimatedSprite2D33" parent="." unique_id=486241314 instance=ExtResource("5_cqxqa")]
+position = Vector2(365, 680)
+
+[node name="AnimatedSprite2D34" parent="." unique_id=626868596 instance=ExtResource("7_q0uv5")]
+position = Vector2(288, 695)
+
+[node name="AnimatedSprite2D12" parent="." unique_id=1612914098 instance=ExtResource("5_cqxqa")]
+position = Vector2(215, 686)
+
+[node name="AnimatedSprite2D6" parent="." unique_id=390410589 instance=ExtResource("7_q0uv5")]
+position = Vector2(136, 695)
+
+[node name="AnimatedSprite2D35" parent="." unique_id=2012134203 instance=ExtResource("5_cqxqa")]
+position = Vector2(64, 682)
+
+[node name="AnimatedSprite2D36" parent="." unique_id=969949432 instance=ExtResource("6_l430y")]
+position = Vector2(58, 752)

@@ -1,0 +1,36 @@
+[gd_scene format=3 uid="uid://bbh8ra70aewtc"]
+
+[ext_resource type="Texture2D" uid="uid://lq05s2xunjn7" path="res://Resources/objects/Lake/Lake1.png" id="1_v36vd"]
+[ext_resource type="Texture2D" uid="uid://c8ddcexgbefo3" path="res://Resources/objects/Lake/Lake2.png" id="2_v56ei"]
+[ext_resource type="Script" uid="uid://c844xk21lifky" path="res://Scripts/Obstacle.gd" id="3_rsgfa"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_guh3l"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_v36vd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_v56ei")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 4.0
+}]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" unique_id=1160690367]
+z_index = -1
+scale = Vector2(0.75, 0.75)
+sprite_frames = SubResource("SpriteFrames_guh3l")
+script = ExtResource("3_rsgfa")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1544722432]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D" unique_id=412660596]
+polygon = PackedVector2Array(126.66667, -196, 173.33334, -201.33334, 232, -177.33334, 293.33334, -61.333336, 285.33334, 24, 210.66667, 137.33334, 92, 198.66667, -62.666668, 174.66667, -250.66667, 74.66667, -293.33334, 4, -260, -69.333336, -189.33334, -105.333336, -58.666668, -108, 33.333336, -145.33334)
+
+[node name="Area2D" type="Area2D" parent="." unique_id=988163361]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D" unique_id=1052937439]
+scale = Vector2(0.995, 0.995)
+polygon = PackedVector2Array(126.66667, -196, 173.33334, -201.33334, 232, -177.33334, 293.33334, -61.333336, 285.33334, 24, 210.66667, 137.33334, 92, 198.66667, -62.666668, 174.66667, -250.66667, 74.66667, -293.33334, 4, -260, -69.333336, -189.33334, -105.333336, -58.666668, -108, 33.333336, -145.33334)

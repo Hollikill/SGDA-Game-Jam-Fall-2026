@@ -1,0 +1,36 @@
+[gd_scene format=3 uid="uid://boys8s0fyu1bw"]
+
+[ext_resource type="Texture2D" uid="uid://bwbwyqm5xvcgw" path="res://Resources/objects/Sawmill/Sawmill1.png" id="1_mmrbx"]
+[ext_resource type="Texture2D" uid="uid://bve7tae4equbf" path="res://Resources/objects/Sawmill/Sawmill2.png" id="2_eyv52"]
+[ext_resource type="Script" uid="uid://c844xk21lifky" path="res://Scripts/Obstacle.gd" id="3_xuwwx"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_28pet"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_mmrbx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_eyv52")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" unique_id=1637049278]
+z_index = 1
+scale = Vector2(0.75, 0.75)
+sprite_frames = SubResource("SpriteFrames_28pet")
+script = ExtResource("3_xuwwx")
+is_environment = true
+
+[node name="Area2D" type="Area2D" parent="." unique_id=911337625]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D" unique_id=361164776]
+polygon = PackedVector2Array(-67, 397, 376, 376, 360, -255, 297, -389, -75, -396, -163, -366, -171, -176, -388, -44, -388, 95, -171, -51, -180, 236)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=84069624]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D" unique_id=719927767]
+polygon = PackedVector2Array(-67, 397, 376, 376, 276, 232, -180, 236)

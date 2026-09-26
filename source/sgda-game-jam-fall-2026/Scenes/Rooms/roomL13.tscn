@@ -1,0 +1,97 @@
+[gd_scene format=3 uid="uid://cyf6ytk2kp3ct"]
+
+[ext_resource type="Script" uid="uid://cmhfdvscu61c2" path="res://Scripts/RoomController.gd" id="1_jsn6o"]
+[ext_resource type="Script" uid="uid://kh06467o6o7c" path="res://Scripts/EntranceMethod.gd" id="2_0x261"]
+[ext_resource type="PackedScene" uid="uid://bbh8ra70aewtc" path="res://Prefabs/obstacles/lake1.tscn" id="3_87kh3"]
+[ext_resource type="PackedScene" uid="uid://oklbu86mklqs" path="res://Prefabs/obstacles/bench1.tscn" id="4_i13s8"]
+[ext_resource type="PackedScene" uid="uid://bjwq1cbv4kp6q" path="res://Prefabs/obstacles/tree1.tscn" id="5_le0ig"]
+[ext_resource type="PackedScene" uid="uid://dvjghvdb6k0ss" path="res://Prefabs/obstacles/sapling1.tscn" id="6_wp0l2"]
+
+[sub_resource type="Resource" id="Resource_ledl8"]
+script = ExtResource("2_0x261")
+room_id = "roomK13"
+enter_side = 3
+metadata/_custom_type_script = "uid://kh06467o6o7c"
+
+[sub_resource type="Resource" id="Resource_1lkfe"]
+script = ExtResource("2_0x261")
+room_id = "roomL14"
+enter_side = 0
+metadata/_custom_type_script = "uid://kh06467o6o7c"
+
+[node name="Room6" type="Node2D" unique_id=4316471]
+script = ExtResource("1_jsn6o")
+room_id = "roomL13"
+top = SubResource("Resource_ledl8")
+right = SubResource("Resource_1lkfe")
+
+[node name="AnimatedSprite2D" parent="." unique_id=1160690367 instance=ExtResource("3_87kh3")]
+position = Vector2(621, 331)
+
+[node name="AnimatedSprite2D2" parent="." unique_id=980863385 instance=ExtResource("4_i13s8")]
+position = Vector2(507, 80)
+
+[node name="AnimatedSprite2D3" parent="." unique_id=1988748383 instance=ExtResource("5_le0ig")]
+position = Vector2(1264, -93)
+
+[node name="AnimatedSprite2D4" parent="." unique_id=1026750077 instance=ExtResource("5_le0ig")]
+position = Vector2(1305, 17)
+
+[node name="AnimatedSprite2D5" parent="." unique_id=1213178655 instance=ExtResource("5_le0ig")]
+position = Vector2(1264, 95)
+
+[node name="AnimatedSprite2D6" parent="." unique_id=1951826284 instance=ExtResource("5_le0ig")]
+position = Vector2(1298, 416)
+
+[node name="AnimatedSprite2D7" parent="." unique_id=1189166976 instance=ExtResource("5_le0ig")]
+position = Vector2(1254, 481)
+
+[node name="AnimatedSprite2D8" parent="." unique_id=743536259 instance=ExtResource("5_le0ig")]
+position = Vector2(1309, 577)
+
+[node name="Node2D" parent="." unique_id=2143138332 instance=ExtResource("6_wp0l2")]
+position = Vector2(1293, 349)
+
+[node name="AnimatedSprite2D9" parent="." unique_id=397189206 instance=ExtResource("5_le0ig")]
+position = Vector2(46, 565)
+
+[node name="AnimatedSprite2D10" parent="." unique_id=1558904889 instance=ExtResource("5_le0ig")]
+position = Vector2(288, 532)
+
+[node name="AnimatedSprite2D11" parent="." unique_id=1367470738 instance=ExtResource("5_le0ig")]
+position = Vector2(496, 601)
+
+[node name="AnimatedSprite2D12" parent="." unique_id=949161666 instance=ExtResource("5_le0ig")]
+position = Vector2(677, 583)
+
+[node name="AnimatedSprite2D13" parent="." unique_id=872842672 instance=ExtResource("5_le0ig")]
+position = Vector2(215, 571)
+
+[node name="AnimatedSprite2D14" parent="." unique_id=651562762 instance=ExtResource("5_le0ig")]
+position = Vector2(138, 641)
+
+[node name="AnimatedSprite2D15" parent="." unique_id=568477112 instance=ExtResource("5_le0ig")]
+position = Vector2(405, 620)
+
+[node name="AnimatedSprite2D16" parent="." unique_id=809000194 instance=ExtResource("5_le0ig")]
+position = Vector2(599, 610)
+
+[node name="AnimatedSprite2D17" parent="." unique_id=598147979 instance=ExtResource("5_le0ig")]
+position = Vector2(775, 640)
+
+[node name="AnimatedSprite2D18" parent="." unique_id=920474551 instance=ExtResource("5_le0ig")]
+position = Vector2(909, 584)
+
+[node name="AnimatedSprite2D19" parent="." unique_id=1251509305 instance=ExtResource("5_le0ig")]
+position = Vector2(1005, 658)
+
+[node name="AnimatedSprite2D20" parent="." unique_id=1187738036 instance=ExtResource("5_le0ig")]
+position = Vector2(1131, 574)
+
+[node name="AnimatedSprite2D21" parent="." unique_id=882717632 instance=ExtResource("5_le0ig")]
+position = Vector2(1236, 629)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=757969398]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D" unique_id=461544172]
+polygon = PackedVector2Array(1255, 695, 1251, 457, 1299, 455, 1302, 739, -15, 742, -18, 682)
