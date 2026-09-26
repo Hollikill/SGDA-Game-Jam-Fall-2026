@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://lbwgnqq4tmyh"]
+
+[ext_resource type="Texture2D" path="res://Resources/chest000.png" id="1_34hxm"]
+[ext_resource type="Script" uid="uid://c844xk21lifky" path="res://Scripts/Obstacle.gd" id="2_psldt"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_guh3l"]
+size = Vector2(103, 56)
+
+[node name="chest001" type="Sprite2D" unique_id=1002490319]
+z_index = 1
+texture = ExtResource("1_34hxm")
+script = ExtResource("2_psldt")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=392492203]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1213768400]
+position = Vector2(6.5, 15)
+shape = SubResource("RectangleShape2D_guh3l")

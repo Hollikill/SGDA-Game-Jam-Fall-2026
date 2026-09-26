@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://dh0uphemmsjy8"]
+
+[ext_resource type="Texture2D" path="res://Resources/house_outside_000.png" id="1_vhrun"]
+[ext_resource type="Script" uid="uid://c844xk21lifky" path="res://Scripts/Obstacle.gd" id="2_vhrun"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_guh3l"]
+size = Vector2(292, 281)
+
+[node name="HouseOutside000" type="Sprite2D" unique_id=293732730]
+z_index = 1
+texture = ExtResource("1_vhrun")
+script = ExtResource("2_vhrun")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=739527766]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D" unique_id=2015263557]
+polygon = PackedVector2Array(-1, -15, 111, -22, 122, 198, 46, 203, 17, 276, 32, 288, 59, 232, 144, 234, 136, -41, -154, -45, -160, 239, -40, 238, -40, 205, -132, 206, -120, -9)
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1035012028]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1316210125]
+position = Vector2(-6, 95.5)
+shape = SubResource("RectangleShape2D_guh3l")
