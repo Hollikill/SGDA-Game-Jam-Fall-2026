@@ -1,4 +1,4 @@
-extends Sprite2D
+extends AnimatedSprite2D
 
 @export var min_transparency: float = 0.3;
 var seconds_to_fade: float = 0.2;
@@ -12,6 +12,7 @@ var base_texture_rotation;
 var sprite_scale_offset = 1;
 
 func _ready():
+	play("default")
 	var collision_areas = find_children("*", "Area2D", true, false)
 	for area in collision_areas:
 		area.input_pickable = true
@@ -19,7 +20,8 @@ func _ready():
 		area.mouse_exited.connect(_on_mouse_exit)
 	base_texture_scale = scale;
 	base_texture_rotation = rotation;
-	sprite_scale_offset = max((texture.get_size().x + texture.get_size().y)/80,1);
+	var sprite_texture = sprite_frames.get_frame_texture(animation, 0)
+	sprite_scale_offset = max((sprite_texture.get_size().x + sprite_texture.get_size().y)/80,1);
 
 func _on_mouse_enter():
 	mouse_on = true;
