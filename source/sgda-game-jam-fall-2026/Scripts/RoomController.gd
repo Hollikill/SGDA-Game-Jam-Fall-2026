@@ -1,6 +1,11 @@
 extends Node
 
 @export var room_id: String = "";
+@export_group("leave blank for generic counter")
+@export var reward_flag_id: String = "";
+
+# room connections
+@export_category("Room Connections")
 @export var top: EntranceMethod
 @export var bottom: EntranceMethod
 @export var left: EntranceMethod
@@ -29,7 +34,17 @@ const BORDER_WIDTH := 3
 const OVERLAY_COLOR := Color(0.75, 0.75, 1, 1)
 
 func _ready() -> void:
+	# set reward key if generic
+	if (reward_flag_id == ""):
+		reward_flag_id = "generic_" + room_id;
+
+	# track global room id
 	GlobalPersistant.current_loaded_room = room_id;
+
+	# backup unlock handling
+	GlobalPersistant.is_complete(room_id)
+
+	# manage background
 	add_child(background);
 	background.z_index = -999;
 	background.position = GlobalPersistant.screen_size/2.0;
@@ -153,7 +168,7 @@ func toggle_popup() -> void:
 	popup_layer.visible = is_popup_open
 	
 	if is_popup_open:
-		set_process(false)
+		#set_process(false)
 		player.set_physics_process(false)
 		player.set_process(false)
 		
@@ -161,7 +176,11 @@ func toggle_popup() -> void:
 			var slot = popup_textures[i];
 			if entrancesIDs[i] != "":
 				var path = "res://Resources/Rooms/"+entrancesIDs[i]+".png"
-				var img = load(path)
+				var img: Texture = null;
+				if ResourceLoader.exists(path):
+					img = load(path)
+				else:
+					img = load("res://Resources/Rooms/invalid.png")
 				if(GlobalPersistant.is_complete(entrancesIDs[i])): 
 					slot.modulate = OVERLAY_COLOR
 				slot.texture = img
@@ -174,6 +193,12 @@ func toggle_popup() -> void:
 		player.set_process(true)
 
 func _process(_delta: float) -> void:
+	# trigger room unlock on completion
+	if (GlobalPersistant.room_trigger_unlock == true):
+		GlobalPersistant.room_trigger_unlock = false;
+		GlobalPersistant.giveFlag(reward_flag_id);
+
+	# switch rooms on player hit side
 	var offScreenSide = player.off_screen_side()
 	if (offScreenSide == "left" and left != null):
 		_switch_room(left)
@@ -184,10 +209,9 @@ func _process(_delta: float) -> void:
 	if ((offScreenSide == "bottom" and !GlobalPersistant.hasFlag("UD_flip") and bottom != null) or (offScreenSide == "top" and GlobalPersistant.hasFlag("UD_flip") and top != null)):
 		_switch_room(bottom)
 
-func _unhandled_input(event: InputEvent) -> void:
-	if event is InputEventKey and event.pressed and not event.is_echo():
-		if event.keycode == KEY_M:
-			toggle_popup()
+	# toggle map view
+	if (Input.is_action_just_pressed("game_map")):
+		toggle_popup()
 
 func _switch_room(entrance_method: EntranceMethod):
 	GlobalPersistant.scene_transition_info.player_position = player.global_position

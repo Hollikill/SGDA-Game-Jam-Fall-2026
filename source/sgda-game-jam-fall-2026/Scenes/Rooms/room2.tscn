@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://kh06467o6o7c" path="res://Scripts/EntranceMethod.gd" id="2_ey5jp"]
 [ext_resource type="PackedScene" uid="uid://dndmo2hii738" path="res://Prefabs/obstacles/farm_tree.tscn" id="3_ey5jp"]
 [ext_resource type="PackedScene" uid="uid://bjwq1cbv4kp6q" path="res://Prefabs/obstacles/tree1.tscn" id="4_rfld1"]
+[ext_resource type="PackedScene" uid="uid://dvjghvdb6k0ss" path="res://Prefabs/obstacles/sapling.tscn" id="5_1lkfe"]
 
 [sub_resource type="Resource" id="Resource_572sk"]
 script = ExtResource("2_ey5jp")
@@ -98,3 +99,6 @@ position = Vector2(760, 356)
 
 [node name="AnimatedSprite2D8" parent="orchard" unique_id=249981675 instance=ExtResource("3_ey5jp")]
 position = Vector2(1023, 356)
+
+[node name="AnimatedSprite2D" parent="." unique_id=950036218 instance=ExtResource("5_1lkfe")]
+position = Vector2(29, 355)

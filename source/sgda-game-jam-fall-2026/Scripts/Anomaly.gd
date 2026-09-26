@@ -1,11 +1,13 @@
-extends Area2D
+extends Node2D
 
 var mouse_on = false;
 
 func _ready():
-	input_pickable = true
-	mouse_entered.connect(_on_mouse_enter)
-	mouse_exited.connect(_on_mouse_exit)
+	var collision_areas = get_parent().find_children("*", "Area2D", true, false)
+	for area in collision_areas:
+		area.input_pickable = true
+		area.mouse_entered.connect(_on_mouse_enter)
+		area.mouse_exited.connect(_on_mouse_exit)
 
 func _on_mouse_enter():
 	mouse_on = true;

@@ -4,7 +4,10 @@
 [ext_resource type="Script" uid="uid://kh06467o6o7c" path="res://Scripts/EntranceMethod.gd" id="2_dsn0a"]
 [ext_resource type="PackedScene" uid="uid://2xlqw7anjbu3" path="res://Prefabs/obstacles/fountain1.tscn" id="3_dsn0a"]
 [ext_resource type="PackedScene" uid="uid://bjwq1cbv4kp6q" path="res://Prefabs/obstacles/tree1.tscn" id="4_i70oh"]
+[ext_resource type="Script" uid="uid://c8n7jicn1tmee" path="res://Scripts/AnomalyVersion.gd" id="4_w8mrb"]
+[ext_resource type="PackedScene" uid="uid://ykuh2np5dc26" path="res://Prefabs/obstacles/fountain2.tscn" id="5_2tpi7"]
 [ext_resource type="PackedScene" uid="uid://dq6b1o604jc03" path="res://Prefabs/obstacles/crate1.tscn" id="5_sn4vg"]
+[ext_resource type="Script" uid="uid://mx8vrp3eawff" path="res://Scripts/Anomaly.gd" id="6_ac48s"]
 
 [sub_resource type="Resource" id="Resource_owv72"]
 script = ExtResource("2_dsn0a")
@@ -18,14 +21,36 @@ room_id = "room0"
 enter_side = 1
 metadata/_custom_type_script = "uid://kh06467o6o7c"
 
+[sub_resource type="Resource" id="Resource_iei0n"]
+script = ExtResource("2_dsn0a")
+room_id = "room3"
+enter_side = 0
+metadata/_custom_type_script = "uid://kh06467o6o7c"
+
 [node name="Room1" type="Node2D" unique_id=542838139]
 script = ExtResource("1_a81mt")
 room_id = "room1"
 top = SubResource("Resource_owv72")
 left = SubResource("Resource_tvmfc")
+right = SubResource("Resource_iei0n")
 
 [node name="AnimatedSprite2D" parent="." unique_id=1919120940 instance=ExtResource("3_dsn0a")]
 position = Vector2(642, 343)
+
+[node name="Node2D" type="Node2D" parent="AnimatedSprite2D" unique_id=912279019]
+script = ExtResource("4_w8mrb")
+anomaly_version = 1
+
+[node name="AnimatedSprite2D5" parent="." unique_id=2139260396 instance=ExtResource("5_2tpi7")]
+position = Vector2(643, 343)
+
+[node name="Node2D" type="Node2D" parent="AnimatedSprite2D5" unique_id=674820350]
+script = ExtResource("4_w8mrb")
+anomaly_version = 1
+is_normal = false
+
+[node name="Anomaly" type="Node2D" parent="AnimatedSprite2D5" unique_id=304909116]
+script = ExtResource("6_ac48s")
 
 [node name="border" type="Node2D" parent="." unique_id=1774140890]
 position = Vector2(21, -104)

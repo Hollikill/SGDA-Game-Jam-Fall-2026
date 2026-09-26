@@ -20,6 +20,7 @@ var room_data = {};
 var room_versions = {};
 var current_loaded_room: String = "";
 var loading_rooms: bool = true;
+var room_trigger_unlock = false;
 
 func subscribe_anomaly_version(version_id: int):
 	if (!room_versions.has(current_loaded_room)): room_versions[current_loaded_room] = [];
@@ -31,6 +32,7 @@ func _add_used_anomaly_version(room_id: String, version_id: int):
 	if (!room_data[room_id].has("used_versions")): room_data[room_id]["used_versions"] = [];
 	if (room_data[room_id]["used_versions"].find(version_id) == -1):
 		room_data[room_id]["used_versions"].append(version_id);
+	is_complete(room_id)
 
 # build all the anomaly connections and versions into one map
 func build_room_map():
@@ -51,10 +53,6 @@ func build_room_map():
 			if node.anomaly_version >= 0:
 				subscribe_anomaly_version(node.anomaly_version);
 		room.free()
-	#print("room_data:")
-	#print(room_data)
-	#print("room_versions:")
-	#print(room_versions)
 
 # in game functions
 func complete_anomaly():
@@ -66,8 +64,13 @@ func complete_anomaly():
 func is_complete(room_id: String):
 	if (!room_data.has(room_id)): room_data[room_id] = {};
 	if (!room_data[room_id].has("used_versions")): room_data[room_id]["used_versions"] = [];
+	if (!room_data[room_id].has("finished")): room_data[room_id]["finished"] = false;
 	if (!room_data[room_id].has("completed_versions")): room_data[room_id]["completed_versions"] = [];
-	return room_data[room_id]["completed_versions"].size()+1 >= room_data[room_id]["used_versions"].size();
+	var room_complete = room_data[room_id]["completed_versions"].size()+1 >= room_data[room_id]["used_versions"].size();
+	if (room_complete && !room_data[room_id]["finished"] && !loading_rooms):
+		room_data[room_id]["finished"] = true;
+		room_trigger_unlock = true;
+	return room_complete;
 
 #################################
 # Manage Mouse Cursors
@@ -78,6 +81,22 @@ var current_cursor = CursorType.NORMAL;
 func set_cursor(type: CursorType):
 	if type > current_cursor:
 		current_cursor = type;
+
+#################################
+# Handles unlock/item flags
+
+var flags: Array[String]
+
+func giveFlag(flag: String): 
+	if!(flag in flags): 
+		flags.append(flag)
+	print(flags)
+
+func hasFlag(flag: String): 
+	return flag in flags
+
+func removeFlag(flag: String): 
+	flags.erase(flag)
 
 #################################
 func _ready() -> void:
@@ -92,15 +111,3 @@ func _process(_delta: float) -> void:
 		CursorType.ATTACK:
 			Input.set_custom_mouse_cursor(load("res://Resources/cursors/attack.png"));
 	current_cursor = CursorType.NORMAL;
-
-var flags: Array[String]
-
-func giveFlag(flag: String): 
-	if!(flag in flags): 
-		flags.append(flag)
-
-func hasFlag(flag: String): 
-	return flag in flags
-
-func removeFlag(flag: String): 
-	flags.erase(flag)
