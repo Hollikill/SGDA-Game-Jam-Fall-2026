@@ -8,4 +8,4 @@ func _ready():
 	add_child(button)
 
 func _button_pressed():
-	get_tree().change_scene_to_file("res://Scenes/MainMenu.tscn")
+	get_tree().change_scene_to_file(GlobalPersistant.back_button_location)

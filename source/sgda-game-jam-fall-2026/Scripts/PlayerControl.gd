@@ -91,7 +91,6 @@ func setupPathfinding(callback: Callable, target: Node2D) -> void:
 	pathfindTarget = target
 
 func pathfind(delta: float): 
-	GlobalAudio.play_dialogue("1")
 	playAnimation("walk")
 	if (pathfindTarget.global_position.distance_to(global_position) <= toleranceDistance):
 		pathfinding = false

@@ -13,6 +13,7 @@ func _ready() -> void:
 	button.pressed.connect(_switch_scenes);
 
 func _switch_scenes():
+	GlobalPersistant.back_button_location = \"Scenes/\"+startingScene+\".tscn\"
 	get_tree().change_scene_to_file(\"Scenes/\"+startingScene+\".tscn\");
 "
 

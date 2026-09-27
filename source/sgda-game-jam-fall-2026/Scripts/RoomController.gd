@@ -46,7 +46,18 @@ func updateText(text: String) -> void:
 func disableText() -> void: 
 	label.visible = false
 
+func _button_pressed() -> void: 
+	get_tree().change_scene_to_file("res://Scenes/SettingsMenu.tscn")
+
 func _ready() -> void:
+	var canvas_layer = CanvasLayer.new()
+	canvas_layer.layer = 2
+	add_child(canvas_layer)
+	var btn = Button.new()
+	btn.text = "Settings"
+	btn.pressed.connect(_button_pressed)
+	canvas_layer.add_child(btn)
+	
 	# set reward key if generic
 	if (reward_flag_id == ""):
 		reward_flag_id = "generic_" + room_id;
@@ -236,4 +247,5 @@ func _switch_room(entrance_method: EntranceMethod):
 	GlobalPersistant.scene_transition_info.player_position = player.global_position
 	GlobalPersistant.scene_transition_info.entrance_side = entrance_method.enter_side
 	GlobalPersistant.scene_transition_info.version_id = entrance_method.version_id
+	GlobalPersistant.back_button_location = "Scenes/Rooms/"+entrance_method.room_id+".tscn"
 	get_tree().change_scene_to_file("Scenes/Rooms/"+entrance_method.room_id+".tscn")

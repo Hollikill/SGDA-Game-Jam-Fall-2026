@@ -14,6 +14,9 @@ var scene_transition_info = {
 	version_id = 0,
 	player_position = Vector2(0,0),
 }
+
+var back_button_location := "res://Scenes/MainMenu.tscn"
+
 #################################
 # Handles unlocked anomalies
 var room_data = {};
