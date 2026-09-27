@@ -47,21 +47,21 @@ func play_sfx(sound_name: String):
 	new_player.play()
 
 func play_dialogue(sound_name: String): 
-	if not dialogues.has(sound_name): 
-		return
-	for player in get_children(): 
-		if not player.playing: 
-			player.stream = dialogues[sound_name]
-			player.bus = "Dialogue"
-			player.play()
-			GlobalPersistant.updateText(dialogueTexts[sound_name])
-			return
-	var new_player = AudioStreamPlayer.new()
-	add_child(new_player)
-	new_player.stream = dialogues[sound_name]
-	new_player.bus = "Dialogue"
-	GlobalPersistant.updateText(dialogueTexts[sound_name])
-	new_player.play()
+	if dialogues.has(sound_name):
+		for player in get_children(): 
+			if not player.playing: 
+				player.stream = dialogues[sound_name]
+				player.bus = "Dialogue"
+				player.play()
+				GlobalPersistant.updateText(dialogueTexts[sound_name])
+				return
+		var new_player = AudioStreamPlayer.new()
+		add_child(new_player)
+		new_player.stream = dialogues[sound_name]
+		new_player.bus = "Dialogue"
+		new_player.play()
+	if dialogueTexts.has(sound_name):
+		GlobalPersistant.updateText(dialogueTexts[sound_name])
 
 func changeAudioVolume(master: float, sfx: float, music: float, dialogue: float): 
 	var master_bus = AudioServer.get_bus_index("Master")

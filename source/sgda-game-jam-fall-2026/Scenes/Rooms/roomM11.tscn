@@ -1,0 +1,93 @@
+[gd_scene format=3 uid="uid://cchajkr3hr5i5"]
+
+[ext_resource type="Script" uid="uid://cmhfdvscu61c2" path="res://Scripts/RoomController.gd" id="1_i8lhd"]
+[ext_resource type="Script" uid="uid://kh06467o6o7c" path="res://Scripts/EntranceMethod.gd" id="2_7cfjx"]
+[ext_resource type="PackedScene" uid="uid://bjwq1cbv4kp6q" path="res://Prefabs/obstacles/tree1.tscn" id="3_7b0lq"]
+[ext_resource type="PackedScene" uid="uid://cjx4woi5n70pg" path="res://Prefabs/obstacles/rock1.tscn" id="4_smp4c"]
+[ext_resource type="PackedScene" uid="uid://bwocgqve53yo8" path="res://Prefabs/obstacles/rock2.tscn" id="5_rwxo1"]
+[ext_resource type="PackedScene" uid="uid://dl8b4sk6on36r" path="res://Prefabs/obstacles/bush2_bypassable.tscn" id="6_7b0lq"]
+[ext_resource type="PackedScene" uid="uid://c7xqi5ns2ow5h" path="res://Prefabs/obstacles/bush1_bypassable.tscn" id="7_smp4c"]
+
+[sub_resource type="Resource" id="Resource_4clc2"]
+script = ExtResource("2_7cfjx")
+room_id = "roomL11"
+enter_side = 3
+metadata/_custom_type_script = "uid://kh06467o6o7c"
+
+[sub_resource type="Resource" id="Resource_154ns"]
+script = ExtResource("2_7cfjx")
+room_id = "roomM12"
+enter_side = 0
+metadata/_custom_type_script = "uid://kh06467o6o7c"
+
+[node name="RoomM11" type="Node2D" unique_id=1359771578]
+script = ExtResource("1_i8lhd")
+room_id = "roomM11"
+top = SubResource("Resource_4clc2")
+right = SubResource("Resource_154ns")
+
+[node name="AnimatedSprite2D22" parent="." unique_id=1160690367 instance=ExtResource("3_7b0lq")]
+position = Vector2(1272, -36)
+
+[node name="AnimatedSprite2D14" parent="." unique_id=1592614072 instance=ExtResource("3_7b0lq")]
+position = Vector2(1281, 28)
+
+[node name="AnimatedSprite2D15" parent="." unique_id=1788408612 instance=ExtResource("3_7b0lq")]
+position = Vector2(1250.5, 103)
+
+[node name="AnimatedSprite2D16" parent="." unique_id=77600446 instance=ExtResource("3_7b0lq")]
+position = Vector2(1278.5, 211)
+
+[node name="AnimatedSprite2D20" parent="." unique_id=1786978282 instance=ExtResource("3_7b0lq")]
+position = Vector2(1301.5, 532)
+
+[node name="AnimatedSprite2D21" parent="." unique_id=43768447 instance=ExtResource("3_7b0lq")]
+position = Vector2(1261, 605)
+
+[node name="AnimatedSprite2D24" parent="." unique_id=1307600052 instance=ExtResource("3_7b0lq")]
+position = Vector2(1299, 724)
+
+[node name="AnimatedSprite2D25" parent="." unique_id=1368472129 instance=ExtResource("3_7b0lq")]
+position = Vector2(1269, 822)
+
+[node name="AnimatedSprite2D" parent="." unique_id=821010267 instance=ExtResource("4_smp4c")]
+position = Vector2(158, 33)
+
+[node name="AnimatedSprite2D10" parent="." unique_id=2104467733 instance=ExtResource("4_smp4c")]
+position = Vector2(192, 525)
+
+[node name="AnimatedSprite2D11" parent="." unique_id=2090873201 instance=ExtResource("4_smp4c")]
+position = Vector2(657, 444)
+
+[node name="AnimatedSprite2D12" parent="." unique_id=1476954783 instance=ExtResource("4_smp4c")]
+position = Vector2(964, 583)
+
+[node name="AnimatedSprite2D13" parent="." unique_id=1206216682 instance=ExtResource("4_smp4c")]
+position = Vector2(978, 318)
+
+[node name="AnimatedSprite2D2" parent="." unique_id=1378124608 instance=ExtResource("5_rwxo1")]
+position = Vector2(354, 262)
+
+[node name="AnimatedSprite2D3" parent="." unique_id=607863314 instance=ExtResource("5_rwxo1")]
+position = Vector2(818, 115)
+
+[node name="AnimatedSprite2D4" parent="." unique_id=2103773227 instance=ExtResource("5_rwxo1")]
+position = Vector2(572.00006, 102.00001)
+
+[node name="AnimatedSprite2D5" parent="." unique_id=401348816 instance=ExtResource("5_rwxo1")]
+position = Vector2(745, 354)
+
+[node name="AnimatedSprite2D6" parent="." unique_id=233634806 instance=ExtResource("5_rwxo1")]
+position = Vector2(1009, 206)
+
+[node name="AnimatedSprite2D7" parent="." unique_id=1692167834 instance=ExtResource("5_rwxo1")]
+position = Vector2(452, 439)
+
+[node name="Node2D" parent="." unique_id=2143138332 instance=ExtResource("6_7b0lq")]
+position = Vector2(1282, 393)
+
+[node name="Node2D2" parent="." unique_id=663849916 instance=ExtResource("6_7b0lq")]
+position = Vector2(1270, 555)
+
+[node name="Node2D3" parent="." unique_id=2136193044 instance=ExtResource("7_smp4c")]
+position = Vector2(1230, 480)
