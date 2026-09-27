@@ -19,11 +19,35 @@ room_id = "roomM14"
 enter_side = 0
 metadata/_custom_type_script = "uid://kh06467o6o7c"
 
+[sub_resource type="Resource" id="Resource_216he"]
+script = ExtResource("2_tl4br")
+room_id = "roomL12"
+metadata/_custom_type_script = "uid://kh06467o6o7c"
+
+[sub_resource type="Resource" id="Resource_wa5eu"]
+script = ExtResource("2_tl4br")
+room_id = "roomL14"
+metadata/_custom_type_script = "uid://kh06467o6o7c"
+
+[sub_resource type="Resource" id="Resource_bbia4"]
+script = ExtResource("2_tl4br")
+room_id = "roomN12"
+metadata/_custom_type_script = "uid://kh06467o6o7c"
+
+[sub_resource type="Resource" id="Resource_2udqr"]
+script = ExtResource("2_tl4br")
+room_id = "roomN14"
+metadata/_custom_type_script = "uid://kh06467o6o7c"
+
 [node name="Room0" type="Node2D" unique_id=459127640]
 script = ExtResource("1_rceqv")
 room_id = "roomM13"
 bottom = SubResource("Resource_ac48s")
 right = SubResource("Resource_i70oh")
+topleft = SubResource("Resource_216he")
+topright = SubResource("Resource_wa5eu")
+bottomleft = SubResource("Resource_bbia4")
+bottomright = SubResource("Resource_2udqr")
 
 [node name="background" type="Node2D" parent="." unique_id=611366845]
 

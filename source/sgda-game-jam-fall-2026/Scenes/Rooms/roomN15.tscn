@@ -3,15 +3,34 @@
 [ext_resource type="PackedScene" uid="uid://bjwq1cbv4kp6q" path="res://Prefabs/obstacles/tree1.tscn" id="1_6ceij"]
 [ext_resource type="PackedScene" uid="uid://cr5mtai11cq4i" path="res://Prefabs/obstacles/grave1.tscn" id="1_7tju2"]
 [ext_resource type="Script" uid="uid://cmhfdvscu61c2" path="res://Scripts/RoomController.gd" id="1_riprs"]
+[ext_resource type="Script" uid="uid://kh06467o6o7c" path="res://Scripts/EntranceMethod.gd" id="2_fy358"]
 [ext_resource type="PackedScene" uid="uid://je8sgqhssgo3" path="res://Prefabs/obstacles/grave2.tscn" id="2_qknr1"]
 [ext_resource type="PackedScene" uid="uid://c8fwy71hu7mch" path="res://Prefabs/obstacles/grave3.tscn" id="3_6ceij"]
 [ext_resource type="PackedScene" uid="uid://csvc1n8u4lme1" path="res://Prefabs/obstacles/fence/fence_post.tscn" id="4_riprs"]
 [ext_resource type="PackedScene" uid="uid://d16c5tsad2doc" path="res://Prefabs/obstacles/fence/fence_vert.tscn" id="5_fy358"]
 [ext_resource type="PackedScene" uid="uid://djdtyaotv2icg" path="res://Prefabs/obstacles/fence/fence_horz.tscn" id="7_riprs"]
 
+[sub_resource type="Resource" id="Resource_igb6b"]
+script = ExtResource("2_fy358")
+room_id = "roomM14"
+metadata/_custom_type_script = "uid://kh06467o6o7c"
+
+[sub_resource type="Resource" id="Resource_7oms4"]
+script = ExtResource("2_fy358")
+room_id = "roomO14"
+metadata/_custom_type_script = "uid://kh06467o6o7c"
+
+[sub_resource type="Resource" id="Resource_r4oyv"]
+script = ExtResource("2_fy358")
+room_id = "roomO16"
+metadata/_custom_type_script = "uid://kh06467o6o7c"
+
 [node name="RoomN15" type="Node2D" unique_id=66961305]
 script = ExtResource("1_riprs")
 room_id = "roomN15"
+topleft = SubResource("Resource_igb6b")
+bottomleft = SubResource("Resource_7oms4")
+bottomright = SubResource("Resource_r4oyv")
 
 [node name="AnimatedSprite2D" parent="." unique_id=1160690367 instance=ExtResource("1_6ceij")]
 position = Vector2(55, -6)

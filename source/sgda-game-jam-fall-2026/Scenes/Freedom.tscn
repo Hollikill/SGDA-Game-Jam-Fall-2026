@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://b0f1ujwflc6f1"]
+
+[ext_resource type="Script" uid="uid://ngy6qo2lujac" path="res://Scripts/freedom.gd" id="1_o7o7k"]
+
+[node name="Freedom" type="Node2D" unique_id=884375082]
+script = ExtResource("1_o7o7k")
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="." unique_id=459460080]
+offset_right = 40.0
+offset_bottom = 40.0

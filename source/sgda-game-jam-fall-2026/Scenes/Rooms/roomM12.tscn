@@ -24,11 +24,29 @@ room_id = "roomN12"
 enter_side = 2
 metadata/_custom_type_script = "uid://kh06467o6o7c"
 
+[sub_resource type="Resource" id="Resource_tydgd"]
+script = ExtResource("2_1x15p")
+room_id = "roomL11"
+metadata/_custom_type_script = "uid://kh06467o6o7c"
+
+[sub_resource type="Resource" id="Resource_4jvjc"]
+script = ExtResource("2_1x15p")
+room_id = "roomL13"
+metadata/_custom_type_script = "uid://kh06467o6o7c"
+
+[sub_resource type="Resource" id="Resource_x1idl"]
+script = ExtResource("2_1x15p")
+room_id = "roomN13"
+metadata/_custom_type_script = "uid://kh06467o6o7c"
+
 [node name="RoomM12" type="Node2D" unique_id=1817108962]
 script = ExtResource("1_h58qd")
 room_id = "roomM12"
 top = SubResource("Resource_e0msq")
 bottom = SubResource("Resource_kvqwb")
+topleft = SubResource("Resource_tydgd")
+topright = SubResource("Resource_4jvjc")
+bottomright = SubResource("Resource_x1idl")
 
 [node name="border" type="Node2D" parent="." unique_id=1509680839]
 

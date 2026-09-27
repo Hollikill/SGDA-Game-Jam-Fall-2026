@@ -22,11 +22,29 @@ room_id = "roomN13"
 enter_side = 1
 metadata/_custom_type_script = "uid://kh06467o6o7c"
 
+[sub_resource type="Resource" id="Resource_exvag"]
+script = ExtResource("2_fjsl5")
+room_id = "roomM13"
+metadata/_custom_type_script = "uid://kh06467o6o7c"
+
+[sub_resource type="Resource" id="Resource_bxahr"]
+script = ExtResource("2_fjsl5")
+room_id = "roomM15"
+metadata/_custom_type_script = "uid://kh06467o6o7c"
+
+[sub_resource type="Resource" id="Resource_jefgk"]
+script = ExtResource("2_fjsl5")
+room_id = "roomO15"
+metadata/_custom_type_script = "uid://kh06467o6o7c"
+
 [node name="Room4" type="Node2D" unique_id=542161043]
 script = ExtResource("1_in3hd")
 room_id = "roomN14"
 top = SubResource("Resource_ac48s")
 left = SubResource("Resource_3tidl")
+topleft = SubResource("Resource_exvag")
+topright = SubResource("Resource_bxahr")
+bottomright = SubResource("Resource_jefgk")
 
 [node name="AnimatedSprite2D" parent="." unique_id=1160690367 instance=ExtResource("3_m4d0l")]
 position = Vector2(794, 367)

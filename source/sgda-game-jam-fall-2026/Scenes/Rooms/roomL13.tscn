@@ -25,6 +25,21 @@ room_id = "roomL14"
 enter_side = 0
 metadata/_custom_type_script = "uid://kh06467o6o7c"
 
+[sub_resource type="Resource" id="Resource_qgebm"]
+script = ExtResource("2_0x261")
+room_id = "roomK12"
+metadata/_custom_type_script = "uid://kh06467o6o7c"
+
+[sub_resource type="Resource" id="Resource_lrt04"]
+script = ExtResource("2_0x261")
+room_id = "roomM12"
+metadata/_custom_type_script = "uid://kh06467o6o7c"
+
+[sub_resource type="Resource" id="Resource_3xp6j"]
+script = ExtResource("2_0x261")
+room_id = "roomM14"
+metadata/_custom_type_script = "uid://kh06467o6o7c"
+
 [node name="Room6" type="Node2D" unique_id=4316471]
 script = ExtResource("1_jsn6o")
 room_id = "roomL13"
@@ -32,6 +47,9 @@ reward_flag_id = "grass_cloak"
 top = SubResource("Resource_ledl8")
 left = SubResource("Resource_2conp")
 right = SubResource("Resource_1lkfe")
+topleft = SubResource("Resource_qgebm")
+bottomleft = SubResource("Resource_lrt04")
+bottomright = SubResource("Resource_3xp6j")
 
 [node name="AnimatedSprite2D" parent="." unique_id=1160690367 instance=ExtResource("3_87kh3")]
 position = Vector2(621, 331)

@@ -26,12 +26,36 @@ room_id = "roomL13"
 enter_side = 0
 metadata/_custom_type_script = "uid://kh06467o6o7c"
 
+[sub_resource type="Resource" id="Resource_jj0rf"]
+script = ExtResource("2_fhhbb")
+room_id = "roomK11"
+metadata/_custom_type_script = "uid://kh06467o6o7c"
+
+[sub_resource type="Resource" id="Resource_b8vji"]
+script = ExtResource("2_fhhbb")
+room_id = "roomK13"
+metadata/_custom_type_script = "uid://kh06467o6o7c"
+
+[sub_resource type="Resource" id="Resource_j2xw1"]
+script = ExtResource("2_fhhbb")
+room_id = "roomM11"
+metadata/_custom_type_script = "uid://kh06467o6o7c"
+
+[sub_resource type="Resource" id="Resource_sipye"]
+script = ExtResource("2_fhhbb")
+room_id = "roomM13"
+metadata/_custom_type_script = "uid://kh06467o6o7c"
+
 [node name="RoomL12" type="Node2D" unique_id=836291961]
 script = ExtResource("1_2conp")
 room_id = "roomL12"
 top = SubResource("Resource_ud02f")
 bottom = SubResource("Resource_1dhxe")
 right = SubResource("Resource_m3db2")
+topleft = SubResource("Resource_jj0rf")
+topright = SubResource("Resource_b8vji")
+bottomleft = SubResource("Resource_j2xw1")
+bottomright = SubResource("Resource_sipye")
 
 [node name="border" type="Node2D" parent="." unique_id=1719650539]
 

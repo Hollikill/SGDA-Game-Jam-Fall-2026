@@ -20,11 +20,17 @@ room_id = "roomK12"
 enter_side = 0
 metadata/_custom_type_script = "uid://kh06467o6o7c"
 
+[sub_resource type="Resource" id="Resource_q0sq1"]
+script = ExtResource("2_i4v77")
+room_id = "roomL12"
+metadata/_custom_type_script = "uid://kh06467o6o7c"
+
 [node name="RoomK11" type="Node2D" unique_id=1377438730]
 script = ExtResource("1_n2xfq")
 room_id = "roomK11"
 bottom = SubResource("Resource_884pw")
 right = SubResource("Resource_n2xfq")
+bottomright = SubResource("Resource_q0sq1")
 
 [node name="AnimatedSprite2D22" parent="." unique_id=1160690367 instance=ExtResource("3_urxpg")]
 position = Vector2(1272, -36)

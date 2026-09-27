@@ -3,11 +3,60 @@
 [ext_resource type="Script" uid="uid://cmhfdvscu61c2" path="res://Scripts/RoomController.gd" id="1_104yc"]
 [ext_resource type="PackedScene" uid="uid://cr5mtai11cq4i" path="res://Prefabs/obstacles/grave1.tscn" id="1_he7lw"]
 [ext_resource type="PackedScene" uid="uid://je8sgqhssgo3" path="res://Prefabs/obstacles/grave2.tscn" id="2_104yc"]
+[ext_resource type="Script" uid="uid://kh06467o6o7c" path="res://Scripts/EntranceMethod.gd" id="2_kuifh"]
 [ext_resource type="PackedScene" uid="uid://c8fwy71hu7mch" path="res://Prefabs/obstacles/grave3.tscn" id="3_swe3j"]
+[ext_resource type="PackedScene" uid="uid://djdtyaotv2icg" path="res://Prefabs/obstacles/fence/fence_horz.tscn" id="6_paplx"]
+[ext_resource type="PackedScene" uid="uid://csvc1n8u4lme1" path="res://Prefabs/obstacles/fence/fence_post.tscn" id="7_8iwfx"]
+
+[sub_resource type="Resource" id="Resource_olmkj"]
+script = ExtResource("2_kuifh")
+room_id = "roomN15"
+enter_side = 3
+metadata/_custom_type_script = "uid://kh06467o6o7c"
+
+[sub_resource type="Resource" id="Resource_7iv4n"]
+script = ExtResource("2_kuifh")
+room_id = "roomP15"
+enter_side = 2
+metadata/_custom_type_script = "uid://kh06467o6o7c"
+
+[sub_resource type="Resource" id="Resource_qrq7m"]
+script = ExtResource("2_kuifh")
+room_id = "roomO14"
+enter_side = 1
+metadata/_custom_type_script = "uid://kh06467o6o7c"
+
+[sub_resource type="Resource" id="Resource_00nbg"]
+script = ExtResource("2_kuifh")
+room_id = "roomO16"
+enter_side = 0
+metadata/_custom_type_script = "uid://kh06467o6o7c"
+
+[sub_resource type="Resource" id="Resource_3cbay"]
+script = ExtResource("2_kuifh")
+room_id = "roomN14"
+metadata/_custom_type_script = "uid://kh06467o6o7c"
+
+[sub_resource type="Resource" id="Resource_cjrgu"]
+script = ExtResource("2_kuifh")
+room_id = "roomP14"
+metadata/_custom_type_script = "uid://kh06467o6o7c"
+
+[sub_resource type="Resource" id="Resource_3vok4"]
+script = ExtResource("2_kuifh")
+room_id = "roomP16"
+metadata/_custom_type_script = "uid://kh06467o6o7c"
 
 [node name="RoomO15" type="Node2D" unique_id=1018366569]
 script = ExtResource("1_104yc")
 room_id = "roomO15"
+top = SubResource("Resource_olmkj")
+bottom = SubResource("Resource_7iv4n")
+left = SubResource("Resource_qrq7m")
+right = SubResource("Resource_00nbg")
+topleft = SubResource("Resource_3cbay")
+bottomleft = SubResource("Resource_cjrgu")
+bottomright = SubResource("Resource_3vok4")
 
 [node name="graves" type="Node2D" parent="." unique_id=116687472]
 position = Vector2(228, 404)
@@ -43,3 +92,56 @@ scale = Vector2(1, 1)
 [node name="AnimatedSprite2D8" parent="graves" unique_id=2132930247 instance=ExtResource("3_swe3j")]
 position = Vector2(1089.3334, -310.66663)
 scale = Vector2(1, 1)
+
+[node name="fence2" type="Node2D" parent="." unique_id=870171561]
+
+[node name="AnimatedSprite2D5" parent="fence2" unique_id=1659090985 instance=ExtResource("6_paplx")]
+position = Vector2(74.625, 677)
+
+[node name="AnimatedSprite2D6" parent="fence2" unique_id=329236576 instance=ExtResource("7_8iwfx")]
+position = Vector2(157.625, 663)
+
+[node name="AnimatedSprite2D7" parent="fence2" unique_id=559585000 instance=ExtResource("6_paplx")]
+position = Vector2(231.625, 680)
+
+[node name="AnimatedSprite2D8" parent="fence2" unique_id=1756994766 instance=ExtResource("7_8iwfx")]
+position = Vector2(308.625, 668)
+
+[node name="AnimatedSprite2D9" parent="fence2" unique_id=452970884 instance=ExtResource("6_paplx")]
+position = Vector2(380.625, 680)
+
+[node name="AnimatedSprite2D10" parent="fence2" unique_id=1499482131 instance=ExtResource("7_8iwfx")]
+position = Vector2(456.625, 668)
+
+[node name="AnimatedSprite2D11" parent="fence2" unique_id=792814745 instance=ExtResource("6_paplx")]
+position = Vector2(528.625, 684)
+
+[node name="AnimatedSprite2D12" parent="fence2" unique_id=2067348577 instance=ExtResource("7_8iwfx")]
+position = Vector2(611.625, 669)
+
+[node name="AnimatedSprite2D13" parent="fence2" unique_id=1235138254 instance=ExtResource("6_paplx")]
+position = Vector2(684.625, 686)
+
+[node name="AnimatedSprite2D14" parent="fence2" unique_id=792536449 instance=ExtResource("7_8iwfx")]
+position = Vector2(767.625, 673)
+
+[node name="AnimatedSprite2D15" parent="fence2" unique_id=1480539206 instance=ExtResource("6_paplx")]
+position = Vector2(840.625, 686)
+
+[node name="AnimatedSprite2D16" parent="fence2" unique_id=944031693 instance=ExtResource("7_8iwfx")]
+position = Vector2(923.625, 671)
+
+[node name="AnimatedSprite2D17" parent="fence2" unique_id=1990340657 instance=ExtResource("6_paplx")]
+position = Vector2(999.625, 687)
+
+[node name="AnimatedSprite2D18" parent="fence2" unique_id=1366485669 instance=ExtResource("7_8iwfx")]
+position = Vector2(1079.625, 674)
+
+[node name="AnimatedSprite2D19" parent="fence2" unique_id=13077950 instance=ExtResource("6_paplx")]
+position = Vector2(1149.75, 685)
+
+[node name="AnimatedSprite2D20" parent="fence2" unique_id=2090626708 instance=ExtResource("7_8iwfx")]
+position = Vector2(1229.75, 672)
+
+[node name="AnimatedSprite2D21" parent="fence2" unique_id=1019694467 instance=ExtResource("6_paplx")]
+position = Vector2(1295.75, 682)

@@ -3,14 +3,48 @@
 [ext_resource type="PackedScene" uid="uid://djdtyaotv2icg" path="res://Prefabs/obstacles/fence/fence_horz.tscn" id="1_0g2xc"]
 [ext_resource type="Script" uid="uid://cmhfdvscu61c2" path="res://Scripts/RoomController.gd" id="1_im0wf"]
 [ext_resource type="PackedScene" uid="uid://csvc1n8u4lme1" path="res://Prefabs/obstacles/fence/fence_post.tscn" id="2_ru6kk"]
+[ext_resource type="Script" uid="uid://kh06467o6o7c" path="res://Scripts/EntranceMethod.gd" id="2_wtkoq"]
 [ext_resource type="PackedScene" uid="uid://dk2h2kifi35fe" path="res://Prefabs/obstacles/mausoleum1.tscn" id="3_ru6kk"]
 [ext_resource type="PackedScene" uid="uid://cr5mtai11cq4i" path="res://Prefabs/obstacles/grave1.tscn" id="4_y3bqd"]
 [ext_resource type="PackedScene" uid="uid://je8sgqhssgo3" path="res://Prefabs/obstacles/grave2.tscn" id="5_im0wf"]
 [ext_resource type="PackedScene" uid="uid://c8fwy71hu7mch" path="res://Prefabs/obstacles/grave3.tscn" id="6_wtkoq"]
 
+[sub_resource type="Resource" id="Resource_jvjq8"]
+script = ExtResource("2_wtkoq")
+room_id = "roomO15"
+enter_side = 3
+metadata/_custom_type_script = "uid://kh06467o6o7c"
+
+[sub_resource type="Resource" id="Resource_d14ey"]
+script = ExtResource("2_wtkoq")
+room_id = "roomP14"
+enter_side = 1
+metadata/_custom_type_script = "uid://kh06467o6o7c"
+
+[sub_resource type="Resource" id="Resource_ps8j1"]
+script = ExtResource("2_wtkoq")
+room_id = "roomP16"
+enter_side = 0
+metadata/_custom_type_script = "uid://kh06467o6o7c"
+
+[sub_resource type="Resource" id="Resource_51acg"]
+script = ExtResource("2_wtkoq")
+room_id = "roomO14"
+metadata/_custom_type_script = "uid://kh06467o6o7c"
+
+[sub_resource type="Resource" id="Resource_o44up"]
+script = ExtResource("2_wtkoq")
+room_id = "roomO16"
+metadata/_custom_type_script = "uid://kh06467o6o7c"
+
 [node name="RoomP15" type="Node2D" unique_id=130810269]
 script = ExtResource("1_im0wf")
 room_id = "roomP15"
+top = SubResource("Resource_jvjq8")
+left = SubResource("Resource_d14ey")
+right = SubResource("Resource_ps8j1")
+topleft = SubResource("Resource_51acg")
+topright = SubResource("Resource_o44up")
 
 [node name="fence2" type="Node2D" parent="." unique_id=768300701]
 
