@@ -1,0 +1,93 @@
+[gd_scene format=3 uid="uid://cm25ysdse0uns"]
+
+[ext_resource type="Script" uid="uid://cmhfdvscu61c2" path="res://Scripts/RoomController.gd" id="1_n2xfq"]
+[ext_resource type="Script" uid="uid://kh06467o6o7c" path="res://Scripts/EntranceMethod.gd" id="2_i4v77"]
+[ext_resource type="PackedScene" uid="uid://bjwq1cbv4kp6q" path="res://Prefabs/obstacles/tree1.tscn" id="3_urxpg"]
+[ext_resource type="PackedScene" uid="uid://cjx4woi5n70pg" path="res://Prefabs/obstacles/rock1.tscn" id="4_urxpg"]
+[ext_resource type="PackedScene" uid="uid://bwocgqve53yo8" path="res://Prefabs/obstacles/rock2.tscn" id="5_vgvou"]
+[ext_resource type="PackedScene" uid="uid://dl8b4sk6on36r" path="res://Prefabs/obstacles/bush2_bypassable.tscn" id="6_0d562"]
+[ext_resource type="PackedScene" uid="uid://c7xqi5ns2ow5h" path="res://Prefabs/obstacles/bush1_bypassable.tscn" id="7_sqx2u"]
+
+[sub_resource type="Resource" id="Resource_884pw"]
+script = ExtResource("2_i4v77")
+room_id = "roomL11"
+enter_side = 2
+metadata/_custom_type_script = "uid://kh06467o6o7c"
+
+[sub_resource type="Resource" id="Resource_n2xfq"]
+script = ExtResource("2_i4v77")
+room_id = "roomK12"
+enter_side = 0
+metadata/_custom_type_script = "uid://kh06467o6o7c"
+
+[node name="RoomK11" type="Node2D" unique_id=1377438730]
+script = ExtResource("1_n2xfq")
+room_id = "roomK11"
+bottom = SubResource("Resource_884pw")
+right = SubResource("Resource_n2xfq")
+
+[node name="AnimatedSprite2D22" parent="." unique_id=1160690367 instance=ExtResource("3_urxpg")]
+position = Vector2(1272, -36)
+
+[node name="AnimatedSprite2D14" parent="." unique_id=113780214 instance=ExtResource("3_urxpg")]
+position = Vector2(1281, 28)
+
+[node name="AnimatedSprite2D15" parent="." unique_id=531052571 instance=ExtResource("3_urxpg")]
+position = Vector2(1250.5, 103)
+
+[node name="AnimatedSprite2D16" parent="." unique_id=1945561118 instance=ExtResource("3_urxpg")]
+position = Vector2(1278.5, 211)
+
+[node name="AnimatedSprite2D20" parent="." unique_id=400348864 instance=ExtResource("3_urxpg")]
+position = Vector2(1301.5, 532)
+
+[node name="AnimatedSprite2D21" parent="." unique_id=404612357 instance=ExtResource("3_urxpg")]
+position = Vector2(1261, 605)
+
+[node name="AnimatedSprite2D24" parent="." unique_id=557144944 instance=ExtResource("3_urxpg")]
+position = Vector2(1299, 724)
+
+[node name="AnimatedSprite2D25" parent="." unique_id=1091498865 instance=ExtResource("3_urxpg")]
+position = Vector2(1269, 822)
+
+[node name="AnimatedSprite2D" parent="." unique_id=1642558876 instance=ExtResource("4_urxpg")]
+position = Vector2(158, 33)
+
+[node name="AnimatedSprite2D10" parent="." unique_id=821555061 instance=ExtResource("4_urxpg")]
+position = Vector2(192, 525)
+
+[node name="AnimatedSprite2D11" parent="." unique_id=706825381 instance=ExtResource("4_urxpg")]
+position = Vector2(657, 444)
+
+[node name="AnimatedSprite2D12" parent="." unique_id=305028222 instance=ExtResource("4_urxpg")]
+position = Vector2(964, 583)
+
+[node name="AnimatedSprite2D13" parent="." unique_id=1766680836 instance=ExtResource("4_urxpg")]
+position = Vector2(978, 318)
+
+[node name="AnimatedSprite2D2" parent="." unique_id=761063507 instance=ExtResource("5_vgvou")]
+position = Vector2(354, 262)
+
+[node name="AnimatedSprite2D3" parent="." unique_id=1109316176 instance=ExtResource("5_vgvou")]
+position = Vector2(818, 115)
+
+[node name="AnimatedSprite2D4" parent="." unique_id=1722345648 instance=ExtResource("5_vgvou")]
+position = Vector2(572.00006, 102.00001)
+
+[node name="AnimatedSprite2D5" parent="." unique_id=1981461924 instance=ExtResource("5_vgvou")]
+position = Vector2(745, 354)
+
+[node name="AnimatedSprite2D6" parent="." unique_id=512178120 instance=ExtResource("5_vgvou")]
+position = Vector2(1009, 206)
+
+[node name="AnimatedSprite2D7" parent="." unique_id=51340544 instance=ExtResource("5_vgvou")]
+position = Vector2(452, 439)
+
+[node name="Node2D" parent="." unique_id=2143138332 instance=ExtResource("6_0d562")]
+position = Vector2(1267, 505)
+
+[node name="Node2D2" parent="." unique_id=33056192 instance=ExtResource("6_0d562")]
+position = Vector2(1267, 401)
+
+[node name="Node2D3" parent="." unique_id=1400078620 instance=ExtResource("7_sqx2u")]
+position = Vector2(1233, 449)
