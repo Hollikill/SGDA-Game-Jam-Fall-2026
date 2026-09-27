@@ -15,6 +15,8 @@ extends Node
 @export var bottomleft: EntranceMethod
 @export var bottomright: EntranceMethod
 
+@export var label := Label.new()
+
 var entrancesIDs: Array[String] = []
 
 @onready var background: Sprite2D = Sprite2D.new();
@@ -33,10 +35,23 @@ const BORDER_COLOR := Color(0.2, 0.1, 1, 1)
 const BORDER_WIDTH := 3
 const OVERLAY_COLOR := Color(0.75, 0.75, 1, 1)
 
+func updateText(text: String) -> void: 
+	label.text = text
+	label.position = Vector2(1280/2, 720/2)
+	label.add_theme_color_override("font_color", Color.BLACK)
+	label.visible = true
+
+func disableText() -> void: 
+	label.visible = false
+
 func _ready() -> void:
 	# set reward key if generic
 	if (reward_flag_id == ""):
 		reward_flag_id = "generic_" + room_id;
+	
+	label.visible = false
+	GlobalPersistant.updateTextFunc = updateText
+	GlobalPersistant.disableTextFunc = disableText
 
 	# track global room id
 	GlobalPersistant.current_loaded_room = room_id;

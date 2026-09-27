@@ -22,6 +22,15 @@ var current_loaded_room: String = "";
 var loading_rooms: bool = true;
 var room_trigger_unlock = [];
 
+var updateTextFunc: Callable
+var disableTextFunc: Callable
+
+func updateText(text: String) -> void: 
+	updateTextFunc.call(text)
+
+func disableText() -> void: 
+	disableTextFunc.call()
+
 func subscribe_anomaly_version(version_id: int):
 	if (!room_versions.has(current_loaded_room)): room_versions[current_loaded_room] = [];
 	if (room_versions[current_loaded_room].find(version_id) == -1):
@@ -103,7 +112,7 @@ func _ready() -> void:
 	build_room_map();
 	loading_rooms = false;
 	pass
-	
+
 func _process(_delta: float) -> void:
 	match current_cursor:
 		CursorType.NORMAL:

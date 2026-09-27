@@ -1,0 +1,128 @@
+[gd_scene format=3 uid="uid://bbhq1rg34wnsv"]
+
+[ext_resource type="Script" uid="uid://ce025ucs72tj1" path="res://Scripts/BackToMenuButton.gd" id="1_8uw7q"]
+
+[sub_resource type="GDScript" id="GDScript_bxjf0"]
+script/source = "extends Control
+
+@onready var master = get_node(\"MasterVolume\")
+@onready var music = get_node(\"MusicVolume\")
+@onready var sfx = get_node(\"SFXVolume\")
+@onready var dialogue = get_node(\"DialogueVolume\")
+@onready var masterLabel = get_node(\"MasterLabel\")
+@onready var musicLabel = get_node(\"MusicLabel\")
+@onready var sfxLabel = get_node(\"SFXLabel\")
+@onready var dialogueLabel = get_node(\"DialogueLabel\")
+
+var masterVolume = 1
+var musicVolume = 1
+var sfxVolume = 1
+var dialogueVolume = 1
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	master.position = Vector2(50, 50)
+	music.position = Vector2(50, 150)
+	sfx.position = Vector2(50, 100)
+	dialogue.position = Vector2(50, 200)
+	master.custom_minimum_size.x = 1000
+	music.custom_minimum_size.x = 1000
+	sfx.custom_minimum_size.x = 1000
+	dialogue.custom_minimum_size.x = 1000
+	master.value = 100
+	music.value = 100
+	sfx.value = 100
+	dialogue.value = 100
+	masterLabel.position = Vector2(550, 30)
+	musicLabel.position = Vector2(550, 130)
+	sfxLabel.position = Vector2(550, 80)
+	dialogueLabel.position = Vector2(550, 180)
+	masterLabel.add_theme_color_override(\"font_color\", Color.BLACK)
+	musicLabel.add_theme_color_override(\"font_color\", Color.BLACK)
+	sfxLabel.add_theme_color_override(\"font_color\", Color.BLACK)
+	dialogueLabel.add_theme_color_override(\"font_color\", Color.BLACK)
+	updateVolume()
+
+func updateVolume(): 
+	masterLabel.text = \"Master: \" + str(int(100 * masterVolume)) + \"%\"
+	sfxLabel.text = \"SFX: \" + str(int(100 * sfxVolume)) + \"%\"
+	musicLabel.text = \"Music: \" + str(int(100 * musicVolume)) + \"%\"
+	dialogueLabel.text = \"Dialogue: \" + str(int(100 * dialogueVolume)) + \"%\"
+	GlobalAudio.changeAudioVolume(masterVolume, sfxVolume, musicVolume, dialogueVolume)
+
+func _on_master_volume_value_changed(value: float) -> void:
+	masterVolume = value / 100
+	updateVolume()
+
+func _on_sfx_volume_value_changed(value: float) -> void: 
+	sfxVolume = value / 100
+	updateVolume()
+
+func _on_music_volume_value_changed(value: float) -> void: 
+	musicVolume = value / 100
+	updateVolume()
+
+func _on_dialogue_volume_value_changed(value: float) -> void: 
+	dialogueVolume = value / 100
+	updateVolume()
+"
+
+[node name="SettingsMenu" type="Control" unique_id=2096931720]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = SubResource("GDScript_bxjf0")
+
+[node name="Button" type="Button" parent="." unique_id=949693429]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+script = ExtResource("1_8uw7q")
+
+[node name="MasterVolume" type="HSlider" parent="." unique_id=981685133]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 16.0
+
+[node name="MusicVolume" type="HSlider" parent="." unique_id=1072896519]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 16.0
+
+[node name="SFXVolume" type="HSlider" parent="." unique_id=951128885]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 16.0
+
+[node name="DialogueVolume" type="HSlider" parent="." unique_id=1800452382]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 16.0
+
+[node name="MasterLabel" type="Label" parent="." unique_id=875760043]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="MusicLabel" type="Label" parent="." unique_id=1653637144]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="SFXLabel" type="Label" parent="." unique_id=424150063]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="DialogueLabel" type="Label" parent="." unique_id=1394879240]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+
+[connection signal="value_changed" from="MasterVolume" to="." method="_on_master_volume_value_changed"]
+[connection signal="value_changed" from="MusicVolume" to="." method="_on_music_volume_value_changed"]
+[connection signal="value_changed" from="SFXVolume" to="." method="_on_sfx_volume_value_changed"]
+[connection signal="value_changed" from="DialogueVolume" to="." method="_on_dialogue_volume_value_changed"]

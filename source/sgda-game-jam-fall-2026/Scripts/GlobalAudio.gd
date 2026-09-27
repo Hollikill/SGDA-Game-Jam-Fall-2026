@@ -12,8 +12,12 @@ const sounds = {
 const dialogues = {
 }
 
+const dialogueTexts = {
+}
+
 func _ready() -> void:
 	add_child(player)
+	player.bus = "Music"
 	player.stream = tracks["1"]
 	player.play()
 
@@ -45,14 +49,16 @@ func play_dialogue(sound_name: String):
 		return
 	for player in get_children(): 
 		if not player.playing: 
-			player.stream = sounds[sound_name]
+			player.stream = dialogues[sound_name]
 			player.bus = "Dialogue"
 			player.play()
+			GlobalPersistant.updateText(dialogueTexts[sound_name])
 			return
 	var new_player = AudioStreamPlayer.new()
 	add_child(new_player)
-	new_player.stream = sounds[sound_name]
+	new_player.stream = dialogues[sound_name]
 	new_player.bus = "Dialogue"
+	GlobalPersistant.updateText(dialogueTexts[sound_name])
 	new_player.play()
 
 func changeAudioVolume(master: float, sfx: float, music: float, dialogue: float): 
@@ -63,4 +69,4 @@ func changeAudioVolume(master: float, sfx: float, music: float, dialogue: float)
 	var music_bus = AudioServer.get_bus_index("Music")
 	AudioServer.set_bus_volume_db(music_bus, linear_to_db(music)) 
 	var dialogue_bus = AudioServer.get_bus_index("Dialogue")
-	AudioServer.set_bus_volume_db(music_bus, linear_to_db(dialogue))
+	AudioServer.set_bus_volume_db(dialogue_bus, linear_to_db(dialogue))

@@ -1,5 +1,7 @@
 [gd_scene format=3 uid="uid://cnv4qw1vyrqnj"]
 
+[ext_resource type="Script" uid="uid://c0os3loy87dy5" path="res://Scripts/OpenSettingsMenu.gd" id="1_tt5f1"]
+
 [sub_resource type="GDScript" id="GDScript_erv1k"]
 script/source = "extends Button
 
@@ -35,3 +37,8 @@ text = "Start Game"
 script = SubResource("GDScript_erv1k")
 button = NodePath(".")
 startingScene = "Rooms/roomM13"
+
+[node name="Button" type="Button" parent="." unique_id=1092511572]
+offset_right = 8.0
+offset_bottom = 8.0
+script = ExtResource("1_tt5f1")

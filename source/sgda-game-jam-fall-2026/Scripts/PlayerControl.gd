@@ -164,6 +164,11 @@ func _physics_process(delta: float) -> void:
 		global_position.y = GlobalPersistant.screen_size.y - sprite_size.y
 	
 
+func _process(delta):
+	if Input.is_action_just_pressed("game_attack"):
+		GlobalPersistant.disableText()
+
+
 func off_screen_side():
 	if (global_position.x - sprite_size.x <= 0):
 		return "left"
