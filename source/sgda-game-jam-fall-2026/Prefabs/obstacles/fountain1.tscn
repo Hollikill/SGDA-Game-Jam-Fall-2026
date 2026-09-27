@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://2xlqw7anjbu3"]
 
-[ext_resource type="Texture2D" uid="uid://n3n4j3cqni5e" path="res://Resources/objects/fountain1/statue1_0.png" id="1_ohn2w"]
-[ext_resource type="Texture2D" uid="uid://jisl8jgy3qeg" path="res://Resources/objects/fountain1/statue1_1.png" id="2_2modu"]
+[ext_resource type="Texture2D" uid="uid://b48yaw81j7s01" path="res://Resources/objects/fountain1/fountain1_0.png" id="1_ohn2w"]
+[ext_resource type="Texture2D" uid="uid://uevmi6joqumt" path="res://Resources/objects/fountain1/fountain1_1.png" id="2_2modu"]
 [ext_resource type="Script" uid="uid://c844xk21lifky" path="res://Scripts/Obstacle.gd" id="3_swopv"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_srst0"]

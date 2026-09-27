@@ -140,12 +140,12 @@ func _ready() -> void:
 			pass
 
 func load_room_background() -> void:
-	var path: String = "res://Resources/Rooms/%s.png" % room_id
+	#var path: String = "res://Resources/Rooms/%s.png" % room_id
 	
-	if ResourceLoader.exists(path):
+	#if ResourceLoader.exists(path):
 		pass#background.texture = load(path)
-	else:
-		push_error("RoomController Error: Background image missing at " + path)
+	#else:
+	#	push_error("RoomController Error: Background image missing at " + path)
 
 func recalculateBorders(): 
 	for i in range(0, 9): 
