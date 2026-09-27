@@ -28,6 +28,7 @@ metadata/_custom_type_script = "uid://kh06467o6o7c"
 [node name="Room6" type="Node2D" unique_id=4316471]
 script = ExtResource("1_jsn6o")
 room_id = "roomL13"
+reward_flag_id = "grass_cloak"
 top = SubResource("Resource_ledl8")
 left = SubResource("Resource_2conp")
 right = SubResource("Resource_1lkfe")

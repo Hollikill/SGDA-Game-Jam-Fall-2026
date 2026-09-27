@@ -7,6 +7,8 @@
 [ext_resource type="PackedScene" uid="uid://dvjghvdb6k0ss" path="res://Prefabs/obstacles/sapling1.tscn" id="5_1lkfe"]
 [ext_resource type="PackedScene" uid="uid://cjx4woi5n70pg" path="res://Prefabs/obstacles/rock1.tscn" id="6_hvjgf"]
 [ext_resource type="PackedScene" uid="uid://d02oomfbb8lh4" path="res://Prefabs/obstacles/rock_breakable.tscn" id="7_cj5e2"]
+[ext_resource type="PackedScene" uid="uid://dl8b4sk6on36r" path="res://Prefabs/obstacles/bush2_bypassable.tscn" id="8_0u40d"]
+[ext_resource type="PackedScene" uid="uid://c7xqi5ns2ow5h" path="res://Prefabs/obstacles/bush1_bypassable.tscn" id="9_q0fxk"]
 
 [sub_resource type="Resource" id="Resource_572sk"]
 script = ExtResource("2_ey5jp")
@@ -124,17 +126,32 @@ position = Vector2(1261, 608)
 [node name="AnimatedSprite2D5" parent="." unique_id=299536233 instance=ExtResource("6_hvjgf")]
 position = Vector2(1237, 664)
 
+[node name="Node2D12" parent="." unique_id=1984409217 instance=ExtResource("9_q0fxk")]
+position = Vector2(537, -4)
+
+[node name="Node2D6" parent="." unique_id=1188762564 instance=ExtResource("8_0u40d")]
+position = Vector2(581, 21)
+
+[node name="Node2D7" parent="." unique_id=2141011530 instance=ExtResource("8_0u40d")]
+position = Vector2(722, 9)
+
+[node name="Node2D8" parent="." unique_id=990633171 instance=ExtResource("9_q0fxk")]
+position = Vector2(657, 16)
+
+[node name="Node2D9" parent="." unique_id=75256979 instance=ExtResource("9_q0fxk")]
+position = Vector2(622, 41)
+
+[node name="Node2D10" parent="." unique_id=560511313 instance=ExtResource("9_q0fxk")]
+position = Vector2(700, 45)
+
+[node name="Node2D11" parent="." unique_id=2012248333 instance=ExtResource("9_q0fxk")]
+position = Vector2(776, 32)
+
 [node name="Node2D" parent="." unique_id=2143138332 instance=ExtResource("7_cj5e2")]
-position = Vector2(1273, 452)
+position = Vector2(1297, 285)
 
-[node name="Node2D2" parent="." unique_id=138097616 instance=ExtResource("7_cj5e2")]
-position = Vector2(1278, 403)
+[node name="Node2D2" parent="." unique_id=126315598 instance=ExtResource("7_cj5e2")]
+position = Vector2(1262, 367)
 
-[node name="Node2D3" parent="." unique_id=1655381620 instance=ExtResource("7_cj5e2")]
-position = Vector2(1266, 356)
-
-[node name="Node2D4" parent="." unique_id=1259581971 instance=ExtResource("7_cj5e2")]
-position = Vector2(1278, 316)
-
-[node name="Node2D5" parent="." unique_id=657476824 instance=ExtResource("7_cj5e2")]
-position = Vector2(1275, 270)
+[node name="Node2D3" parent="." unique_id=956232690 instance=ExtResource("7_cj5e2")]
+position = Vector2(1283, 452)

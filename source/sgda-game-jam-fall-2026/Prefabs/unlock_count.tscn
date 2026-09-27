@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://c7s2jfcq1gi2e"]
+
+[ext_resource type="Script" uid="uid://cjmd0pgkg54vx" path="res://Scripts/LockText.gd" id="1_ac6pr"]
+
+[node name="unlock count" type="RichTextLabel" unique_id=2009469868]
+offset_left = -43.0
+offset_top = -24.0
+offset_right = 69.0
+offset_bottom = 25.0
+theme_override_font_sizes/normal_font_size = 32
+bbcode_enabled = true
+text = "[color=f44]12/15[/color]"
+script = ExtResource("1_ac6pr")
+unlock_flag_count_required = 15

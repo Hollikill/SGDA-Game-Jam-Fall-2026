@@ -123,7 +123,7 @@ func _ready() -> void:
 	add_child(player)
 	player.global_position = GlobalPersistant.scene_transition_info.player_position;
 	
-	load_room_background()
+	#load_room_background()
 	
 	match GlobalPersistant.scene_transition_info.entrance_side:
 		GlobalPersistant.EnterSide.LEFT:

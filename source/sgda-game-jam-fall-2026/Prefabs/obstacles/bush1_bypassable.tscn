@@ -1,0 +1,45 @@
+[gd_scene format=3 uid="uid://c7xqi5ns2ow5h"]
+
+[ext_resource type="Script" uid="uid://d4ko5yy51dh04" path="res://Scripts/UnlockObject.gd" id="1_jxpvt"]
+[ext_resource type="Texture2D" uid="uid://bqnku521ip7e8" path="res://Resources/objects/bush1/bush1_0.png" id="2_on4lj"]
+[ext_resource type="Texture2D" uid="uid://dcn3jrua7td6a" path="res://Resources/objects/bush1/bush1_1.png" id="3_lfdvr"]
+[ext_resource type="Script" uid="uid://c844xk21lifky" path="res://Scripts/Obstacle.gd" id="4_618i7"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_vblew"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_on4lj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_lfdvr")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 4.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_guh3l"]
+size = Vector2(51.5, 60)
+
+[node name="Node2D" type="Node2D" unique_id=2143138332]
+script = ExtResource("1_jxpvt")
+unlock_flag_id = "grass_cloak"
+only_disable_collision = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=950036218]
+sprite_frames = SubResource("SpriteFrames_vblew")
+script = ExtResource("4_618i7")
+is_environment = true
+
+[node name="StaticBody2D" type="StaticBody2D" parent="AnimatedSprite2D" unique_id=993132323]
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="AnimatedSprite2D/StaticBody2D" unique_id=2123489217]
+position = Vector2(0, -4)
+shape = SubResource("RectangleShape2D_guh3l")
+
+[node name="Area2D" type="Area2D" parent="AnimatedSprite2D" unique_id=878334163]
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="AnimatedSprite2D/Area2D" unique_id=1283663945]
+position = Vector2(0, -4)
+shape = SubResource("RectangleShape2D_guh3l")

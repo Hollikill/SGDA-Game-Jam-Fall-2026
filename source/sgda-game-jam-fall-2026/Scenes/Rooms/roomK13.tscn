@@ -6,6 +6,8 @@
 [ext_resource type="PackedScene" uid="uid://cm2ab8vednxcq" path="res://Prefabs/obstacles/flower2.tscn" id="4_1dhxe"]
 [ext_resource type="PackedScene" uid="uid://c8m0htswftaok" path="res://Prefabs/obstacles/flower3.tscn" id="5_r6hpr"]
 [ext_resource type="PackedScene" uid="uid://bjwq1cbv4kp6q" path="res://Prefabs/obstacles/tree1.tscn" id="6_1dhxe"]
+[ext_resource type="PackedScene" uid="uid://dl8b4sk6on36r" path="res://Prefabs/obstacles/bush2_bypassable.tscn" id="7_btnoj"]
+[ext_resource type="PackedScene" uid="uid://c7xqi5ns2ow5h" path="res://Prefabs/obstacles/bush1_bypassable.tscn" id="8_4h3ag"]
 
 [sub_resource type="Resource" id="Resource_jsn6o"]
 script = ExtResource("2_o2h61")
@@ -77,15 +79,6 @@ position = Vector2(1291, 166)
 
 [node name="AnimatedSprite2D17" parent="border" unique_id=1797211986 instance=ExtResource("6_1dhxe")]
 position = Vector2(1261, 238)
-
-[node name="AnimatedSprite2D18" parent="border" unique_id=1666406482 instance=ExtResource("6_1dhxe")]
-position = Vector2(1300, 323)
-
-[node name="AnimatedSprite2D19" parent="border" unique_id=1162960375 instance=ExtResource("6_1dhxe")]
-position = Vector2(1272, 407)
-
-[node name="AnimatedSprite2D20" parent="border" unique_id=917539741 instance=ExtResource("6_1dhxe")]
-position = Vector2(1314, 487)
 
 [node name="AnimatedSprite2D21" parent="border" unique_id=1666106265 instance=ExtResource("6_1dhxe")]
 position = Vector2(1282, 578)
@@ -239,3 +232,21 @@ scale = Vector2(1, -1)
 
 [node name="AnimatedSprite2D35" parent="flowers" unique_id=179824263 instance=ExtResource("3_aj3ur")]
 position = Vector2(891, 199)
+
+[node name="Node2D" parent="." unique_id=2143138332 instance=ExtResource("7_btnoj")]
+position = Vector2(1270, 612)
+
+[node name="Node2D2" parent="." unique_id=1752135322 instance=ExtResource("7_btnoj")]
+position = Vector2(1242, 545)
+
+[node name="Node2D3" parent="." unique_id=272263884 instance=ExtResource("7_btnoj")]
+position = Vector2(1270, 460)
+
+[node name="Node2D4" parent="." unique_id=1148100206 instance=ExtResource("8_4h3ag")]
+position = Vector2(1214, 480)
+
+[node name="Node2D5" parent="." unique_id=976029791 instance=ExtResource("8_4h3ag")]
+position = Vector2(1230, 658)
+
+[node name="Node2D6" parent="." unique_id=2090451997 instance=ExtResource("8_4h3ag")]
+position = Vector2(1207, 421)

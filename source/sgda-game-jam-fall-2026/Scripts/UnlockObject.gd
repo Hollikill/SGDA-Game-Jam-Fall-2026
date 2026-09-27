@@ -6,8 +6,6 @@ extends Node
 @export var unlock_via_flag_count: bool = false;
 @export var unlock_flag_count_required: int = -1;
 
-@onready var parent = get_parent()
-
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pass
