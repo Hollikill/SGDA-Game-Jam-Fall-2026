@@ -99,7 +99,7 @@ var flags: Array[String]
 func giveFlag(flag: String): 
 	if!(flag in flags): 
 		flags.append(flag)
-	print(flags)
+	#print(flags)
 
 func hasFlag(flag: String): 
 	return flag in flags

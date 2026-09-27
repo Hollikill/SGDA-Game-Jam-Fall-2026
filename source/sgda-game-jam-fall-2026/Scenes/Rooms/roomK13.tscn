@@ -13,10 +13,17 @@ room_id = "roomL13"
 enter_side = 2
 metadata/_custom_type_script = "uid://kh06467o6o7c"
 
+[sub_resource type="Resource" id="Resource_0x261"]
+script = ExtResource("2_o2h61")
+room_id = "roomK12"
+enter_side = 1
+metadata/_custom_type_script = "uid://kh06467o6o7c"
+
 [node name="Room7" type="Node2D" unique_id=902578976]
 script = ExtResource("1_jbyei")
 room_id = "roomK13"
 bottom = SubResource("Resource_jsn6o")
+left = SubResource("Resource_0x261")
 
 [node name="border" type="Node2D" parent="." unique_id=1762832866]
 
@@ -82,6 +89,12 @@ position = Vector2(1314, 487)
 
 [node name="AnimatedSprite2D21" parent="border" unique_id=1666106265 instance=ExtResource("6_1dhxe")]
 position = Vector2(1282, 578)
+
+[node name="AnimatedSprite2D24" parent="border" unique_id=519959245 instance=ExtResource("6_1dhxe")]
+position = Vector2(1307, 676)
+
+[node name="AnimatedSprite2D25" parent="border" unique_id=99870330 instance=ExtResource("6_1dhxe")]
+position = Vector2(1301, 781)
 
 [node name="AnimatedSprite2D22" parent="border" unique_id=222099646 instance=ExtResource("6_1dhxe")]
 position = Vector2(24, -96)
