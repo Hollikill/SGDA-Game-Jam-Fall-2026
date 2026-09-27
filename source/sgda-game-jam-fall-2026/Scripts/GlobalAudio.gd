@@ -33,10 +33,11 @@ func _ready() -> void:
 func swap_track(track_name: String) -> void:
 	if not tracks.has(track_name):
 		return
+	player.bus = "Music"
 	var current_position: float = player.get_playback_position()
 	player.stream = tracks[track_name]
-	player.bus = "Music"
 	last_music_playing = track_name
+	player.play()
 
 func play_sfx(sound_name: String):
 	if not sounds.has(sound_name):
@@ -84,7 +85,7 @@ func _process(delta: float) -> void:
 	if (!GlobalPersistant.loading_rooms):
 		if (GlobalPersistant.flags.size() >= 3 && last_music_playing == "1"):
 			swap_track("2")
-		if (GlobalPersistant.flags.size() >= 8 && last_music_playing == "1"):
+		if (GlobalPersistant.flags.size() >= 8 && last_music_playing == "2"):
 			swap_track("3")
-		if (GlobalPersistant.flags.size() >= 13 && last_music_playing == "1"):
+		if (GlobalPersistant.flags.size() >= 13 && last_music_playing == "3"):
 			swap_track("4")

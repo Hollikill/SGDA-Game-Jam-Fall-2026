@@ -135,7 +135,7 @@ rotation = -3.1415925
 scale = Vector2(0.75, -0.75)
 
 [node name="AnimatedSprite2D9" parent="." unique_id=452923044 instance=ExtResource("4_jvcbs")]
-position = Vector2(925.99994, 250)
+position = Vector2(926, 250)
 rotation = -3.1415925
 scale = Vector2(0.75, -0.75)
 
