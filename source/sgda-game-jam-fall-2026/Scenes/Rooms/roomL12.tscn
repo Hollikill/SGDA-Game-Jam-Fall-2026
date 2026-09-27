@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://moj4xunry65n" path="res://Prefabs/obstacles/flower1.tscn" id="2_uhfo6"]
 [ext_resource type="PackedScene" uid="uid://cm2ab8vednxcq" path="res://Prefabs/obstacles/flower2.tscn" id="3_2conp"]
 [ext_resource type="PackedScene" uid="uid://c8m0htswftaok" path="res://Prefabs/obstacles/flower3.tscn" id="4_fhhbb"]
+[ext_resource type="PackedScene" uid="uid://bn51qnjkn4he4" path="res://Prefabs/obstacles/mushroom1.tscn" id="7_fhhbb"]
 
 [sub_resource type="Resource" id="Resource_ud02f"]
 script = ExtResource("2_fhhbb")
@@ -201,3 +202,9 @@ scale = Vector2(1, -1)
 
 [node name="AnimatedSprite2D35" parent="flowers" unique_id=1493577255 instance=ExtResource("2_uhfo6")]
 position = Vector2(891, 199)
+
+[node name="AnimatedSprite2D2" parent="." unique_id=1298250093 instance=ExtResource("7_fhhbb")]
+position = Vector2(616, 666)
+
+[node name="AnimatedSprite2D3" parent="." unique_id=386925277 instance=ExtResource("7_fhhbb")]
+position = Vector2(825, 647)
