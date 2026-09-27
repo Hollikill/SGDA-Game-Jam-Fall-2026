@@ -11,6 +11,7 @@
 [node name="RoomP15" type="Node2D" unique_id=130810269]
 script = ExtResource("1_im0wf")
 room_id = "roomP15"
+reward_flag_id = "hammer"
 
 [node name="fence2" type="Node2D" parent="." unique_id=768300701]
 
