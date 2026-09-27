@@ -10,9 +10,11 @@ const sounds = {
 }
 
 const dialogues = {
+"1": preload("res://Resources/Audio/1.mp3")
 }
 
 const dialogueTexts = {
+"1": "This is some test dialogue. Press LMB to attack/disable this message"
 }
 
 func _ready() -> void:

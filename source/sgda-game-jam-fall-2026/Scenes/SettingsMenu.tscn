@@ -33,14 +33,23 @@ func _ready() -> void:
 	music.value = 100
 	sfx.value = 100
 	dialogue.value = 100
-	masterLabel.position = Vector2(550, 30)
-	musicLabel.position = Vector2(550, 130)
-	sfxLabel.position = Vector2(550, 80)
-	dialogueLabel.position = Vector2(550, 180)
+	masterLabel.position = Vector2(525, 30)
+	musicLabel.position = Vector2(525, 130)
+	sfxLabel.position = Vector2(525, 80)
+	dialogueLabel.position = Vector2(525, 180)
 	masterLabel.add_theme_color_override(\"font_color\", Color.BLACK)
 	musicLabel.add_theme_color_override(\"font_color\", Color.BLACK)
 	sfxLabel.add_theme_color_override(\"font_color\", Color.BLACK)
 	dialogueLabel.add_theme_color_override(\"font_color\", Color.BLACK)
+	
+	masterLabel.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+	masterLabel.vertical_alignment = VERTICAL_ALIGNMENT_CENTER
+	musicLabel.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+	musicLabel.vertical_alignment = VERTICAL_ALIGNMENT_CENTER
+	sfxLabel.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+	sfxLabel.vertical_alignment = VERTICAL_ALIGNMENT_CENTER
+	dialogueLabel.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+	dialogueLabel.vertical_alignment = VERTICAL_ALIGNMENT_CENTER
 	updateVolume()
 
 func updateVolume(): 

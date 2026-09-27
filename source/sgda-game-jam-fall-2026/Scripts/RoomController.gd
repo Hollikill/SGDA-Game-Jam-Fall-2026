@@ -54,6 +54,10 @@ func _ready() -> void:
 	label.visible = false
 	GlobalPersistant.updateTextFunc = updateText
 	GlobalPersistant.disableTextFunc = disableText
+	label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+	label.vertical_alignment = VERTICAL_ALIGNMENT_CENTER
+	label.z_index = 2
+	add_child(label)
 
 	# track global room id
 	GlobalPersistant.current_loaded_room = room_id;
@@ -185,7 +189,6 @@ func toggle_popup() -> void:
 	popup_layer.visible = is_popup_open
 	
 	if is_popup_open:
-		#set_process(false)
 		player.set_physics_process(false)
 		player.set_process(false)
 		
@@ -205,7 +208,6 @@ func toggle_popup() -> void:
 				slot.texture = null
 		recalculateBorders()
 	else:
-		set_process(true)
 		player.set_physics_process(true)
 		player.set_process(true)
 
