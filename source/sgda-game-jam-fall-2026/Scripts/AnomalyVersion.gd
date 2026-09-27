@@ -8,5 +8,9 @@ extends Node
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	if ((GlobalPersistant.scene_transition_info.version_id == anomaly_version) == is_normal):
-		parent.queue_free()
+	if (GlobalPersistant.is_complete(parent.get_parent().room_id)): 
+		if (!is_normal): 
+			parent.queue_free()
+	else: 
+		if ((GlobalPersistant.scene_transition_info.version_id == anomaly_version) == is_normal):
+			parent.queue_free()
