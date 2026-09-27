@@ -9,6 +9,9 @@
 [ext_resource type="PackedScene" uid="uid://csvc1n8u4lme1" path="res://Prefabs/obstacles/fence/fence_post.tscn" id="6_jm1lt"]
 [ext_resource type="PackedScene" uid="uid://djdtyaotv2icg" path="res://Prefabs/obstacles/fence/fence_horz.tscn" id="7_swsd1"]
 [ext_resource type="PackedScene" uid="uid://d16c5tsad2doc" path="res://Prefabs/obstacles/fence/fence_vert.tscn" id="8_rcsut"]
+[ext_resource type="Script" uid="uid://c8n7jicn1tmee" path="res://Scripts/AnomalyVersion.gd" id="10_83eft"]
+[ext_resource type="PackedScene" uid="uid://dndmo2hii738" path="res://Prefabs/obstacles/tree_farm.tscn" id="11_21d4d"]
+[ext_resource type="Script" uid="uid://mx8vrp3eawff" path="res://Scripts/Anomaly.gd" id="12_21d4d"]
 
 [sub_resource type="Resource" id="Resource_iei0n"]
 script = ExtResource("2_jsrh8")
@@ -156,3 +159,23 @@ position = Vector2(1280, 723)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D" unique_id=1099884450]
 polygon = PackedVector2Array(-19, 20, 1260, 14, 1278, 676, 1315, 680, 1297, -17, -16, -32)
+
+[node name="AnimatedSprite2D20" parent="." unique_id=2057048307 instance=ExtResource("5_xq1pa")]
+position = Vector2(1138, 186)
+
+[node name="Node2D" type="Node2D" parent="AnimatedSprite2D20" unique_id=1339927840]
+script = ExtResource("10_83eft")
+anomaly_version = 1
+
+[node name="AnimatedSprite2D21" parent="." unique_id=1874557643 instance=ExtResource("11_21d4d")]
+position = Vector2(1141, 384)
+
+[node name="Node2D2" type="Node2D" parent="AnimatedSprite2D21" unique_id=1926268106]
+position = Vector2(-4, -264)
+script = ExtResource("10_83eft")
+anomaly_version = 1
+is_normal = false
+
+[node name="Node2D" type="Node2D" parent="AnimatedSprite2D21" unique_id=347684974]
+position = Vector2(-4, -264)
+script = ExtResource("12_21d4d")

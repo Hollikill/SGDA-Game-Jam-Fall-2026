@@ -6,11 +6,15 @@
 [ext_resource type="PackedScene" uid="uid://c163ahw78yv26" path="res://Prefabs/obstacles/house1.tscn" id="4_ayarf"]
 [ext_resource type="PackedScene" uid="uid://vouejpxblbtv" path="res://Prefabs/obstacles/chest1.tscn" id="5_p1fxw"]
 [ext_resource type="PackedScene" uid="uid://dvjghvdb6k0ss" path="res://Prefabs/obstacles/sapling1.tscn" id="6_xoihg"]
+[ext_resource type="PackedScene" uid="uid://2vlr5eee8b1u" path="res://Prefabs/obstacles/bush3_bypassable.tscn" id="7_ayarf"]
+[ext_resource type="Script" uid="uid://c8n7jicn1tmee" path="res://Scripts/AnomalyVersion.gd" id="8_p1fxw"]
+[ext_resource type="PackedScene" uid="uid://btjp8bwsh1xyv" path="res://Prefabs/Anomaly.tscn" id="9_xoihg"]
 
 [sub_resource type="Resource" id="Resource_ac48s"]
 script = ExtResource("2_tl4br")
 room_id = "roomN13"
 enter_side = 2
+version_id = 1
 metadata/_custom_type_script = "uid://kh06467o6o7c"
 
 [sub_resource type="Resource" id="Resource_i70oh"]
@@ -158,3 +162,13 @@ position = Vector2(617, 718)
 
 [node name="Node2D2" parent="." unique_id=1511720578 instance=ExtResource("6_xoihg")]
 position = Vector2(736, 725)
+
+[node name="Node2D3" parent="." unique_id=230134828 instance=ExtResource("7_ayarf")]
+position = Vector2(198, 289)
+
+[node name="Node2D" type="Node2D" parent="Node2D3" unique_id=1167199411]
+script = ExtResource("8_p1fxw")
+anomaly_version = 1
+is_normal = false
+
+[node name="Anomaly" parent="Node2D3" unique_id=826644755 instance=ExtResource("9_xoihg")]
