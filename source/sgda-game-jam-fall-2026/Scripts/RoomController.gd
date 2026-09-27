@@ -3,6 +3,7 @@ extends Node
 @export var room_id: String = "";
 @export_group("leave blank for generic counter")
 @export var reward_flag_id: String = "";
+@export var dialogue_reward_id: String = "";
 
 # room connections
 @export_category("Room Connections")
@@ -213,9 +214,12 @@ func toggle_popup() -> void:
 
 func _process(_delta: float) -> void:
 	# trigger room unlock on completion
+	GlobalPersistant.is_complete();
 	if (GlobalPersistant.room_trigger_unlock.find(room_id) != -1):
 		GlobalPersistant.room_trigger_unlock.remove_at(GlobalPersistant.room_trigger_unlock.find(room_id));
 		GlobalPersistant.giveFlag(reward_flag_id);
+		if (dialogue_reward_id != ""):
+			GlobalAudio.play_dialogue(dialogue_reward_id);
 
 	# switch rooms on player hit side
 	var offScreenSide = player.off_screen_side()
