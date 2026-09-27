@@ -3,6 +3,11 @@
 [ext_resource type="Script" uid="uid://cmhfdvscu61c2" path="res://Scripts/RoomController.gd" id="1_6pl4w"]
 [ext_resource type="PackedScene" uid="uid://bjwq1cbv4kp6q" path="res://Prefabs/obstacles/tree1.tscn" id="1_timms"]
 [ext_resource type="Script" uid="uid://kh06467o6o7c" path="res://Scripts/EntranceMethod.gd" id="2_eitr4"]
+[ext_resource type="PackedScene" uid="uid://bn51qnjkn4he4" path="res://Prefabs/obstacles/mushroom1.tscn" id="4_fb4jb"]
+[ext_resource type="PackedScene" uid="uid://c04qgkvtmjbyq" path="res://Prefabs/obstacles/mushroom2.tscn" id="5_dmxri"]
+[ext_resource type="PackedScene" uid="uid://cm2ab8vednxcq" path="res://Prefabs/obstacles/flower2.tscn" id="6_u4a3d"]
+[ext_resource type="PackedScene" uid="uid://cjx4woi5n70pg" path="res://Prefabs/obstacles/rock1.tscn" id="7_dmxri"]
+[ext_resource type="PackedScene" uid="uid://bwocgqve53yo8" path="res://Prefabs/obstacles/rock2.tscn" id="8_u4a3d"]
 
 [sub_resource type="Resource" id="Resource_lkcko"]
 script = ExtResource("2_eitr4")
@@ -79,3 +84,68 @@ position = Vector2(1035, 596)
 
 [node name="AnimatedSprite2D5" parent="border" unique_id=1485549963 instance=ExtResource("1_timms")]
 position = Vector2(832, 596)
+
+[node name="AnimatedSprite2D2" parent="." unique_id=980863385 instance=ExtResource("4_fb4jb")]
+position = Vector2(827, 216)
+
+[node name="AnimatedSprite2D3" parent="." unique_id=379324724 instance=ExtResource("4_fb4jb")]
+position = Vector2(867, 173)
+
+[node name="AnimatedSprite2D5" parent="." unique_id=2014558986 instance=ExtResource("4_fb4jb")]
+position = Vector2(932, 162)
+
+[node name="AnimatedSprite2D6" parent="." unique_id=1922298166 instance=ExtResource("4_fb4jb")]
+position = Vector2(993, 187)
+
+[node name="AnimatedSprite2D7" parent="." unique_id=1932624657 instance=ExtResource("4_fb4jb")]
+position = Vector2(1029, 269)
+
+[node name="AnimatedSprite2D8" parent="." unique_id=971081327 instance=ExtResource("4_fb4jb")]
+position = Vector2(1014, 327)
+
+[node name="AnimatedSprite2D9" parent="." unique_id=45971936 instance=ExtResource("4_fb4jb")]
+position = Vector2(929, 366)
+
+[node name="AnimatedSprite2D10" parent="." unique_id=1137350541 instance=ExtResource("4_fb4jb")]
+position = Vector2(873, 350)
+
+[node name="AnimatedSprite2D4" parent="." unique_id=1352825429 instance=ExtResource("5_dmxri")]
+position = Vector2(819, 268)
+
+[node name="AnimatedSprite2D11" parent="." unique_id=555687545 instance=ExtResource("5_dmxri")]
+position = Vector2(841, 312)
+
+[node name="AnimatedSprite2D12" parent="." unique_id=1219841119 instance=ExtResource("5_dmxri")]
+position = Vector2(972, 343)
+
+[node name="AnimatedSprite2D13" parent="." unique_id=466279279 instance=ExtResource("5_dmxri")]
+position = Vector2(1018, 224)
+
+[node name="AnimatedSprite2D14" parent="." unique_id=1831319725 instance=ExtResource("6_u4a3d")]
+position = Vector2(921, 249)
+
+[node name="AnimatedSprite2D" parent="." unique_id=2131106995 instance=ExtResource("7_dmxri")]
+position = Vector2(371, 154)
+
+[node name="AnimatedSprite2D15" parent="." unique_id=1132749371 instance=ExtResource("7_dmxri")]
+position = Vector2(126, 34)
+
+[node name="AnimatedSprite2D16" parent="." unique_id=624129832 instance=ExtResource("7_dmxri")]
+position = Vector2(94, 380)
+
+[node name="AnimatedSprite2D17" parent="." unique_id=1241207268 instance=ExtResource("7_dmxri")]
+position = Vector2(398, 487)
+
+[node name="AnimatedSprite2D18" parent="." unique_id=715056257 instance=ExtResource("8_u4a3d")]
+position = Vector2(313, 389)
+
+[node name="AnimatedSprite2D19" parent="." unique_id=1956350945 instance=ExtResource("8_u4a3d")]
+position = Vector2(109, 250)
+scale = Vector2(-0.75, 0.75)
+
+[node name="AnimatedSprite2D20" parent="." unique_id=551111056 instance=ExtResource("8_u4a3d")]
+position = Vector2(372, 64)
+
+[node name="AnimatedSprite2D21" parent="." unique_id=1043687478 instance=ExtResource("8_u4a3d")]
+position = Vector2(165, 628)
+scale = Vector2(-0.75, 0.75)

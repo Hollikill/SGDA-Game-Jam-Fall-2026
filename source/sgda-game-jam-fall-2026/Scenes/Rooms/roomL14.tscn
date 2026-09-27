@@ -5,6 +5,8 @@
 [ext_resource type="PackedScene" uid="uid://dndmo2hii738" path="res://Prefabs/obstacles/tree_farm.tscn" id="3_ey5jp"]
 [ext_resource type="PackedScene" uid="uid://bjwq1cbv4kp6q" path="res://Prefabs/obstacles/tree1.tscn" id="4_rfld1"]
 [ext_resource type="PackedScene" uid="uid://dvjghvdb6k0ss" path="res://Prefabs/obstacles/sapling1.tscn" id="5_1lkfe"]
+[ext_resource type="PackedScene" uid="uid://cjx4woi5n70pg" path="res://Prefabs/obstacles/rock1.tscn" id="6_hvjgf"]
+[ext_resource type="PackedScene" uid="uid://d02oomfbb8lh4" path="res://Prefabs/obstacles/rock_breakable.tscn" id="7_cj5e2"]
 
 [sub_resource type="Resource" id="Resource_572sk"]
 script = ExtResource("2_ey5jp")
@@ -109,3 +111,30 @@ position = Vector2(1023, 356)
 
 [node name="AnimatedSprite2D" parent="." unique_id=950036218 instance=ExtResource("5_1lkfe")]
 position = Vector2(29, 355)
+
+[node name="AnimatedSprite2D2" parent="." unique_id=1503678816 instance=ExtResource("6_hvjgf")]
+position = Vector2(1252, 473)
+
+[node name="AnimatedSprite2D3" parent="." unique_id=1762689208 instance=ExtResource("6_hvjgf")]
+position = Vector2(1223, 544)
+
+[node name="AnimatedSprite2D4" parent="." unique_id=1052206667 instance=ExtResource("6_hvjgf")]
+position = Vector2(1261, 608)
+
+[node name="AnimatedSprite2D5" parent="." unique_id=299536233 instance=ExtResource("6_hvjgf")]
+position = Vector2(1237, 664)
+
+[node name="Node2D" parent="." unique_id=2143138332 instance=ExtResource("7_cj5e2")]
+position = Vector2(1273, 452)
+
+[node name="Node2D2" parent="." unique_id=138097616 instance=ExtResource("7_cj5e2")]
+position = Vector2(1278, 403)
+
+[node name="Node2D3" parent="." unique_id=1655381620 instance=ExtResource("7_cj5e2")]
+position = Vector2(1266, 356)
+
+[node name="Node2D4" parent="." unique_id=1259581971 instance=ExtResource("7_cj5e2")]
+position = Vector2(1278, 316)
+
+[node name="Node2D5" parent="." unique_id=657476824 instance=ExtResource("7_cj5e2")]
+position = Vector2(1275, 270)
