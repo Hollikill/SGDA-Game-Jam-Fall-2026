@@ -17,6 +17,8 @@ extends Node
 
 @export var label := Label.new()
 
+@export var required_flags := 0
+
 var entrancesIDs: Array[String] = []
 
 @onready var background: Sprite2D = Sprite2D.new();
