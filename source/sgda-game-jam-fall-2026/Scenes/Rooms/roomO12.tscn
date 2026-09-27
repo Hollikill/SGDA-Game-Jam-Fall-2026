@@ -24,11 +24,23 @@ room_id = "roomM15"
 version_id = 1
 metadata/_custom_type_script = "uid://kh06467o6o7c"
 
+[sub_resource type="Resource" id="Resource_heb7o"]
+script = ExtResource("2_eitr4")
+room_id = "roomN11"
+metadata/_custom_type_script = "uid://kh06467o6o7c"
+
+[sub_resource type="Resource" id="Resource_fgebs"]
+script = ExtResource("2_eitr4")
+room_id = "roomN13"
+metadata/_custom_type_script = "uid://kh06467o6o7c"
+
 [node name="RoomO12" type="Node2D" unique_id=880506470]
 script = ExtResource("1_6pl4w")
 room_id = "roomO12"
 top = SubResource("Resource_lkcko")
 bottom = SubResource("Resource_quafe")
+topleft = SubResource("Resource_heb7o")
+topright = SubResource("Resource_fgebs")
 
 [node name="border" type="Node2D" parent="." unique_id=709141298]
 

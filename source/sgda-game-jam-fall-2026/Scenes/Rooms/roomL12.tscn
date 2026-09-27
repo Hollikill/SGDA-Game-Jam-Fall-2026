@@ -20,6 +20,11 @@ room_id = "roomM12"
 enter_side = 2
 metadata/_custom_type_script = "uid://kh06467o6o7c"
 
+[sub_resource type="Resource" id="Resource_co7q7"]
+script = ExtResource("2_fhhbb")
+room_id = "roomL11"
+metadata/_custom_type_script = "uid://kh06467o6o7c"
+
 [sub_resource type="Resource" id="Resource_m3db2"]
 script = ExtResource("2_fhhbb")
 room_id = "roomL13"
@@ -51,6 +56,7 @@ script = ExtResource("1_2conp")
 room_id = "roomL12"
 top = SubResource("Resource_ud02f")
 bottom = SubResource("Resource_1dhxe")
+left = SubResource("Resource_co7q7")
 right = SubResource("Resource_m3db2")
 topleft = SubResource("Resource_jj0rf")
 topright = SubResource("Resource_b8vji")

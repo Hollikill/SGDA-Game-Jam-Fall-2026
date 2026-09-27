@@ -28,6 +28,16 @@ enter_side = 2
 version_id = 1
 metadata/_custom_type_script = "uid://kh06467o6o7c"
 
+[sub_resource type="Resource" id="Resource_if48i"]
+script = ExtResource("2_aunrb")
+room_id = "roomN11"
+metadata/_custom_type_script = "uid://kh06467o6o7c"
+
+[sub_resource type="Resource" id="Resource_tgbet"]
+script = ExtResource("2_aunrb")
+room_id = "roomN13"
+metadata/_custom_type_script = "uid://kh06467o6o7c"
+
 [sub_resource type="Resource" id="Resource_xh3io"]
 script = ExtResource("2_aunrb")
 room_id = "roomM11"
@@ -49,6 +59,8 @@ room_id = "roomN12"
 reward_flag_id = "factory_key"
 top = SubResource("Resource_aunrb")
 bottom = SubResource("Resource_5yxse")
+left = SubResource("Resource_if48i")
+right = SubResource("Resource_tgbet")
 topleft = SubResource("Resource_xh3io")
 topright = SubResource("Resource_625lt")
 bottomright = SubResource("Resource_5e8yn")

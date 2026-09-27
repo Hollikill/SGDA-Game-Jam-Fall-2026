@@ -9,6 +9,11 @@
 [ext_resource type="PackedScene" uid="uid://c8fwy71hu7mch" path="res://Prefabs/obstacles/grave3.tscn" id="5_34eb5"]
 [ext_resource type="PackedScene" uid="uid://djdtyaotv2icg" path="res://Prefabs/obstacles/fence/fence_horz.tscn" id="8_4hllj"]
 
+[sub_resource type="Resource" id="Resource_0cqtx"]
+script = ExtResource("2_17f2m")
+room_id = "roomN14"
+metadata/_custom_type_script = "uid://kh06467o6o7c"
+
 [sub_resource type="Resource" id="Resource_flsnp"]
 script = ExtResource("2_17f2m")
 room_id = "roomP14"
@@ -39,6 +44,7 @@ metadata/_custom_type_script = "uid://kh06467o6o7c"
 [node name="RoomO14" type="Node2D" unique_id=1531833998]
 script = ExtResource("1_m13d2")
 room_id = "roomO14"
+top = SubResource("Resource_0cqtx")
 bottom = SubResource("Resource_flsnp")
 right = SubResource("Resource_y8rlq")
 topleft = SubResource("Resource_rrk03")

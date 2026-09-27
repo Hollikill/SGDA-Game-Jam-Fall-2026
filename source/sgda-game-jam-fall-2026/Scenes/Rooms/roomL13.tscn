@@ -13,6 +13,11 @@ room_id = "roomK13"
 enter_side = 3
 metadata/_custom_type_script = "uid://kh06467o6o7c"
 
+[sub_resource type="Resource" id="Resource_m7pak"]
+script = ExtResource("2_0x261")
+room_id = "roomM13"
+metadata/_custom_type_script = "uid://kh06467o6o7c"
+
 [sub_resource type="Resource" id="Resource_2conp"]
 script = ExtResource("2_0x261")
 room_id = "roomL12"
@@ -45,6 +50,7 @@ script = ExtResource("1_jsn6o")
 room_id = "roomL13"
 reward_flag_id = "grass_cloak"
 top = SubResource("Resource_ledl8")
+bottom = SubResource("Resource_m7pak")
 left = SubResource("Resource_2conp")
 right = SubResource("Resource_1lkfe")
 topleft = SubResource("Resource_qgebm")

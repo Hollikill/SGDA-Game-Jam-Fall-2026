@@ -10,11 +10,21 @@
 [ext_resource type="Script" uid="uid://c8n7jicn1tmee" path="res://Scripts/AnomalyVersion.gd" id="8_p1fxw"]
 [ext_resource type="PackedScene" uid="uid://btjp8bwsh1xyv" path="res://Prefabs/Anomaly.tscn" id="9_xoihg"]
 
+[sub_resource type="Resource" id="Resource_i6seb"]
+script = ExtResource("2_tl4br")
+room_id = "roomL13"
+metadata/_custom_type_script = "uid://kh06467o6o7c"
+
 [sub_resource type="Resource" id="Resource_ac48s"]
 script = ExtResource("2_tl4br")
 room_id = "roomN13"
 enter_side = 2
 version_id = 1
+metadata/_custom_type_script = "uid://kh06467o6o7c"
+
+[sub_resource type="Resource" id="Resource_4tf2o"]
+script = ExtResource("2_tl4br")
+room_id = "roomM12"
 metadata/_custom_type_script = "uid://kh06467o6o7c"
 
 [sub_resource type="Resource" id="Resource_i70oh"]
@@ -46,7 +56,9 @@ metadata/_custom_type_script = "uid://kh06467o6o7c"
 [node name="Room0" type="Node2D" unique_id=459127640]
 script = ExtResource("1_rceqv")
 room_id = "roomM13"
+top = SubResource("Resource_i6seb")
 bottom = SubResource("Resource_ac48s")
+left = SubResource("Resource_4tf2o")
 right = SubResource("Resource_i70oh")
 topleft = SubResource("Resource_216he")
 topright = SubResource("Resource_wa5eu")
