@@ -1,0 +1,36 @@
+[gd_scene format=3 uid="uid://dk2h2kifi35fe"]
+
+[ext_resource type="Texture2D" uid="uid://dtdx8aj7gu561" path="res://Resources/objects/mausoleum/mausoleum1.png" id="1_e1otl"]
+[ext_resource type="Texture2D" uid="uid://hkdsk7c66a3x" path="res://Resources/objects/mausoleum/mausoleum2.png" id="2_sv1id"]
+[ext_resource type="Script" uid="uid://c844xk21lifky" path="res://Scripts/Obstacle.gd" id="3_5bls2"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_28pet"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_e1otl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_sv1id")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" unique_id=1637049278]
+z_index = 1
+scale = Vector2(0.75, 0.75)
+sprite_frames = SubResource("SpriteFrames_28pet")
+script = ExtResource("3_5bls2")
+is_environment = true
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=84069624]
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="StaticBody2D" unique_id=1957874323]
+polygon = PackedVector2Array(353.33334, 409.33334, -325.33334, 413.33334, -350.6667, 285.33334, 281.33334, 278.6667)
+
+[node name="Area2D" type="Area2D" parent="." unique_id=911337625]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D" unique_id=843278726]
+polygon = PackedVector2Array(353.33334, 409.33334, -325.33334, 413.33334, -366.6667, 285.33334, -348, 16, -9.333334, -161.33334, 329.33334, 105.333336)

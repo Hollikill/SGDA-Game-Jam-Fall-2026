@@ -6,7 +6,9 @@
 [ext_resource type="PackedScene" uid="uid://bjwq1cbv4kp6q" path="res://Prefabs/obstacles/tree1.tscn" id="4_gnylh"]
 [ext_resource type="PackedScene" uid="uid://csvc1n8u4lme1" path="res://Prefabs/obstacles/fence/fence_post.tscn" id="5_cqxqa"]
 [ext_resource type="PackedScene" uid="uid://d16c5tsad2doc" path="res://Prefabs/obstacles/fence/fence_vert.tscn" id="6_l430y"]
+[ext_resource type="Script" uid="uid://d4ko5yy51dh04" path="res://Scripts/UnlockObject.gd" id="7_m4d0l"]
 [ext_resource type="PackedScene" uid="uid://djdtyaotv2icg" path="res://Prefabs/obstacles/fence/fence_horz.tscn" id="7_q0uv5"]
+[ext_resource type="PackedScene" uid="uid://c7s2jfcq1gi2e" path="res://Prefabs/unlock_count.tscn" id="9_gnylh"]
 
 [sub_resource type="Resource" id="Resource_ac48s"]
 script = ExtResource("2_fjsl5")
@@ -66,14 +68,24 @@ position = Vector2(1281, 108)
 [node name="AnimatedSprite2D15" parent="." unique_id=419996962 instance=ExtResource("5_cqxqa")]
 position = Vector2(1285, 163)
 
-[node name="AnimatedSprite2D16" parent="." unique_id=877036568 instance=ExtResource("6_l430y")]
+[node name="Node2D" type="Node2D" parent="." unique_id=425589522]
 position = Vector2(1281, 258)
+scale = Vector2(0.75, 0.75)
+script = ExtResource("7_m4d0l")
+unlock_flag_id = "key_graveyard"
+unlock_via_flag_count = true
+unlock_flag_count_required = 13
 
-[node name="AnimatedSprite2D17" parent="." unique_id=1559173787 instance=ExtResource("5_cqxqa")]
-position = Vector2(1283, 307)
+[node name="AnimatedSprite2D16" parent="Node2D" unique_id=877036568 instance=ExtResource("6_l430y")]
+scale = Vector2(1, 1)
 
-[node name="AnimatedSprite2D18" parent="." unique_id=312576152 instance=ExtResource("6_l430y")]
-position = Vector2(1280, 399)
+[node name="AnimatedSprite2D17" parent="Node2D" unique_id=1559173787 instance=ExtResource("5_cqxqa")]
+position = Vector2(2.666748, 65.33334)
+scale = Vector2(1, 1)
+
+[node name="AnimatedSprite2D18" parent="Node2D" unique_id=312576152 instance=ExtResource("6_l430y")]
+position = Vector2(-1.333252, 188)
+scale = Vector2(1, 1)
 
 [node name="AnimatedSprite2D19" parent="." unique_id=1856450003 instance=ExtResource("5_cqxqa")]
 position = Vector2(1281, 473)
@@ -134,3 +146,10 @@ position = Vector2(64, 682)
 
 [node name="AnimatedSprite2D36" parent="." unique_id=969949432 instance=ExtResource("6_l430y")]
 position = Vector2(58, 752)
+
+[node name="unlock count" parent="." unique_id=2009469868 instance=ExtResource("9_gnylh")]
+offset_left = 1165.0
+offset_top = 279.0
+offset_right = 1277.0
+offset_bottom = 328.0
+unlock_flag_count_required = 13

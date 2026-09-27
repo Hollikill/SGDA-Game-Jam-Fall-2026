@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://cm2ab8vednxcq" path="res://Prefabs/obstacles/flower2.tscn" id="9_7e8py"]
 [ext_resource type="PackedScene" uid="uid://cjx4woi5n70pg" path="res://Prefabs/obstacles/rock1.tscn" id="10_nkuqb"]
 [ext_resource type="PackedScene" uid="uid://bwocgqve53yo8" path="res://Prefabs/obstacles/rock2.tscn" id="11_unqlb"]
+[ext_resource type="PackedScene" uid="uid://br1yub4aixmxw" path="res://Prefabs/obstacles/pebble1.tscn" id="12_unqlb"]
 
 [sub_resource type="Resource" id="Resource_aunrb"]
 script = ExtResource("2_aunrb")
@@ -188,3 +189,33 @@ position = Vector2(67, 41)
 
 [node name="AnimatedSprite2D29" parent="." unique_id=966526130 instance=ExtResource("11_unqlb")]
 position = Vector2(430, 718)
+
+[node name="AnimatedSprite2D30" parent="." unique_id=2030673326 instance=ExtResource("12_unqlb")]
+position = Vector2(170, 526)
+
+[node name="AnimatedSprite2D31" parent="." unique_id=1199219814 instance=ExtResource("12_unqlb")]
+position = Vector2(324, 428)
+
+[node name="AnimatedSprite2D32" parent="." unique_id=1828803385 instance=ExtResource("12_unqlb")]
+position = Vector2(381, 555)
+
+[node name="AnimatedSprite2D33" parent="." unique_id=974328092 instance=ExtResource("12_unqlb")]
+position = Vector2(458, 428)
+
+[node name="AnimatedSprite2D34" parent="." unique_id=979243807 instance=ExtResource("12_unqlb")]
+position = Vector2(57, 301)
+
+[node name="AnimatedSprite2D35" parent="." unique_id=328633012 instance=ExtResource("12_unqlb")]
+position = Vector2(242, 251)
+
+[node name="AnimatedSprite2D36" parent="." unique_id=1972875796 instance=ExtResource("12_unqlb")]
+position = Vector2(374, 166)
+
+[node name="AnimatedSprite2D37" parent="." unique_id=1401187044 instance=ExtResource("12_unqlb")]
+position = Vector2(169, 70)
+
+[node name="AnimatedSprite2D38" parent="." unique_id=589546284 instance=ExtResource("12_unqlb")]
+position = Vector2(48, 606)
+
+[node name="AnimatedSprite2D39" parent="." unique_id=2875714 instance=ExtResource("12_unqlb")]
+position = Vector2(297, 628)

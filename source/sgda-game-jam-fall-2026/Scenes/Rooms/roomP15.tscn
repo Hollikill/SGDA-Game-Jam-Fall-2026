@@ -1,0 +1,88 @@
+[gd_scene format=3 uid="uid://dtowv4kpn3mq"]
+
+[ext_resource type="PackedScene" uid="uid://djdtyaotv2icg" path="res://Prefabs/obstacles/fence/fence_horz.tscn" id="1_0g2xc"]
+[ext_resource type="Script" uid="uid://cmhfdvscu61c2" path="res://Scripts/RoomController.gd" id="1_im0wf"]
+[ext_resource type="PackedScene" uid="uid://csvc1n8u4lme1" path="res://Prefabs/obstacles/fence/fence_post.tscn" id="2_ru6kk"]
+[ext_resource type="PackedScene" uid="uid://dk2h2kifi35fe" path="res://Prefabs/obstacles/mausoleum1.tscn" id="3_ru6kk"]
+[ext_resource type="PackedScene" uid="uid://cr5mtai11cq4i" path="res://Prefabs/obstacles/grave1.tscn" id="4_y3bqd"]
+[ext_resource type="PackedScene" uid="uid://je8sgqhssgo3" path="res://Prefabs/obstacles/grave2.tscn" id="5_im0wf"]
+[ext_resource type="PackedScene" uid="uid://c8fwy71hu7mch" path="res://Prefabs/obstacles/grave3.tscn" id="6_wtkoq"]
+
+[node name="RoomP15" type="Node2D" unique_id=130810269]
+script = ExtResource("1_im0wf")
+room_id = "roomP15"
+
+[node name="fence2" type="Node2D" parent="." unique_id=768300701]
+
+[node name="AnimatedSprite2D5" parent="fence2" unique_id=1160690367 instance=ExtResource("1_0g2xc")]
+position = Vector2(33.75, 683)
+
+[node name="AnimatedSprite2D6" parent="fence2" unique_id=1082226888 instance=ExtResource("2_ru6kk")]
+position = Vector2(116.75, 669)
+
+[node name="AnimatedSprite2D7" parent="fence2" unique_id=1438289267 instance=ExtResource("1_0g2xc")]
+position = Vector2(190.75, 686)
+
+[node name="AnimatedSprite2D8" parent="fence2" unique_id=1902938211 instance=ExtResource("2_ru6kk")]
+position = Vector2(267.75, 674)
+
+[node name="AnimatedSprite2D9" parent="fence2" unique_id=1531955181 instance=ExtResource("1_0g2xc")]
+position = Vector2(339.75, 686)
+
+[node name="AnimatedSprite2D10" parent="fence2" unique_id=299111727 instance=ExtResource("2_ru6kk")]
+position = Vector2(415.75, 674)
+
+[node name="AnimatedSprite2D11" parent="fence2" unique_id=2010062532 instance=ExtResource("1_0g2xc")]
+position = Vector2(487.75, 690)
+
+[node name="AnimatedSprite2D12" parent="fence2" unique_id=1212143530 instance=ExtResource("2_ru6kk")]
+position = Vector2(570.75, 675)
+
+[node name="AnimatedSprite2D13" parent="fence2" unique_id=1253838569 instance=ExtResource("1_0g2xc")]
+position = Vector2(643.75, 692)
+
+[node name="AnimatedSprite2D14" parent="fence2" unique_id=1785054898 instance=ExtResource("2_ru6kk")]
+position = Vector2(726.75, 679)
+
+[node name="AnimatedSprite2D15" parent="fence2" unique_id=1591978418 instance=ExtResource("1_0g2xc")]
+position = Vector2(799.75, 692)
+
+[node name="AnimatedSprite2D16" parent="fence2" unique_id=15440486 instance=ExtResource("2_ru6kk")]
+position = Vector2(882.75, 677)
+
+[node name="AnimatedSprite2D17" parent="fence2" unique_id=1794671653 instance=ExtResource("1_0g2xc")]
+position = Vector2(958.75, 693)
+
+[node name="AnimatedSprite2D18" parent="fence2" unique_id=312268656 instance=ExtResource("2_ru6kk")]
+position = Vector2(1038.75, 680)
+
+[node name="AnimatedSprite2D19" parent="fence2" unique_id=663069767 instance=ExtResource("1_0g2xc")]
+position = Vector2(1108.875, 691)
+
+[node name="AnimatedSprite2D20" parent="fence2" unique_id=1946409939 instance=ExtResource("2_ru6kk")]
+position = Vector2(1188.875, 678)
+
+[node name="AnimatedSprite2D21" parent="fence2" unique_id=1619827557 instance=ExtResource("1_0g2xc")]
+position = Vector2(1254.875, 688)
+
+[node name="AnimatedSprite2D" parent="." unique_id=1637049278 instance=ExtResource("3_ru6kk")]
+position = Vector2(643, 202)
+
+[node name="graves" type="Node2D" parent="." unique_id=441140430]
+position = Vector2(228, 404)
+scale = Vector2(0.75, 0.75)
+
+[node name="AnimatedSprite2D9" parent="graves" unique_id=273182687 instance=ExtResource("4_y3bqd")]
+position = Vector2(-4, -332)
+scale = Vector2(1, 1)
+
+[node name="AnimatedSprite2D5" parent="graves" unique_id=1655131032 instance=ExtResource("4_y3bqd")]
+scale = Vector2(1, 1)
+
+[node name="AnimatedSprite2D4" parent="graves" unique_id=2082450080 instance=ExtResource("5_im0wf")]
+position = Vector2(1101.3334, 16)
+scale = Vector2(1, 1)
+
+[node name="AnimatedSprite2D8" parent="graves" unique_id=898003213 instance=ExtResource("6_wtkoq")]
+position = Vector2(1089.3334, -310.66663)
+scale = Vector2(1, 1)

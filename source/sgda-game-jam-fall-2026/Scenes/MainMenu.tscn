@@ -1,45 +1,90 @@
 [gd_scene format=3 uid="uid://cnv4qw1vyrqnj"]
 
 [ext_resource type="Script" uid="uid://c0os3loy87dy5" path="res://Scripts/OpenSettingsMenu.gd" id="1_tt5f1"]
+[ext_resource type="Texture2D" uid="uid://e6cums3rmnap" path="res://Resources/menu/PlayButton1.png" id="1_xim88"]
+[ext_resource type="Texture2D" uid="uid://da51cbfrcgp4q" path="res://Resources/menu/PlayButton2.png" id="2_koqhg"]
+[ext_resource type="Texture2D" uid="uid://sfbikcaioew3" path="res://Resources/menu/Menu1.png" id="4_cmrfp"]
+[ext_resource type="Texture2D" uid="uid://cyw73wgxir7ya" path="res://Resources/menu/Menu2.png" id="5_loo7a"]
+[ext_resource type="Texture2D" uid="uid://yecxkngdca4v" path="res://Resources/menu/Settings button1.png" id="6_if7li"]
+[ext_resource type="Texture2D" uid="uid://dg5im5k2j75sg" path="res://Resources/menu/Settings button2.png" id="7_rrcx7"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_guh3l"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_cmrfp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_loo7a")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="GDScript" id="GDScript_n0hm5"]
+resource_name = "auto_animate"
+script/source = "extends AnimatedSprite2D
+
+func _ready() -> void:
+	play(\"default\")
+"
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_fh7cp"]
+
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_yqtmi"]
+resource_local_to_scene = true
+frames = 2
+frame_0/texture = ExtResource("1_xim88")
+frame_0/duration = 0.25
+frame_1/texture = ExtResource("2_koqhg")
+frame_1/duration = 0.25
 
 [sub_resource type="GDScript" id="GDScript_erv1k"]
 script/source = "extends Button
 
-@export var button: Button = null;
 @export var startingScene: String = \"\";
 
 # Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	button.pressed.connect(_switch_scenes);
+func _ready() -> void:pressed.connect(_switch_scenes);
 
 func _switch_scenes():
 	GlobalPersistant.back_button_location = \"Scenes/\"+startingScene+\".tscn\"
 	get_tree().change_scene_to_file(\"Scenes/\"+startingScene+\".tscn\");
 "
 
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_xim88"]
+frames = 2
+frame_0/texture = ExtResource("6_if7li")
+frame_0/duration = 0.25
+frame_1/texture = ExtResource("7_rrcx7")
+frame_1/duration = 0.25
+
 [node name="MainMenu" type="Node2D" unique_id=1075226138]
 
-[node name="Title Text" type="RichTextLabel" parent="." unique_id=838690557]
-offset_left = 500.0
-offset_top = 156.0
-offset_right = 799.0
-offset_bottom = 331.0
-theme_override_font_sizes/normal_font_size = 127
-bbcode_enabled = true
-text = "[color=#4f4]ESC8[/color]"
-scroll_active = false
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1648830035]
+position = Vector2(640, 360)
+sprite_frames = SubResource("SpriteFrames_guh3l")
+script = SubResource("GDScript_n0hm5")
 
-[node name="Start Button" type="Button" parent="." unique_id=1625528580 node_paths=PackedStringArray("button")]
-offset_left = 574.0
-offset_top = 371.0
-offset_right = 723.0
-offset_bottom = 420.0
-text = "Start Game"
+[node name="Start Button2" type="Button" parent="." unique_id=505806347]
+offset_left = 186.0
+offset_top = 217.0
+offset_right = 586.0
+offset_bottom = 413.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_fh7cp")
+icon = SubResource("AnimatedTexture_yqtmi")
+icon_alignment = 1
 script = SubResource("GDScript_erv1k")
-button = NodePath(".")
 startingScene = "Rooms/roomM13"
 
-[node name="Button" type="Button" parent="." unique_id=1092511572]
-offset_right = 8.0
-offset_bottom = 8.0
+[node name="Start Button3" type="Button" parent="." unique_id=1308165811]
+offset_left = 179.0
+offset_top = 397.0
+offset_right = 579.0
+offset_bottom = 593.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_fh7cp")
+icon = SubResource("AnimatedTexture_xim88")
+icon_alignment = 1
+expand_icon = true
 script = ExtResource("1_tt5f1")

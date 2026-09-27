@@ -1,0 +1,45 @@
+[gd_scene format=3 uid="uid://griis4gu1tw3"]
+
+[ext_resource type="Script" uid="uid://cmhfdvscu61c2" path="res://Scripts/RoomController.gd" id="1_104yc"]
+[ext_resource type="PackedScene" uid="uid://cr5mtai11cq4i" path="res://Prefabs/obstacles/grave1.tscn" id="1_he7lw"]
+[ext_resource type="PackedScene" uid="uid://je8sgqhssgo3" path="res://Prefabs/obstacles/grave2.tscn" id="2_104yc"]
+[ext_resource type="PackedScene" uid="uid://c8fwy71hu7mch" path="res://Prefabs/obstacles/grave3.tscn" id="3_swe3j"]
+
+[node name="RoomO15" type="Node2D" unique_id=1018366569]
+script = ExtResource("1_104yc")
+room_id = "roomO15"
+
+[node name="graves" type="Node2D" parent="." unique_id=116687472]
+position = Vector2(228, 404)
+scale = Vector2(0.75, 0.75)
+
+[node name="AnimatedSprite2D9" parent="graves" unique_id=1160690367 instance=ExtResource("1_he7lw")]
+position = Vector2(-4, -332)
+scale = Vector2(1, 1)
+
+[node name="AnimatedSprite2D5" parent="graves" unique_id=175314653 instance=ExtResource("1_he7lw")]
+scale = Vector2(1, 1)
+
+[node name="AnimatedSprite2D6" parent="graves" unique_id=1859733292 instance=ExtResource("1_he7lw")]
+position = Vector2(709.3334, 2.666687)
+scale = Vector2(1, 1)
+
+[node name="AnimatedSprite2D2" parent="graves" unique_id=856249438 instance=ExtResource("2_104yc")]
+position = Vector2(341.33337, -317.33334)
+scale = Vector2(1, 1)
+
+[node name="AnimatedSprite2D4" parent="graves" unique_id=451004927 instance=ExtResource("2_104yc")]
+position = Vector2(1101.3334, 16)
+scale = Vector2(1, 1)
+
+[node name="AnimatedSprite2D3" parent="graves" unique_id=139562499 instance=ExtResource("3_swe3j")]
+position = Vector2(760, -321.33334)
+scale = Vector2(1, 1)
+
+[node name="AnimatedSprite2D7" parent="graves" unique_id=82428517 instance=ExtResource("3_swe3j")]
+position = Vector2(328, -5.333313)
+scale = Vector2(1, 1)
+
+[node name="AnimatedSprite2D8" parent="graves" unique_id=2132930247 instance=ExtResource("3_swe3j")]
+position = Vector2(1089.3334, -310.66663)
+scale = Vector2(1, 1)

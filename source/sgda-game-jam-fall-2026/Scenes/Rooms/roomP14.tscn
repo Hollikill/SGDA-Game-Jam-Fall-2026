@@ -1,0 +1,130 @@
+[gd_scene format=3 uid="uid://cqjklwklm8b5x"]
+
+[ext_resource type="Script" uid="uid://cmhfdvscu61c2" path="res://Scripts/RoomController.gd" id="1_nfqig"]
+[ext_resource type="PackedScene" uid="uid://csvc1n8u4lme1" path="res://Prefabs/obstacles/fence/fence_post.tscn" id="1_suxs1"]
+[ext_resource type="PackedScene" uid="uid://d16c5tsad2doc" path="res://Prefabs/obstacles/fence/fence_vert.tscn" id="2_l0ips"]
+[ext_resource type="PackedScene" uid="uid://djdtyaotv2icg" path="res://Prefabs/obstacles/fence/fence_horz.tscn" id="3_l0ips"]
+[ext_resource type="PackedScene" uid="uid://cr5mtai11cq4i" path="res://Prefabs/obstacles/grave1.tscn" id="4_jwioc"]
+[ext_resource type="PackedScene" uid="uid://je8sgqhssgo3" path="res://Prefabs/obstacles/grave2.tscn" id="5_nfqig"]
+[ext_resource type="PackedScene" uid="uid://c8fwy71hu7mch" path="res://Prefabs/obstacles/grave3.tscn" id="6_ygsfs"]
+
+[node name="RoomP14" type="Node2D" unique_id=556525577]
+script = ExtResource("1_nfqig")
+room_id = "roomP14"
+
+[node name="Node2D" type="Node2D" parent="." unique_id=1960118227]
+
+[node name="AnimatedSprite2D13" parent="Node2D" unique_id=1160690367 instance=ExtResource("1_suxs1")]
+position = Vector2(5.625, 26)
+
+[node name="AnimatedSprite2D14" parent="Node2D" unique_id=1677495216 instance=ExtResource("2_l0ips")]
+position = Vector2(1.625, 107)
+
+[node name="AnimatedSprite2D15" parent="Node2D" unique_id=8728695 instance=ExtResource("1_suxs1")]
+position = Vector2(5.625, 162)
+
+[node name="AnimatedSprite2D16" parent="Node2D" unique_id=221572943 instance=ExtResource("2_l0ips")]
+position = Vector2(1.625, 257)
+
+[node name="AnimatedSprite2D17" parent="Node2D" unique_id=302555497 instance=ExtResource("1_suxs1")]
+position = Vector2(3.625, 306)
+
+[node name="AnimatedSprite2D18" parent="Node2D" unique_id=1257405732 instance=ExtResource("2_l0ips")]
+position = Vector2(0.625, 398)
+
+[node name="AnimatedSprite2D19" parent="Node2D" unique_id=1763715045 instance=ExtResource("1_suxs1")]
+position = Vector2(1.625, 472)
+
+[node name="AnimatedSprite2D20" parent="Node2D" unique_id=215154020 instance=ExtResource("2_l0ips")]
+position = Vector2(-1.375, 567)
+
+[node name="AnimatedSprite2D21" parent="Node2D" unique_id=938589149 instance=ExtResource("1_suxs1")]
+position = Vector2(2.625, 661)
+
+[node name="fence2" type="Node2D" parent="." unique_id=717148000]
+
+[node name="AnimatedSprite2D5" parent="fence2" unique_id=1574237818 instance=ExtResource("3_l0ips")]
+position = Vector2(74.625, 677)
+
+[node name="AnimatedSprite2D6" parent="fence2" unique_id=2111407736 instance=ExtResource("1_suxs1")]
+position = Vector2(157.625, 663)
+
+[node name="AnimatedSprite2D7" parent="fence2" unique_id=1718401499 instance=ExtResource("3_l0ips")]
+position = Vector2(231.625, 680)
+
+[node name="AnimatedSprite2D8" parent="fence2" unique_id=1978919079 instance=ExtResource("1_suxs1")]
+position = Vector2(308.625, 668)
+
+[node name="AnimatedSprite2D9" parent="fence2" unique_id=319214458 instance=ExtResource("3_l0ips")]
+position = Vector2(380.625, 680)
+
+[node name="AnimatedSprite2D10" parent="fence2" unique_id=2117433520 instance=ExtResource("1_suxs1")]
+position = Vector2(456.625, 668)
+
+[node name="AnimatedSprite2D11" parent="fence2" unique_id=78302400 instance=ExtResource("3_l0ips")]
+position = Vector2(528.625, 684)
+
+[node name="AnimatedSprite2D12" parent="fence2" unique_id=1570065597 instance=ExtResource("1_suxs1")]
+position = Vector2(611.625, 669)
+
+[node name="AnimatedSprite2D13" parent="fence2" unique_id=1636574752 instance=ExtResource("3_l0ips")]
+position = Vector2(684.625, 686)
+
+[node name="AnimatedSprite2D14" parent="fence2" unique_id=521328543 instance=ExtResource("1_suxs1")]
+position = Vector2(767.625, 673)
+
+[node name="AnimatedSprite2D15" parent="fence2" unique_id=688176896 instance=ExtResource("3_l0ips")]
+position = Vector2(840.625, 686)
+
+[node name="AnimatedSprite2D16" parent="fence2" unique_id=1764500144 instance=ExtResource("1_suxs1")]
+position = Vector2(923.625, 671)
+
+[node name="AnimatedSprite2D17" parent="fence2" unique_id=1600168136 instance=ExtResource("3_l0ips")]
+position = Vector2(999.625, 687)
+
+[node name="AnimatedSprite2D18" parent="fence2" unique_id=1409075488 instance=ExtResource("1_suxs1")]
+position = Vector2(1079.625, 674)
+
+[node name="AnimatedSprite2D19" parent="fence2" unique_id=1574117403 instance=ExtResource("3_l0ips")]
+position = Vector2(1149.75, 685)
+
+[node name="AnimatedSprite2D20" parent="fence2" unique_id=1603138883 instance=ExtResource("1_suxs1")]
+position = Vector2(1229.75, 672)
+
+[node name="AnimatedSprite2D21" parent="fence2" unique_id=74828399 instance=ExtResource("3_l0ips")]
+position = Vector2(1295.75, 682)
+
+[node name="graves" type="Node2D" parent="fence2" unique_id=1894685058]
+position = Vector2(228, 404)
+scale = Vector2(0.75, 0.75)
+
+[node name="AnimatedSprite2D9" parent="fence2/graves" unique_id=734480337 instance=ExtResource("4_jwioc")]
+position = Vector2(-4, -332)
+scale = Vector2(1, 1)
+
+[node name="AnimatedSprite2D5" parent="fence2/graves" unique_id=1113225172 instance=ExtResource("4_jwioc")]
+scale = Vector2(1, 1)
+
+[node name="AnimatedSprite2D6" parent="fence2/graves" unique_id=395065953 instance=ExtResource("4_jwioc")]
+position = Vector2(709.3334, 2.666687)
+scale = Vector2(1, 1)
+
+[node name="AnimatedSprite2D2" parent="fence2/graves" unique_id=948564537 instance=ExtResource("5_nfqig")]
+position = Vector2(341.33337, -317.33334)
+scale = Vector2(1, 1)
+
+[node name="AnimatedSprite2D4" parent="fence2/graves" unique_id=1992297697 instance=ExtResource("5_nfqig")]
+position = Vector2(1101.3334, 16)
+scale = Vector2(1, 1)
+
+[node name="AnimatedSprite2D3" parent="fence2/graves" unique_id=1622538601 instance=ExtResource("6_ygsfs")]
+position = Vector2(760, -321.33334)
+scale = Vector2(1, 1)
+
+[node name="AnimatedSprite2D7" parent="fence2/graves" unique_id=114109115 instance=ExtResource("6_ygsfs")]
+position = Vector2(328, -5.333313)
+scale = Vector2(1, 1)
+
+[node name="AnimatedSprite2D8" parent="fence2/graves" unique_id=679978795 instance=ExtResource("6_ygsfs")]
+position = Vector2(1089.3334, -310.66663)
+scale = Vector2(1, 1)

@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://bwocgqve53yo8" path="res://Prefabs/obstacles/rock2.tscn" id="5_rwxo1"]
 [ext_resource type="PackedScene" uid="uid://dl8b4sk6on36r" path="res://Prefabs/obstacles/bush2_bypassable.tscn" id="6_7b0lq"]
 [ext_resource type="PackedScene" uid="uid://c7xqi5ns2ow5h" path="res://Prefabs/obstacles/bush1_bypassable.tscn" id="7_smp4c"]
+[ext_resource type="PackedScene" uid="uid://c7s2jfcq1gi2e" path="res://Prefabs/unlock_count.tscn" id="8_smp4c"]
 
 [sub_resource type="Resource" id="Resource_4clc2"]
 script = ExtResource("2_7cfjx")
@@ -91,3 +92,9 @@ position = Vector2(1270, 555)
 
 [node name="Node2D3" parent="." unique_id=2136193044 instance=ExtResource("7_smp4c")]
 position = Vector2(1230, 480)
+
+[node name="unlock count" parent="." unique_id=2009469868 instance=ExtResource("8_smp4c")]
+offset_left = 13.0
+offset_top = 328.0
+offset_right = 125.0
+offset_bottom = 377.0

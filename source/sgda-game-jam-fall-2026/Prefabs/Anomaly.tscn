@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://btjp8bwsh1xyv"]
+
+[ext_resource type="Script" uid="uid://mx8vrp3eawff" path="res://Scripts/Anomaly.gd" id="1_wmx6j"]
+
+[node name="Anomaly" type="Node2D" unique_id=826644755]
+script = ExtResource("1_wmx6j")

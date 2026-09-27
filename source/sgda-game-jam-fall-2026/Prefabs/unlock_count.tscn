@@ -9,6 +9,6 @@ offset_right = 69.0
 offset_bottom = 25.0
 theme_override_font_sizes/normal_font_size = 32
 bbcode_enabled = true
-text = "[color=f44]12/15[/color]"
+text = "[color=f44]##/##[/color]"
 script = ExtResource("1_ac6pr")
 unlock_flag_count_required = 15

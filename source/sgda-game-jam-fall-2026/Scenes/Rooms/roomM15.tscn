@@ -14,6 +14,7 @@
 script = ExtResource("2_jsrh8")
 room_id = "roomM14"
 enter_side = 1
+version_id = 2
 metadata/_custom_type_script = "uid://kh06467o6o7c"
 
 [node name="Room3" type="Node2D" unique_id=1425708952]

@@ -16,9 +16,7 @@ extends Node
 @export var bottomleft: EntranceMethod
 @export var bottomright: EntranceMethod
 
-@export var label := Label.new()
-
-@export var required_flags := 0
+var label := Label.new()
 
 var entrancesIDs: Array[String] = []
 
@@ -51,6 +49,8 @@ func _button_pressed() -> void:
 	get_tree().change_scene_to_file("res://Scenes/SettingsMenu.tscn")
 
 func _ready() -> void:
+	print(GlobalPersistant.scene_transition_info.version_id)
+
 	var canvas_layer = CanvasLayer.new()
 	canvas_layer.layer = 2
 	add_child(canvas_layer)

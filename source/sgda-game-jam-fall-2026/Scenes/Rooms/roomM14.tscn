@@ -7,7 +7,11 @@
 [ext_resource type="Script" uid="uid://c8n7jicn1tmee" path="res://Scripts/AnomalyVersion.gd" id="4_w8mrb"]
 [ext_resource type="PackedScene" uid="uid://ykuh2np5dc26" path="res://Prefabs/obstacles/fountain2.tscn" id="5_2tpi7"]
 [ext_resource type="PackedScene" uid="uid://dq6b1o604jc03" path="res://Prefabs/obstacles/crate1.tscn" id="5_sn4vg"]
-[ext_resource type="Script" uid="uid://mx8vrp3eawff" path="res://Scripts/Anomaly.gd" id="6_ac48s"]
+[ext_resource type="PackedScene" uid="uid://btjp8bwsh1xyv" path="res://Prefabs/Anomaly.tscn" id="6_vr2rh"]
+[ext_resource type="PackedScene" uid="uid://dcrvq8fnyj4q6" path="res://Prefabs/obstacles/haybale1.tscn" id="7_n0hm5"]
+[ext_resource type="PackedScene" uid="uid://ct1qg83mdkjsw" path="res://Prefabs/obstacles/wood1.tscn" id="10_wltdg"]
+[ext_resource type="PackedScene" uid="uid://b1mipveh2yjqv" path="res://Prefabs/obstacles/tree2.tscn" id="11_vr2rh"]
+[ext_resource type="PackedScene" uid="uid://wp6h6q4rorof" path="res://Prefabs/obstacles/tree3.tscn" id="12_02xly"]
 
 [sub_resource type="Resource" id="Resource_owv72"]
 script = ExtResource("2_dsn0a")
@@ -57,14 +61,13 @@ script = ExtResource("4_w8mrb")
 anomaly_version = 1
 is_normal = false
 
-[node name="Anomaly" type="Node2D" parent="AnimatedSprite2D5" unique_id=304909116]
-script = ExtResource("6_ac48s")
+[node name="Anomaly" parent="AnimatedSprite2D5" unique_id=826644755 instance=ExtResource("6_vr2rh")]
 
 [node name="border" type="Node2D" parent="." unique_id=1774140890]
 position = Vector2(21, -104)
 scale = Vector2(0.75, 0.75)
 
-[node name="AnimatedSprite2D2" parent="border" unique_id=1160690367 instance=ExtResource("4_i70oh")]
+[node name="AnimatedSprite2D2" parent="border" unique_id=1163125688 instance=ExtResource("4_i70oh")]
 scale = Vector2(1, 1)
 
 [node name="AnimatedSprite2D3" parent="border" unique_id=152552732 instance=ExtResource("4_i70oh")]
@@ -105,3 +108,34 @@ scale = Vector2(-1, 1)
 [node name="AnimatedSprite2D3" parent="." unique_id=856175925 instance=ExtResource("5_sn4vg")]
 position = Vector2(465, 110)
 scale = Vector2(-1, 1)
+
+[node name="AnimatedSprite2D6" parent="." unique_id=1841419681 instance=ExtResource("10_wltdg")]
+position = Vector2(862, 418)
+scale = Vector2(-0.75, 0.75)
+
+[node name="AnimatedSprite2D7" parent="." unique_id=1585916074 instance=ExtResource("10_wltdg")]
+position = Vector2(748, 532)
+
+[node name="AnimatedSprite2D8" parent="." unique_id=1654269614 instance=ExtResource("10_wltdg")]
+position = Vector2(934, 553)
+
+[node name="AnimatedSprite2D9" parent="." unique_id=918227625 instance=ExtResource("11_vr2rh")]
+position = Vector2(379, 440)
+
+[node name="Node2D" type="Node2D" parent="AnimatedSprite2D9" unique_id=1762911940]
+script = ExtResource("4_w8mrb")
+anomaly_version = 2
+
+[node name="AnimatedSprite2D10" parent="." unique_id=852942918 instance=ExtResource("12_02xly")]
+position = Vector2(379, 439)
+
+[node name="Node2D2" type="Node2D" parent="AnimatedSprite2D10" unique_id=20804682]
+position = Vector2(0, 1.333313)
+script = ExtResource("4_w8mrb")
+anomaly_version = 2
+is_normal = false
+
+[node name="Anomaly" parent="AnimatedSprite2D10" unique_id=544489280 instance=ExtResource("6_vr2rh")]
+
+[node name="AnimatedSprite2D11" parent="." unique_id=1160690367 instance=ExtResource("7_n0hm5")]
+position = Vector2(892, 167)
