@@ -6,6 +6,8 @@
 [ext_resource type="PackedScene" uid="uid://moj4xunry65n" path="res://Prefabs/obstacles/flower1.tscn" id="4_d5jv6"]
 [ext_resource type="PackedScene" uid="uid://cm2ab8vednxcq" path="res://Prefabs/obstacles/flower2.tscn" id="5_f2uft"]
 [ext_resource type="PackedScene" uid="uid://c8m0htswftaok" path="res://Prefabs/obstacles/flower3.tscn" id="6_wklev"]
+[ext_resource type="PackedScene" uid="uid://dl8b4sk6on36r" path="res://Prefabs/obstacles/bush2_bypassable.tscn" id="7_jegyf"]
+[ext_resource type="PackedScene" uid="uid://c7xqi5ns2ow5h" path="res://Prefabs/obstacles/bush1_bypassable.tscn" id="8_d5jv6"]
 
 [sub_resource type="Resource" id="Resource_h650o"]
 script = ExtResource("2_y1wtr")
@@ -80,15 +82,6 @@ position = Vector2(-34.5, 64)
 
 [node name="AnimatedSprite2D16" parent="border" unique_id=237262673 instance=ExtResource("3_jegyf")]
 position = Vector2(-6.5, 172)
-
-[node name="AnimatedSprite2D17" parent="border" unique_id=1117773533 instance=ExtResource("3_jegyf")]
-position = Vector2(-36.5, 244)
-
-[node name="AnimatedSprite2D18" parent="border" unique_id=1913879602 instance=ExtResource("3_jegyf")]
-position = Vector2(2.5, 329)
-
-[node name="AnimatedSprite2D19" parent="border" unique_id=1121518273 instance=ExtResource("3_jegyf")]
-position = Vector2(-25.5, 413)
 
 [node name="AnimatedSprite2D20" parent="border" unique_id=537945738 instance=ExtResource("3_jegyf")]
 position = Vector2(16.5, 493)
@@ -239,3 +232,12 @@ scale = Vector2(1, -1)
 
 [node name="AnimatedSprite2D35" parent="flowers" unique_id=2138014972 instance=ExtResource("4_d5jv6")]
 position = Vector2(891, 199)
+
+[node name="Node2D" parent="." unique_id=2143138332 instance=ExtResource("7_jegyf")]
+position = Vector2(18, 523)
+
+[node name="Node2D2" parent="." unique_id=1136653490 instance=ExtResource("7_jegyf")]
+position = Vector2(6, 372)
+
+[node name="Node2D3" parent="." unique_id=1136719123 instance=ExtResource("8_d5jv6")]
+position = Vector2(37, 457)

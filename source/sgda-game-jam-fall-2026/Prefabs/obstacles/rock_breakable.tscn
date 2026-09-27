@@ -27,7 +27,6 @@ script = ExtResource("1_tfyfu")
 unlock_flag_id = "hammer"
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=950036218]
-scale = Vector2(0.5, 0.5)
 sprite_frames = SubResource("SpriteFrames_vblew")
 script = ExtResource("4_kpbf0")
 is_environment = true
