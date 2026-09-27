@@ -10,6 +10,30 @@
 [ext_resource type="PackedScene" uid="uid://d16c5tsad2doc" path="res://Prefabs/obstacles/fence/fence_vert.tscn" id="5_fy358"]
 [ext_resource type="PackedScene" uid="uid://djdtyaotv2icg" path="res://Prefabs/obstacles/fence/fence_horz.tscn" id="7_riprs"]
 
+[sub_resource type="Resource" id="Resource_hk0jk"]
+script = ExtResource("2_fy358")
+room_id = "roomM15"
+enter_side = 3
+metadata/_custom_type_script = "uid://kh06467o6o7c"
+
+[sub_resource type="Resource" id="Resource_dninm"]
+script = ExtResource("2_fy358")
+room_id = "roomO15"
+enter_side = 2
+metadata/_custom_type_script = "uid://kh06467o6o7c"
+
+[sub_resource type="Resource" id="Resource_w67qy"]
+script = ExtResource("2_fy358")
+room_id = "roomN14"
+enter_side = 1
+metadata/_custom_type_script = "uid://kh06467o6o7c"
+
+[sub_resource type="Resource" id="Resource_mbdj7"]
+script = ExtResource("2_fy358")
+room_id = "room"
+enter_side = 0
+metadata/_custom_type_script = "uid://kh06467o6o7c"
+
 [sub_resource type="Resource" id="Resource_igb6b"]
 script = ExtResource("2_fy358")
 room_id = "roomM14"
@@ -28,6 +52,10 @@ metadata/_custom_type_script = "uid://kh06467o6o7c"
 [node name="RoomN15" type="Node2D" unique_id=66961305]
 script = ExtResource("1_riprs")
 room_id = "roomN15"
+top = SubResource("Resource_hk0jk")
+bottom = SubResource("Resource_dninm")
+left = SubResource("Resource_w67qy")
+right = SubResource("Resource_mbdj7")
 topleft = SubResource("Resource_igb6b")
 bottomleft = SubResource("Resource_7oms4")
 bottomright = SubResource("Resource_r4oyv")

@@ -13,6 +13,11 @@
 [ext_resource type="PackedScene" uid="uid://dndmo2hii738" path="res://Prefabs/obstacles/tree_farm.tscn" id="11_21d4d"]
 [ext_resource type="Script" uid="uid://mx8vrp3eawff" path="res://Scripts/Anomaly.gd" id="12_21d4d"]
 
+[sub_resource type="Resource" id="Resource_v2dv2"]
+script = ExtResource("2_jsrh8")
+room_id = "roomN15"
+metadata/_custom_type_script = "uid://kh06467o6o7c"
+
 [sub_resource type="Resource" id="Resource_iei0n"]
 script = ExtResource("2_jsrh8")
 room_id = "roomM14"
@@ -33,6 +38,7 @@ metadata/_custom_type_script = "uid://kh06467o6o7c"
 [node name="Room3" type="Node2D" unique_id=1425708952]
 script = ExtResource("1_rtayk")
 room_id = "roomM15"
+bottom = SubResource("Resource_v2dv2")
 left = SubResource("Resource_iei0n")
 topleft = SubResource("Resource_r582p")
 bottomleft = SubResource("Resource_8pite")
