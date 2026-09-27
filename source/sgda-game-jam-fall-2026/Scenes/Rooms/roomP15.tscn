@@ -40,15 +40,11 @@ metadata/_custom_type_script = "uid://kh06467o6o7c"
 [node name="RoomP15" type="Node2D" unique_id=130810269]
 script = ExtResource("1_im0wf")
 room_id = "roomP15"
-<<<<<<< HEAD
 top = SubResource("Resource_jvjq8")
 left = SubResource("Resource_d14ey")
 right = SubResource("Resource_ps8j1")
 topleft = SubResource("Resource_51acg")
 topright = SubResource("Resource_o44up")
-=======
-reward_flag_id = "hammer"
->>>>>>> fa52db718f82013b41ff92ba210f216716dda76d
 
 [node name="fence2" type="Node2D" parent="." unique_id=768300701]
 
